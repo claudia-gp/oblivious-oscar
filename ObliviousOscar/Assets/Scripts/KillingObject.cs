@@ -13,6 +13,7 @@ public class KillingObject : MonoBehaviour
 	
 	void OnTriggerEnter2D (Collider2D other)
 	{
+		//kill Oscar
 		GameObject obj = other.gameObject;
 		if (other.CompareTag (Oscar.TAG)) {
 			Camera.main.transform.parent = null;

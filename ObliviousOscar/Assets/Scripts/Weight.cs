@@ -13,7 +13,7 @@ public class Weight : Tappable
 
 	public override void OnTap ()
 	{
-		rb.gravityScale = 1f;
+		rb.isKinematic = false;
 	}
 
 }

@@ -11,26 +11,30 @@ public class Draggable : MonoBehaviour
 	 
 	private Rigidbody2D rb;
 	private Vector3 initialPosition;
+	private TransformGesture gesture;
+	private float initialGravity = 1f;
 
-	private void OnEnable ()
+	void Awake ()
 	{
 		initialPosition = transform.position;
-		
-		gameObject.AddComponent<TransformGesture> ();
+
+		gesture = gameObject.AddComponent<TransformGesture> ();
 		gameObject.AddComponent<Transformer> ();
-		
+	
 		rb = GetComponent<Rigidbody2D> ();
-		
-		TransformGesture gesture = GetComponent<TransformGesture> ();
 		if (rb) {
-			gesture.TransformStarted += transformStartedHandler;
-			gesture.TransformCompleted += transformCompletedHandler;
+			initialGravity = rb.gravityScale;
 		}
+	}
+
+	void OnEnable ()
+	{
+		gesture.TransformStarted += TransformStartedHandler;
+		gesture.TransformCompleted += TransformCompletedHandler;
 	}
 	
 	void Update ()
 	{
-
 		Vector3 temp = transform.position;
 
 		if (fixedY) {
@@ -40,18 +44,16 @@ public class Draggable : MonoBehaviour
 			temp.x = initialPosition.x;
 		}
 		transform.position = temp;
-
 	}
 	
-	private void transformStartedHandler (object sender, System.EventArgs e)
+	private void TransformStartedHandler (object sender, System.EventArgs e)
 	{
-		rb.isKinematic = true;
-
+		rb.gravityScale = 0f;
 	}
 		
-	private void transformCompletedHandler (object sender, System.EventArgs e)
+	private void TransformCompletedHandler (object sender, System.EventArgs e)
 	{
-		rb.isKinematic = false;
+		rb.gravityScale = initialGravity;
 	}
 	
 }

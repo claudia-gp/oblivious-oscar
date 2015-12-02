@@ -49,7 +49,7 @@
      <Compile Include="Assets\Scripts\KillingObject.cs" />
      <Compile Include="Assets\Scripts\Oscar.cs" />
      <Compile Include="Assets\Scripts\Tappable.cs" />
-     <Compile Include="Assets\Scripts\Weight.cs" />
+     <Compile Include="Assets\Scripts\TappableWeight.cs" />
      <None Include="Assets\TouchScript\Shaders\DebugDepthTest.shader" />
      <None Include="Assets\TouchScript\license.txt" />
      <None Include="Assets\TouchScript\Shaders\DebugMultiplyDepthTest.shader" />

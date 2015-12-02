@@ -37,3 +37,5 @@ ehthumbs.db
 *.sln
 
 ObliviousOscar/ObliviousOscar.sln
+
+ObliviousOscar/Assembly-CSharp.csproj

@@ -7,7 +7,7 @@ public abstract class Tappable : MonoBehaviour
 {
 	
 	protected Rigidbody2D rigidBody;
-	protected Collider2D collider;
+	protected new Collider2D collider;
 
 	public void Start ()
 	{

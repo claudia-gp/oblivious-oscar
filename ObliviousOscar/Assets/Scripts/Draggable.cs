@@ -13,6 +13,7 @@ public class Draggable : MonoBehaviour
 	private Vector3 initialPosition;
 	private TransformGesture gesture;
 	private float initialGravity = 1f;
+	private bool dragging = false;
 
 	void Awake ()
 	{
@@ -29,31 +30,42 @@ public class Draggable : MonoBehaviour
 
 	void OnEnable ()
 	{
-		gesture.TransformStarted += TransformStartedHandler;
-		gesture.TransformCompleted += TransformCompletedHandler;
+		gesture.TransformStarted += StartDrag;
+		gesture.TransformCompleted += EndDrag;
 	}
-	
+
+	private void OnDisable ()
+	{
+		gesture.TransformStarted -= StartDrag;
+		gesture.TransformCompleted -= EndDrag;
+	}
+
+
 	void Update ()
 	{
-		Vector3 temp = transform.position;
+		if (dragging) {
 
-		if (fixedY) {
-			temp.y = initialPosition.y;
+			transform.position += Oscar.DeltaPosition;
+
+			if (fixedY) {
+				transform.position = new Vector3 (transform.position.x, initialPosition.y);
+			}
+			if (fixedX) {
+				transform.position = new Vector3 (initialPosition.x, transform.position.y);
+			}
 		}
-		if (fixedX) {
-			temp.x = initialPosition.x;
-		}
-		transform.position = temp;
 	}
 	
-	private void TransformStartedHandler (object sender, System.EventArgs e)
+	private void StartDrag (object sender, System.EventArgs e)
 	{
 		rb.gravityScale = 0f;
+		dragging = true;
 	}
 		
-	private void TransformCompletedHandler (object sender, System.EventArgs e)
+	private void EndDrag (object sender, System.EventArgs e)
 	{
 		rb.gravityScale = initialGravity;
+		dragging = false;
 	}
 	
 }

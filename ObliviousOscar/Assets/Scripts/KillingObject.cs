@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class KillingObject : MonoBehaviour
@@ -13,7 +13,7 @@ public class KillingObject : MonoBehaviour
 	
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.CompareTag (Oscar.TAG)) {
+		if (other.CompareTag (Oscar.Tag)) {
 			Camera.main.transform.parent = null;
 			Destroy (other.gameObject);
 		}

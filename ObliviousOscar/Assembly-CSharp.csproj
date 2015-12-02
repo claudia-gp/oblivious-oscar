@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Draggable.cs" />
+     <Compile Include="Assets\Scripts\KillingObject.cs" />
      <Compile Include="Assets\Scripts\Oscar.cs" />
      <Compile Include="Assets\Scripts\Tappable.cs" />
      <Compile Include="Assets\Scripts\Weight.cs" />

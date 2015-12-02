@@ -6,7 +6,7 @@ public class KillingObject : MonoBehaviour
 
 	void Start ()
 	{
-		if (!gameObject.GetComponent<BoxCollider2D> ()) {
+		if (!gameObject.GetComponent<Collider2D> ()) {
 			gameObject.AddComponent<BoxCollider2D> ();
 		}
 	}

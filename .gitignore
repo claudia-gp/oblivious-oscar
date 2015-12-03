@@ -39,3 +39,4 @@ ehthumbs.db
 ObliviousOscar/ObliviousOscar.sln
 
 ObliviousOscar/Assembly-CSharp.csproj
+*.meta

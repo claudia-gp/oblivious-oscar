@@ -20,6 +20,8 @@ public class Draggable : MonoBehaviour
 		initialPosition = transform.position;
 
 		gesture = gameObject.AddComponent<TransformGesture> ();
+		gesture.Type = TouchScript.Gestures.Base.TransformGestureBase.TransformType.Translation;
+
 		gameObject.AddComponent<Transformer> ();
 	
 		rb = GetComponent<Rigidbody2D> ();

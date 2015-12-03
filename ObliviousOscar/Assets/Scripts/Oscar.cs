@@ -24,6 +24,7 @@ public class Oscar : MonoBehaviour
 	{
 		if (instanceCount == 0) {
 			Instance = this;
+			instanceCount++;
 		} else {
 			Destroy (gameObject);
 		}

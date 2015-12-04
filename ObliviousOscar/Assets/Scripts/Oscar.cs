@@ -9,7 +9,7 @@ public class Oscar : MonoBehaviour
 	
 	private static Vector3 previousPosition;
 
-	public static int instanceCount = 0;
+	private static int instanceCount = 0;
 
 	public static Oscar Instance {
 		get;

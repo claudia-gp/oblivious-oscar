@@ -10,12 +10,11 @@ public class KillingObject : MonoBehaviour
 			gameObject.AddComponent<BoxCollider2D> ();
 		}
 	}
-	
+
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.CompareTag (Oscar.Tag)) {
-			Camera.main.transform.parent = null;
-			Destroy (other.gameObject);
+			Oscar.Instance.Kill ();
 		}
 	}
 

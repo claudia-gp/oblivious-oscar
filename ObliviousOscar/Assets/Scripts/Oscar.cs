@@ -17,7 +17,7 @@ public class Oscar : MonoBehaviour
 	}
 
 	public static Vector3 DeltaPosition {
-		get{ return Instance ? Instance.transform.position - previousPosition : new Vector3 ();}
+		get{ return Instance ? Instance.transform.position - previousPosition : new Vector3 (); }
 	}
 
 	void Awake ()
@@ -38,5 +38,11 @@ public class Oscar : MonoBehaviour
 	void LateUpdate ()
 	{
 		previousPosition = transform.position;
+	}
+
+	public void Kill ()
+	{
+		Camera.main.transform.parent = null;
+		Destroy (gameObject);
 	}
 }

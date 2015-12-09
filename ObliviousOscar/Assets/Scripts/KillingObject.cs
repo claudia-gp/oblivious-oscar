@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class KillingObject : MonoBehaviour
 {
 
-	void Start ()
+	void Awake ()
 	{
-		if (!gameObject.GetComponent<Collider2D> ()) {
+		if (!GetComponent<Collider2D> ()) {
 			gameObject.AddComponent<BoxCollider2D> ();
 		}
 	}

@@ -1,33 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class Oscar : MonoBehaviour
+public class Oscar : Singleton<Oscar>
 {
 	public const string Tag = "Oscar";
 
+	public static readonly Vector3 InitialPosition = new Vector3 (-6.5f, 0f);
+
 	public static float Speed = 3f;
-	
-	private static Vector3 previousPosition;
 
-	private static int instanceCount = 0;
+	private Vector3 previousPosition;
 
-	public static Oscar Instance {
-		get;
-		private set;
+	public Vector3 DeltaPosition {
+		get{ return transform.position - previousPosition; }
 	}
 
-	public static Vector3 DeltaPosition {
-		get{ return Instance ? Instance.transform.position - previousPosition : new Vector3 (); }
-	}
-
-	void Awake ()
+	void Start ()
 	{
-		if (instanceCount == 0) {
-			Instance = this;
-			instanceCount++;
-		} else {
-			Destroy (gameObject);
-		}
+		transform.position = SavePointsManager.Instance.LatestPosition;
 	}
 
 	void Update ()
@@ -42,7 +33,6 @@ public class Oscar : MonoBehaviour
 
 	public void Kill ()
 	{
-		Camera.main.transform.parent = null;
-		Destroy (gameObject);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 	}
 }

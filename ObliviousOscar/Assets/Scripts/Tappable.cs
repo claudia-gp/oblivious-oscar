@@ -9,7 +9,7 @@ public abstract class Tappable : MonoBehaviour
 	protected Rigidbody2D rigidBody;
 	protected new Collider2D collider;
 
-	public void Start ()
+	protected void Start ()
 	{
 		//automatically adds a Collider2D if the object doesn't have it
 		collider = GetComponent<Collider2D> ();

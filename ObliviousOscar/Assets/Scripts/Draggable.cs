@@ -47,7 +47,7 @@ public class Draggable : MonoBehaviour
 	{
 		if (dragging) {
 
-			transform.position += Oscar.DeltaPosition;
+			transform.position += Oscar.Instance.DeltaPosition;
 
 			if (fixedY) {
 				transform.position = new Vector3 (transform.position.x, initialPosition.y);
@@ -57,13 +57,13 @@ public class Draggable : MonoBehaviour
 			}
 		}
 	}
-	
+
 	private void StartDrag (object sender, System.EventArgs e)
 	{
 		rb.gravityScale = 0f;
 		dragging = true;
 	}
-		
+
 	private void EndDrag (object sender, System.EventArgs e)
 	{
 		rb.gravityScale = initialGravity;

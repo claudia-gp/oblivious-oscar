@@ -8,5 +8,4 @@ public class TappableWeight : Tappable
 	{
 		base.rigidBody.isKinematic = false;
 	}
-
 }

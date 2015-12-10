@@ -10,12 +10,6 @@ public class Oscar : Singleton<Oscar>
 
 	public static float Speed = 3f;
 
-	private Vector3 previousPosition;
-
-	public Vector3 DeltaPosition {
-		get{ return transform.position - previousPosition; }
-	}
-
 	void Start ()
 	{
 		transform.position = SavePointsManager.Instance.LatestPosition;
@@ -24,11 +18,6 @@ public class Oscar : Singleton<Oscar>
 	void Update ()
 	{
 		transform.position += transform.right * Time.deltaTime * Speed;
-	}
-
-	void LateUpdate ()
-	{
-		previousPosition = transform.position;
 	}
 
 	public void Kill ()

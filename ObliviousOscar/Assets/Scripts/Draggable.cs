@@ -9,15 +9,17 @@ public class Draggable : MonoBehaviour
 	public bool fixedX = false;
 	public bool fixedY = false;
 	 
-	private Rigidbody2D rb;
-	private Vector3 initialPosition;
-	private TransformGesture gesture;
-	private float initialGravity = 1f;
-	private bool dragging = false;
+	Rigidbody2D rb;
+	Vector3 initialPosition;
+	TransformGesture gesture;
+	float initialGravity = 1f;
+	bool dragging = false;
+	Transform initialParent;
 
 	void Awake ()
 	{
 		initialPosition = transform.position;
+		initialParent = transform.parent;
 
 		gesture = gameObject.AddComponent<TransformGesture> ();
 		gesture.Type = TouchScript.Gestures.Base.TransformGestureBase.TransformType.Translation;
@@ -36,7 +38,7 @@ public class Draggable : MonoBehaviour
 		gesture.TransformCompleted += EndDrag;
 	}
 
-	private void OnDisable ()
+	void OnDisable ()
 	{
 		gesture.TransformStarted -= StartDrag;
 		gesture.TransformCompleted -= EndDrag;
@@ -46,9 +48,6 @@ public class Draggable : MonoBehaviour
 	void Update ()
 	{
 		if (dragging) {
-
-			transform.position += Oscar.Instance.DeltaPosition;
-
 			if (fixedY) {
 				transform.position = new Vector3 (transform.position.x, initialPosition.y);
 			}
@@ -58,15 +57,17 @@ public class Draggable : MonoBehaviour
 		}
 	}
 
-	private void StartDrag (object sender, System.EventArgs e)
+	void StartDrag (object sender, System.EventArgs e)
 	{
 		rb.gravityScale = 0f;
+		transform.SetParent (Camera.main.gameObject.transform);
 		dragging = true;
 	}
 
-	private void EndDrag (object sender, System.EventArgs e)
+	void EndDrag (object sender, System.EventArgs e)
 	{
 		rb.gravityScale = initialGravity;
+		transform.SetParent (initialParent);
 		dragging = false;
 	}
 	

@@ -14,8 +14,7 @@ public abstract class Tappable : MonoBehaviour
 		//automatically adds a Collider2D if the object doesn't have it
 		collider = GetComponent<Collider2D> ();
 		if (!(collider)) {
-			gameObject.AddComponent<BoxCollider2D> ();
-			collider = GetComponent<BoxCollider2D> ();
+			collider = gameObject.AddComponent<BoxCollider2D> ();
 		}
 
 		rigidBody = GetComponent<Rigidbody2D> ();

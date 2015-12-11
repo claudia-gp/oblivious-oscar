@@ -10,8 +10,6 @@ public class GroundGenerator : MonoBehaviour
 	public Transform groundContainer;
 	public GameObject groundPrefab;
 
-	static int c = 0;
-
 	void Update ()
 	{
 		if (generateGround) {

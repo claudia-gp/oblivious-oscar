@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+
+#if UNITY_5_3
 using UnityEngine.SceneManagement;
+#endif
 
 public class Oscar : Singleton<Oscar>
 {

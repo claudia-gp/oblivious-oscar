@@ -7,11 +7,12 @@ using UnityEditor;
 public class GroundGenerator : MonoBehaviour
 {
 	public bool generateGround = false;
-	public Transform groundContainer;
 	public GameObject groundPrefab;
 
 	void Update ()
 	{
+		Transform groundContainer = transform;
+
 		if (generateGround) {
 			generateGround = false;
 
@@ -23,7 +24,6 @@ public class GroundGenerator : MonoBehaviour
 				}
 			}
 
-			Debug.Log ("Rightmost x : " + rightMost.transform.position.x);
 			var generated = PrefabUtility.InstantiatePrefab (groundPrefab) as GameObject;
 			generated.transform.SetParent (groundContainer);
 			generated.transform.position = new Vector3 (rightMost.position.x + Offset (), groundContainer.position.y);

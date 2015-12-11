@@ -11,6 +11,10 @@ public class GroundGenerator : MonoBehaviour
 
 	void Update ()
 	{
+		if (EditorApplication.isPlaying) {
+			return;
+		}
+
 		Transform groundContainer = transform;
 
 		if (generateGround) {

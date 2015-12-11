@@ -6,9 +6,8 @@ public class SavePointsManager : PersistentSingleton<SavePointsManager>
 
 	public Vector3 LatestPosition {	get; set; }
 
-	protected new void Awake ()
+	void Start ()
 	{
-		base.Awake ();
-		LatestPosition = Oscar.InitialPosition;
+		LatestPosition = Oscar.Instance.transform.position;
 	}
 }

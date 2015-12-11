@@ -6,13 +6,17 @@ public class Oscar : Singleton<Oscar>
 {
 	public const string Tag = "Oscar";
 
-	public static readonly Vector3 InitialPosition = new Vector3 (-6.5f, 0f);
-
 	public static float Speed = 3f;
+
+	static bool firstInstance = true;
 
 	void Start ()
 	{
-		transform.position = SavePointsManager.Instance.LatestPosition;
+		if (firstInstance) {
+			firstInstance = false;
+		} else {
+			transform.position = SavePointsManager.Instance.LatestPosition;
+		}
 	}
 
 	void Update ()

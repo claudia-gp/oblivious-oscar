@@ -26,6 +26,10 @@ public class Oscar : Singleton<Oscar>
 
 	public void Kill ()
 	{
+		#if UNITY_5_3
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		#else
+		Application.LoadLevel (Application.loadedLevel);
+		#endif
 	}
 }

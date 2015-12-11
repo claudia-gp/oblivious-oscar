@@ -14,7 +14,6 @@ public class GroundGenerator : MonoBehaviour
 
 	void Update ()
 	{
-		Debug.Log ("I was updated " + c++);
 		if (generateGround) {
 			generateGround = false;
 

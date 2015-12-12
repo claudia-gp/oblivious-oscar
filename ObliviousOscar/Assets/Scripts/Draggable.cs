@@ -6,14 +6,14 @@ using TouchScript.Behaviors;
 public class Draggable : MonoBehaviour
 {
 
-	public bool fixedX = false;
-	public bool fixedY = false;
+	public bool fixedX;
+	public bool fixedY;
 	 
 	Rigidbody2D rb;
 	Vector3 initialPosition;
 	TransformGesture gesture;
 	float initialGravity = 1f;
-	bool dragging = false;
+	bool dragging;
 	Transform initialParent;
 
 	void Awake ()
@@ -59,14 +59,18 @@ public class Draggable : MonoBehaviour
 
 	void StartDrag (object sender, System.EventArgs e)
 	{
-		rb.gravityScale = 0f;
+		if (rb) {
+			rb.gravityScale = 0f;
+		}
 		transform.SetParent (Camera.main.gameObject.transform);
 		dragging = true;
 	}
 
 	void EndDrag (object sender, System.EventArgs e)
 	{
-		rb.gravityScale = initialGravity;
+		if (rb) {
+			rb.gravityScale = initialGravity;
+		}
 		transform.SetParent (initialParent);
 		dragging = false;
 	}

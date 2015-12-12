@@ -18,9 +18,6 @@ public class Draggable : MonoBehaviour
 
 	void Awake ()
 	{
-		initialPosition = transform.position;
-		initialParent = transform.parent;
-
 		gesture = gameObject.AddComponent<TransformGesture> ();
 		gesture.Type = TouchScript.Gestures.Base.TransformGestureBase.TransformType.Translation;
 
@@ -30,6 +27,12 @@ public class Draggable : MonoBehaviour
 		if (rb) {
 			initialGravity = rb.gravityScale;
 		}
+	}
+
+	void Start ()
+	{
+		initialPosition = transform.position;
+		initialParent = transform.parent;
 	}
 
 	void OnEnable ()

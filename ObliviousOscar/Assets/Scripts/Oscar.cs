@@ -5,7 +5,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 #endif
 
-public class Oscar : Singleton<Oscar>
+public class Oscar : UnitySingleton<Oscar>
 {
 	public const string Tag = "Oscar";
 

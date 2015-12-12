@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PersistentSingleton<T> : Singleton<T> where T : MonoBehaviour
+public class PersistentSingleton<T> : UnitySingleton<T> where T : MonoBehaviour
 {
 	protected new void Awake ()
 	{

@@ -45,7 +45,7 @@ public class Draggable : MonoBehaviour
 	}
 
 
-	void Update ()
+	void FixedUpdate ()
 	{
 		if (dragging) {
 			if (fixedY) {

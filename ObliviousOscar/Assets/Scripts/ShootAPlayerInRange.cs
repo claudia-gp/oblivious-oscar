@@ -7,10 +7,11 @@ public class ShootAPlayerInRange : MonoBehaviour {
 	public float waitBetweeenProjectiles;
 	private float shotCounter;
 	public float projectileSpeed;
-	public bool isShooting = true;
+	private bool isShooting;
 
 	void Start () {
 		shotCounter = 0;
+		isShooting = true;
 	}
 	
 	void Update () {

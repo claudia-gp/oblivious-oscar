@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TappableSwitch : Tappable
+public class TappableSwitch : MonoBehaviour
 {
 
 	public GameObject doorToOpen;
@@ -10,7 +10,7 @@ public class TappableSwitch : Tappable
 
 	public Sprite tappedSwitchSprite;
 
-	public override void OnTap ()
+	public void OnClick ()
 	{
 		GetComponent<SpriteRenderer> ().sprite = tappedSwitchSprite;
 		doorToOpen.GetComponent<SpriteRenderer> ().sprite = openDoorSprite;

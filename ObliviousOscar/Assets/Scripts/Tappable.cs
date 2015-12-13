@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using TouchScript.Gestures;
 
 
 public abstract class Tappable : MonoBehaviour
@@ -18,11 +16,8 @@ public abstract class Tappable : MonoBehaviour
 		}
 
 		rigidBody = GetComponent<Rigidbody2D> ();
-
-		TapGesture tapGesture = gameObject.AddComponent<TapGesture> ();
-		tapGesture.UseSendMessage = true;
 	}
 
-	abstract public void OnTap ();
+	abstract public void OnClick ();
 	
 }

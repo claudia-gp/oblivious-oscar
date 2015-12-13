@@ -1,6 +1,9 @@
 {
   "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
   "$values": [
-    "Level1"
+    "00_SimpleScene",
+    "01_SlingScene",
+    "02_BridgeScene",
+    "03_CutterScene"
   ]
 }

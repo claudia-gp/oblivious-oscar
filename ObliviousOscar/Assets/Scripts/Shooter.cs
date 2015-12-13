@@ -21,7 +21,7 @@ public class Shooter : MonoBehaviour {
 	{
 		while (true) {
 			yield return new WaitForSeconds (delay);
-			GameObject clone = (GameObject)Instantiate (projectile, transform.position, Quaternion.identity);
+			GameObject clone = (GameObject)Instantiate (projectile, new Vector3(transform.position.x, transform.position.y+1), Quaternion.identity);
 			clone.GetComponent<Rigidbody2D>().velocity = -transform.right * speedFactor;
 		}
 	}

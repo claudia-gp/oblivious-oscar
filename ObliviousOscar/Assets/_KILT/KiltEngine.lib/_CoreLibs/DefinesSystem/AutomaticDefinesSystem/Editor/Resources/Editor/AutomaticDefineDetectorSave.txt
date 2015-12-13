@@ -1,0 +1,28 @@
+{
+  "$type": "AOTDictionary`2[[System.String, mscorlib],[System.String, mscorlib]], Assembly-CSharp",
+  "Buffer": {
+    "$type": "AOTPair`2[[System.String, mscorlib],[System.String, mscorlib]][], Assembly-CSharp",
+    "$values": [
+      {
+        "$type": "AOTPair`2[[System.String, mscorlib],[System.String, mscorlib]], Assembly-CSharp",
+        "Key": "Ferr2D_Path.cs",
+        "Value": "FERR_DLL"
+      },
+      {
+        "$type": "AOTPair`2[[System.String, mscorlib],[System.String, mscorlib]], Assembly-CSharp",
+        "Key": "FeedbackLabel.cs",
+        "Value": "NGUI_KILT_DLL"
+      },
+      {
+        "$type": "AOTPair`2[[System.String, mscorlib],[System.String, mscorlib]], Assembly-CSharp",
+        "Key": "UIPanelTool.cs",
+        "Value": "NGUI_DLL"
+      },
+      {
+        "$type": "AOTPair`2[[System.String, mscorlib],[System.String, mscorlib]], Assembly-CSharp",
+        "Key": "ShopHelper.cs",
+        "Value": "KILT_SHOPHELPER"
+      }
+    ]
+  }
+}

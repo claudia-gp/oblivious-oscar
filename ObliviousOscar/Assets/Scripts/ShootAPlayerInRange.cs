@@ -17,7 +17,7 @@ public class ShootAPlayerInRange : MonoBehaviour {
 	void Update () {
 		shotCounter -= Time.deltaTime;
 		if (shotCounter < 0 && isShooting) {
-			GameObject clone = (GameObject)Instantiate (projectile, new Vector3(transform.position.x, transform.position.y+0.5f), Quaternion.identity);
+			GameObject clone = (GameObject)Instantiate (projectile, new Vector3(transform.position.x - 2, transform.position.y+0.5f), Quaternion.identity);
 			clone.GetComponent<Rigidbody2D>().velocity = -transform.right*projectileSpeed;
 			shotCounter = waitBetweeenProjectiles;
 		}

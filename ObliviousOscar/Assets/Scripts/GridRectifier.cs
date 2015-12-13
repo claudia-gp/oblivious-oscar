@@ -13,10 +13,24 @@ public class GridRectifier : MonoBehaviour
 		}
 
 		foreach (var t in GetComponentsInChildren<Transform>()) {
-			t.position = new Vector3 (Mathf.Round (t.position.x), Mathf.Round (t.position.y));
+			if (hasNotInGridParent (t) && !t.GetComponent<NotInTheGrid> ()) {
+				t.position = new Vector3 (Mathf.Round (t.position.x), Mathf.Round (t.position.y));
+			}
 		}
 	}
+	
+	bool hasNotInGridParent (Transform t)
+	{
+		if (t.parent == null) {
+			return true;
+		}
+		if (t.parent.GetComponent<NotInTheGrid> ()) {
+			return false;
+		}
+		return hasNotInGridParent (t.parent);
+	}
 }
+
 
 #else
 

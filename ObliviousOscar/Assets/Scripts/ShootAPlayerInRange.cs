@@ -7,7 +7,7 @@ public class ShootAPlayerInRange : MonoBehaviour {
 	public float waitBetweeenProjectiles;
 	private float shotCounter;
 	public float projectileSpeed;
-	private bool isShooting;
+	public bool isShooting;
 
 	void Start () {
 		shotCounter = 0;
@@ -24,10 +24,5 @@ public class ShootAPlayerInRange : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.CompareTag(Oscar.Tag)) {
-			gameObject.GetComponent<ShootAPlayerInRange>().isShooting = false;
-		}
-		
-	}
+
 }

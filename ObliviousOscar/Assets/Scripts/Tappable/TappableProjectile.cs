@@ -3,8 +3,9 @@ using System.Collections;
 
 public class TappableProjectile : Tappable {
 
+	public GameObject proj;
 	public override void OnClick ()
 	{
-		Destroy (transform.parent.gameObject);
+		Destroy (proj);
 	}
 }

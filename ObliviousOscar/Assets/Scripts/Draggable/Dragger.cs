@@ -53,8 +53,8 @@ public class Dragger : GlobalPressBehaviour
 			}
 			
 			if (d.limitY != float.PositiveInfinity) {
-				if (newPosition.y > d.initialPosition.y + d.limitX) {
-					newPosition.y = d.initialPosition.y + d.limitX;
+				if (newPosition.y > d.initialPosition.y + d.limitY) {
+					newPosition.y = d.initialPosition.y + d.limitY;
 				}
 				if (newPosition.y < d.initialPosition.y - d.limitY) {
 					newPosition.y = d.initialPosition.y - d.limitY;

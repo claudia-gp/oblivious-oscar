@@ -1,11 +1,21 @@
 using UnityEngine;
 using System.Collections;
 
-public class TappableProjectile : Tappable {
+public class TappableProjectile : Tappable
+{
 
-	public GameObject proj;
 	public override void OnClick ()
 	{
-		Destroy (proj);
+		Destroy (gameObject);
+	}
+
+	public void OnPress ()
+	{
+		OnClick ();
+	}
+
+	public void OnDrag ()
+	{
+		OnClick ();
 	}
 }

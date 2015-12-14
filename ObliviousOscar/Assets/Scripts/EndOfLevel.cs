@@ -15,8 +15,7 @@ public class EndOfLevel : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D oscar){
 		if(oscar.tag.Equals(Oscar.Tag)){
-			Destroy(Oscar.Instance.gameObject.GetComponent<Oscar>());
-			Destroy(Oscar.Instance.gameObject.GetComponent<Animator>());
+			Oscar.Instance.EndLevel();
 
 		}
 	}

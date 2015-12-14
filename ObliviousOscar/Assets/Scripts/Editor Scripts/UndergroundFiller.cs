@@ -12,7 +12,7 @@ public class UndergroundFiller : MonoBehaviour
 			createBlocks = false;
 			GameObject obj1 = gameObject;
 			GameObject obj2 = other;
-			GameObject newObj;
+			GameObject newObj = null;
 
 			for (float i = obj1.transform.position.x; i < obj2.transform.position.x + 1; i++) {
 				for (float j = obj1.transform.position.y; j < obj2.transform.position.y + 1; j++) {

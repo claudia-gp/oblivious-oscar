@@ -4,6 +4,7 @@ using System.Collections;
 public class SignTrigger : MonoBehaviour {
 
 	public GameObject shooter;
+	public GameObject dragger;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,8 @@ public class SignTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D oscar){
 		shooter.SetActive (true);
-
+		dragger.SetActive (false);
 	}
+
+
 }

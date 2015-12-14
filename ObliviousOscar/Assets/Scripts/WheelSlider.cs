@@ -5,11 +5,14 @@ public class WheelSlider : MonoBehaviour {
 
 	public GameObject slider;
 	public float speed;
+	public float maxY;
+	public float rotationSpeed;
 		
 	IEnumerator Start()
 	{
+
 		var pointA = transform.position;
-		var pointB = new Vector3 (transform.position.x, slider.GetComponent<SpriteRenderer> ().bounds.extents.y, transform.position.z);
+		var pointB = new Vector3 (transform.position.x, maxY, transform.position.z);
 	
 		while (true) {
 			yield return StartCoroutine(MoveObject(transform, pointA, pointB));
@@ -26,4 +29,5 @@ public class WheelSlider : MonoBehaviour {
 			yield return null; 
 		}
 	}
+
 }

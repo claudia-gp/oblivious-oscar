@@ -15,6 +15,7 @@ public class Oscar : UnitySingleton<Oscar>
 
 	void Start ()
 	{
+		tag = Tag;
 		if (firstInstance) {
 			firstInstance = false;
 		} else {

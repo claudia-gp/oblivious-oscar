@@ -16,8 +16,7 @@ public class SavePoint : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.CompareTag (Oscar.Tag)) {
-			SavePointsManager.Instance.LatestPosition = gameObject.transform.position;
+			SavePointsManager.Instance.LatestPosition = Oscar.Instance.transform.position;
 		}
-
 	}
 }

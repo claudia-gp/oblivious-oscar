@@ -6,8 +6,6 @@ using System.Collections.Generic;
 //If this class is active, all objects in scene can be dragged by mouse click
 public class Dragger : GlobalPressBehaviour
 {
-	#region Singleton
-	
 	private static Dragger m_instance = null;
 	
 	public static Dragger Instance {
@@ -22,44 +20,48 @@ public class Dragger : GlobalPressBehaviour
 			m_instance = value;
 		}
 	}
-	
-	#endregion
-	
-	#region Unity Functions
-	
+
 	protected virtual void OnLevelLoaded ()
 	{
-		if (Dragger.Instance != null && Dragger.Instance != this)
+		if (Dragger.Instance != null && Dragger.Instance != this) {
 			KiltUtils.Destroy (Dragger.Instance.gameObject);
+		}
 		Dragger.Instance = this;
 	}
 	
-	protected virtual void Update ()
-	{
-		Move ();
-	}
-	
-	#endregion
-	
-	#region Helper Functions
-	
-	protected virtual void Move ()
+	void Update ()
 	{
 		if (Pressed && ObjectPressed != null && ObjectPressed.tag == Draggable.Tag) {
 			Draggable d = ObjectPressed.GetComponent<Draggable> ();
-
-			Vector3 v_oldPos = ObjectPressed.transform.position;
+			
+			Vector3 newPosition = ObjectPressed.transform.position;
 			Vector2 v_worldMousePosition = GetWorldMousePosition (ObjectPressed);
 			if (!d.fixedX) {
-				v_oldPos.x = v_worldMousePosition.x + DeltaClick.x;
+				newPosition.x = v_worldMousePosition.x + DeltaClick.x;
 			}
 			if (!d.fixedY) {
-				v_oldPos.y = v_worldMousePosition.y + DeltaClick.y;
+				newPosition.y = v_worldMousePosition.y + DeltaClick.y;
+			}
+			
+			if (d.limitX != float.PositiveInfinity) {
+				if (newPosition.x > d.initialPosition.x + d.limitX) {
+					newPosition.x = d.initialPosition.x + d.limitX;
+				}
+				if (newPosition.x < d.initialPosition.x - d.limitX) {
+					newPosition.x = d.initialPosition.x - d.limitX;
+				}
+			}
+			
+			if (d.limitY != float.PositiveInfinity) {
+				if (newPosition.y > d.initialPosition.y + d.limitX) {
+					newPosition.y = d.initialPosition.y + d.limitX;
+				}
+				if (newPosition.y < d.initialPosition.y - d.limitY) {
+					newPosition.y = d.initialPosition.y - d.limitY;
+				}
 			}
 
-			ObjectPressed.transform.position = v_oldPos;
+			ObjectPressed.transform.position = newPosition;
 		}
 	}
-	
-	#endregion
 }

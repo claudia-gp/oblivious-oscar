@@ -11,9 +11,8 @@ public class NextScene : ChangeSceneInteraction
 		}
 	}
 
-	public override void Send ()
-	{
-		base.Send ();
-		SavePointsManager.Instance.OnEnable ();
-	}
+//	public override void Send ()
+//	{
+//		base.Send ();
+//	}
 }

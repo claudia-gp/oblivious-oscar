@@ -1,25 +1,44 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Oscar : UnitySingleton<Oscar>
 {
 	public const string Tag = "Oscar";
 	
-	public static float Speed = 3f;
+	public const float Speed = 3f;
 
 	public Sprite finalSprite;
 
 	public Sprite startSprite;
-	
-	static bool firstInstance = true;
 
 	public bool IsRunning{ get; set; }
 
-	void Start ()
+	//TODO try to make Oscar persistent
+	static Hashtable latestPositions = new Hashtable ();
+	static Hashtable initialPositions = new Hashtable ();
+
+	protected new void Awake ()
 	{
+		base.Awake ();
 		IsRunning = true;
 		tag = Tag;
 
-		transform.position = SavePointsManager.Instance.LatestPosition;
+		if (latestPositions.ContainsKey (Application.loadedLevel)) {
+			transform.position = (Vector3)latestPositions [Application.loadedLevel];
+		} else {
+			initialPositions [Application.loadedLevel] = transform.position;
+			latestPositions [Application.loadedLevel] = transform.position;
+		}
+	}
+
+	public void UpdateLatestPosition ()
+	{
+		latestPositions [Application.loadedLevel] = transform.position;
+	}
+
+	public void ResetToInitialPosition ()
+	{
+		latestPositions [Application.loadedLevel] = initialPositions [Application.loadedLevel];
 	}
 
 	void Update ()

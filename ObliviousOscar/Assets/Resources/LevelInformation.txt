@@ -2,6 +2,7 @@
   "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
   "$values": [
     "Tutorial",
-    "Level1"
+    "Level1",
+    "Level3"
   ]
 }

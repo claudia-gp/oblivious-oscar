@@ -8,6 +8,8 @@ public class Oscar : UnitySingleton<Oscar>
 
 	public Sprite finalSprite;
 
+	public Sprite startSprite;
+
 	static bool firstInstance = true;
 
 	public bool IsRunning{ get; set; }
@@ -45,6 +47,8 @@ public class Oscar : UnitySingleton<Oscar>
 		GetComponent<SpriteRenderer> ().sprite = finalSprite;
 		IsRunning = false;
 	}
+
+
 
 	void OnCollisionEnter2D (Collision2D coll)
 	{

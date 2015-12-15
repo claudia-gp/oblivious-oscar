@@ -5,14 +5,9 @@ public class NextScene : ChangeSceneInteraction
 {
 	public override string StageToLoadOnClick {
 		get {
-			return SceneManager.GetLevelNameByIndex (Application.loadedLevel + 1);
+			return SceneManager.GetLevelNameByIndex ((Application.loadedLevel + 1) % Application.levelCount);
 		}
 		set {
 		}
 	}
-
-//	public override void Send ()
-//	{
-//		base.Send ();
-//	}
 }

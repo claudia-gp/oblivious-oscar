@@ -10,10 +10,11 @@ public class Oscar : UnitySingleton<Oscar>
 
 	static bool firstInstance = true;
 
-	bool isRunning = true;
+	public bool IsRunning{ get; set; }
 
 	void Start ()
 	{
+		IsRunning = true;
 		tag = Tag;
 		if (firstInstance) {
 			firstInstance = false;
@@ -24,7 +25,7 @@ public class Oscar : UnitySingleton<Oscar>
 
 	void Update ()
 	{
-		if (isRunning) {
+		if (IsRunning) {
 			transform.position += transform.right * Time.deltaTime * Speed;
 		}
 	}
@@ -42,20 +43,20 @@ public class Oscar : UnitySingleton<Oscar>
 	{
 		GetComponent<Animator> ().enabled = false;
 		GetComponent<SpriteRenderer> ().sprite = finalSprite;
-		isRunning = false;
+		IsRunning = false;
 	}
 
 	void OnCollisionEnter2D (Collision2D coll)
 	{
 		if (coll.gameObject.GetComponent<StopsOscar> ()) {
-			isRunning = false;
+			IsRunning = false;
 		}
 	}
 
 	void OnCollisionExit2D (Collision2D coll)
 	{
 		if (coll.gameObject.GetComponent<StopsOscar> ()) {
-			isRunning = true;
+			IsRunning = true;
 		}
 	}
 }

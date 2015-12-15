@@ -5,9 +5,7 @@ public class TappableSwitch : MonoBehaviour
 {
 
 	public GameObject doorToOpen;
-
 	public Sprite openDoorSprite;
-
 	public Sprite tappedSwitchSprite;
 
 	public void OnClick ()
@@ -15,5 +13,6 @@ public class TappableSwitch : MonoBehaviour
 		GetComponent<SpriteRenderer> ().sprite = tappedSwitchSprite;
 		doorToOpen.GetComponent<SpriteRenderer> ().sprite = openDoorSprite;
 		Destroy (doorToOpen.GetComponent<BoxCollider2D> ());
+		Oscar.Instance.IsRunning = true;
 	}
 }

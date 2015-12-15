@@ -7,22 +7,25 @@ public class Oscar : UnitySingleton<Oscar>
 	public static float Speed = 3f;
 
 	public Sprite finalSprite;
+<<<<<<< HEAD
+	
+=======
+
+	public Sprite startSprite;
 
 	public Sprite startSprite;
 
 	static bool firstInstance = true;
 
+>>>>>>> origin/master
 	public bool IsRunning{ get; set; }
 
 	void Start ()
 	{
 		IsRunning = true;
 		tag = Tag;
-		if (firstInstance) {
-			firstInstance = false;
-		} else {
-			transform.position = SavePointsManager.Instance.LatestPosition;
-		}
+
+		transform.position = SavePointsManager.Instance.LatestPosition;
 	}
 
 	void Update ()

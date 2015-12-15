@@ -14,5 +14,10 @@ public class TappableSwitch : MonoBehaviour
 		doorToOpen.GetComponent<SpriteRenderer> ().sprite = openDoorSprite;
 		Destroy (doorToOpen.GetComponent<BoxCollider2D> ());
 		Oscar.Instance.IsRunning = true;
+
+		//TODO to change: orrible workaroung
+		Oscar.Instance.gameObject.GetComponent<Animator> ().enabled = true;
+		Camera.main.transform.parent = Oscar.Instance.transform;
+
 	}
 }

@@ -15,6 +15,13 @@ public class Draggable : MonoBehaviour
 
 	void Awake ()
 	{
+
+#if UNITY_EDITOR
+		if (GetComponent<Rigidbody2D> () == null) {
+			Debug.LogWarning ("The draggable objects must have a Rigidbody2D");
+		}
+#endif
+
 		initialPosition = transform.position;
 		tag = Tag;
 	}

@@ -61,7 +61,7 @@ public class Dragger : GlobalPressBehaviour
 				}
 			}
 
-			ObjectPressed.transform.position = newPosition;
+			ObjectPressed.GetComponent<Rigidbody2D> ().MovePosition (newPosition);
 		}
 	}
 }

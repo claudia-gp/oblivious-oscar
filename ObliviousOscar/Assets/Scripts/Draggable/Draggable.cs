@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Rigidbody2D))]
 public class Draggable : MonoBehaviour
 {
 	public const string Tag = "Draggable";
@@ -13,16 +14,13 @@ public class Draggable : MonoBehaviour
 
 	public Vector3 initialPosition;
 
+	public Rigidbody2D Rigidbody2D{ get; private set; }
+
 	void Awake ()
 	{
-
-#if UNITY_EDITOR
-		if (GetComponent<Rigidbody2D> () == null) {
-			Debug.LogWarning ("The draggable objects must have a Rigidbody2D");
-		}
-#endif
-
 		initialPosition = transform.position;
 		tag = Tag;
+		Rigidbody2D = GetComponent<Rigidbody2D> ();
+		Rigidbody2D.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 	}
 }

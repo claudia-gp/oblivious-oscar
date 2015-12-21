@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-//If this class is active, all objects in scene can be dragged by mouse click
+//If this class is active, all objects with tag "Draggable" in scene can be dragged by mouse click
 public class Dragger : GlobalPressBehaviour
 {
 	private static Dragger m_instance = null;
@@ -61,7 +61,7 @@ public class Dragger : GlobalPressBehaviour
 				}
 			}
 
-			ObjectPressed.GetComponent<Rigidbody2D> ().MovePosition (newPosition);
+			d.Rigidbody2D.MovePosition (newPosition);
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Oscar : UnitySingleton<Oscar>
@@ -51,7 +52,7 @@ public class Oscar : UnitySingleton<Oscar>
 	public void Kill ()
 	{
 		#if UNITY_5_3
-		UnityEngine.SceneManagement.SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 		#else
 		Application.LoadLevel (Application.loadedLevel);
 		#endif

@@ -47,22 +47,22 @@ public class Oscar : UnitySingleton<Oscar>
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 
-		if (latestPositions.ContainsKey (Application.loadedLevel)) {
-			transform.position = (Vector3)latestPositions [Application.loadedLevel];
+		if (latestPositions.ContainsKey (LevelManager.CurrentIndex)) {
+			transform.position = (Vector3)latestPositions [LevelManager.CurrentIndex];
 		} else {
-			initialPositions [Application.loadedLevel] = transform.position;
-			latestPositions [Application.loadedLevel] = transform.position;
+			initialPositions [LevelManager.CurrentIndex] = transform.position;
+			latestPositions [LevelManager.CurrentIndex] = transform.position;
 		}
 	}
 
 	public void UpdateLatestPosition ()
 	{
-		latestPositions [Application.loadedLevel] = transform.position;
+		latestPositions [LevelManager.CurrentIndex] = transform.position;
 	}
 
 	public void ResetToInitialPosition ()
 	{
-		latestPositions [Application.loadedLevel] = initialPositions [Application.loadedLevel];
+		latestPositions [LevelManager.CurrentIndex] = initialPositions [LevelManager.CurrentIndex];
 	}
 
 	void Update ()

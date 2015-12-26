@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class StopOscarOnTutorial : Tappable
 {
 
 	public override void OnClick ()
 	{
-		Oscar.Instance.gameObject.GetComponent<Animator> ().enabled = true;
-		Oscar.Instance.gameObject.GetComponent<SpriteRenderer> ().sprite = Oscar.Instance.startSprite;
-		Oscar.Instance.IsRunning = true;
-		Camera.main.transform.parent = Oscar.Instance.transform;
+		Oscar oscar = Oscar.Instance;
+		oscar.IsAnimationEnabled = true;
+		oscar.IsRunning = true;
+		oscar.gameObject.GetComponent<SpriteRenderer> ().sprite = oscar.startSprite;
+		Camera.main.transform.parent = oscar.transform;
 	}
 
 	public void OnDrag ()
@@ -20,7 +20,7 @@ public class StopOscarOnTutorial : Tappable
 	void OnTriggerEnter2D (Collider2D oscar)
 	{
 		if (oscar.tag.Equals (Oscar.Tag)) {
-			Oscar.Instance.EndLevel ();
+			OscarController.Instance.StopOscarAndSayHi ();
 		}
 	}
 	

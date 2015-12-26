@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Oscar : UnitySingleton<Oscar>
@@ -14,15 +13,39 @@ public class Oscar : UnitySingleton<Oscar>
 
 	public bool IsRunning{ get; set; }
 
+	public bool IsAnimationEnabled {
+		get {
+			return animator.enabled;
+		}
+		set {
+			animator.enabled = value;
+		}
+	}
+
+	public Sprite Sprite { 
+		get {
+			return spriteRenderer.sprite;
+		}
+		set {
+			spriteRenderer.sprite = value;
+		}
+	}
+
 	//TODO try to make Oscar persistent
 	static Hashtable latestPositions = new Hashtable ();
 	static Hashtable initialPositions = new Hashtable ();
+
+	Animator animator;
+	SpriteRenderer spriteRenderer;
 
 	protected new void Awake ()
 	{
 		base.Awake ();
 		IsRunning = true;
 		tag = Tag;
+
+		animator = GetComponent<Animator> ();
+		spriteRenderer = GetComponent<SpriteRenderer> ();
 
 		if (latestPositions.ContainsKey (Application.loadedLevel)) {
 			transform.position = (Vector3)latestPositions [Application.loadedLevel];
@@ -49,24 +72,6 @@ public class Oscar : UnitySingleton<Oscar>
 		}
 	}
 
-	public void Kill ()
-	{
-		#if UNITY_5_3
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
-		#else
-		Application.LoadLevel (Application.loadedLevel);
-		#endif
-	}
-
-	public void EndLevel ()
-	{
-		GetComponent<Animator> ().enabled = false;
-		GetComponent<SpriteRenderer> ().sprite = finalSprite;
-		IsRunning = false;
-	}
-
-
-
 	void OnCollisionEnter2D (Collision2D coll)
 	{
 		if (coll.gameObject.GetComponent<StopsOscar> ()) {
@@ -80,4 +85,5 @@ public class Oscar : UnitySingleton<Oscar>
 			IsRunning = true;
 		}
 	}
+
 }

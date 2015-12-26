@@ -3,20 +3,25 @@ using System.Collections;
 
 public class TappableMagnet : Tappable
 {
-	private bool isActivated = false;
-
 	public bool tappableTwice;
 	public float initDistance;
+
+	bool isActivated = false;
+	DistanceJoint2D dj;
+
+	void Awake ()
+	{
+		dj = GetComponent<DistanceJoint2D> ();
+	}
 
 	public override void OnClick ()
 	{
 		if (isActivated == false) {
-			GetComponent<DistanceJoint2D> ().distance = 0;
+			dj.distance = 0;
 			isActivated = true;
-		} else { if(tappableTwice){
-			GetComponent<DistanceJoint2D> ().distance = initDistance;
+		} else if (tappableTwice) {
+			dj.distance = initDistance;
 			isActivated = false;
-			}
 		}
 	}
 	

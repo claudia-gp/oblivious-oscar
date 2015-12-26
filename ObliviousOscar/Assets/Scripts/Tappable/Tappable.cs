@@ -19,5 +19,10 @@ public abstract class Tappable : MonoBehaviour
 	}
 
 	abstract public void OnClick ();
+
+	public void OnPress ()
+	{
+		OnClick ();
+	}
 	
 }

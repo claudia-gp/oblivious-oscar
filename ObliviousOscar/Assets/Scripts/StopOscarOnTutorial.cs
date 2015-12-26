@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StopOscarOnTutorial : Tappable {
+public class StopOscarOnTutorial : Tappable
+{
 
 	public override void OnClick ()
 	{
@@ -10,12 +11,12 @@ public class StopOscarOnTutorial : Tappable {
 		Oscar.Instance.IsRunning = true;
 		Camera.main.transform.parent = Oscar.Instance.transform;
 	}
-	
+
 	public void OnPress ()
 	{
 		OnClick ();
 	}
-	
+
 	public void OnDrag ()
 	{
 		OnClick ();

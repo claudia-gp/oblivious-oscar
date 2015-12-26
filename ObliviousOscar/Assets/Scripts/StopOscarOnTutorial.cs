@@ -12,11 +12,6 @@ public class StopOscarOnTutorial : Tappable
 		Camera.main.transform.parent = Oscar.Instance.transform;
 	}
 
-	public void OnPress ()
-	{
-		OnClick ();
-	}
-
 	public void OnDrag ()
 	{
 		OnClick ();

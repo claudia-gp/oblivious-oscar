@@ -8,7 +8,7 @@ public class StopOscarOnTutorial : Tappable
 		Oscar oscar = Oscar.Instance;
 		oscar.IsAnimationEnabled = true;
 		oscar.IsRunning = true;
-		oscar.gameObject.GetComponent<SpriteRenderer> ().sprite = oscar.startSprite;
+		oscar.Sprite = oscar.startSprite;
 		Camera.main.transform.parent = oscar.transform;
 	}
 

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Oscar : UnitySingleton<Oscar>
 {
@@ -31,38 +30,34 @@ public class Oscar : UnitySingleton<Oscar>
 		}
 	}
 
-	//TODO try to make Oscar persistent
-	static Hashtable latestPositions = new Hashtable ();
-	static Hashtable initialPositions = new Hashtable ();
-
 	Animator animator;
 	SpriteRenderer spriteRenderer;
 
 	protected new void Awake ()
 	{
 		base.Awake ();
+
 		IsRunning = true;
-		tag = Tag;
 
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 
-		if (latestPositions.ContainsKey (LevelManager.CurrentIndex)) {
-			transform.position = (Vector3)latestPositions [LevelManager.CurrentIndex];
+		if (SavePointsManager.HasLatestPosition) {
+			transform.position = SavePointsManager.LatestPosition;
 		} else {
-			initialPositions [LevelManager.CurrentIndex] = transform.position;
-			latestPositions [LevelManager.CurrentIndex] = transform.position;
+			SavePointsManager.InitialPosition = transform.position;
+			SavePointsManager.LatestPosition = transform.position;
 		}
 	}
 
 	public void UpdateLatestPosition ()
 	{
-		latestPositions [LevelManager.CurrentIndex] = transform.position;
+		SavePointsManager.LatestPosition = transform.position;
 	}
 
 	public void ResetToInitialPosition ()
 	{
-		latestPositions [LevelManager.CurrentIndex] = initialPositions [LevelManager.CurrentIndex];
+		SavePointsManager.LatestPosition = SavePointsManager.InitialPosition;
 	}
 
 	void Update ()

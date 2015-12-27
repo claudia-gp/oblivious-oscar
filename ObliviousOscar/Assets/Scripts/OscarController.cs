@@ -1,5 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-
+﻿
 public class OscarController
 {
 	private static OscarController instance;

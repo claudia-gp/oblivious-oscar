@@ -32,13 +32,14 @@ public class Oscar : UnitySingleton<Oscar>
 
 	Animator animator;
 	SpriteRenderer spriteRenderer;
+	public Vector3 direction;
 
 	protected new void Awake ()
 	{
 		base.Awake ();
 
 		IsRunning = true;
-
+		direction = transform.right;
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 
@@ -60,10 +61,15 @@ public class Oscar : UnitySingleton<Oscar>
 		SavePointsManager.LatestPosition = SavePointsManager.InitialPosition;
 	}
 
+	public void InvertDirection ()
+	{
+		direction *= -1;
+	}
+
 	void Update ()
 	{
 		if (IsRunning) {
-			transform.position += transform.right * Time.deltaTime * Speed;
+			transform.position += direction * Time.deltaTime * Speed;
 		}
 	}
 

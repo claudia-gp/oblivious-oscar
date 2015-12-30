@@ -6780,7 +6780,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.3
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7869,11 +7869,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 499370, guid: 0b28f35faf78c466e92ba772da3ee444, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 17.5
+      value: 41.2
       objectReference: {fileID: 0}
     - target: {fileID: 499370, guid: 0b28f35faf78c466e92ba772da3ee444, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -33.9
+      value: -30.7
       objectReference: {fileID: 0}
     - target: {fileID: 499370, guid: 0b28f35faf78c466e92ba772da3ee444, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11168,6 +11168,14 @@ Prefab:
     - target: {fileID: 446886, guid: bba68d6515bde68418883774eae77dc2, type: 2}
       propertyPath: m_LocalPosition.y
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003610, guid: bba68d6515bde68418883774eae77dc2, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081592, guid: bba68d6515bde68418883774eae77dc2, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bba68d6515bde68418883774eae77dc2, type: 2}

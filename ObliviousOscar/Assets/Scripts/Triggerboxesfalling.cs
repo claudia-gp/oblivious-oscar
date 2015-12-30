@@ -23,6 +23,10 @@ public class Triggerboxesfalling : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag(Oscar.Tag)) {
+			box1.GetComponent<Rigidbody2D> ().isKinematic = false;
+			box2.GetComponent<Rigidbody2D> ().isKinematic = false;
+			box3.GetComponent<Rigidbody2D> ().isKinematic = false;
+
 			box1.GetComponent<Rigidbody2D> ().gravityScale = gravityIndex;
 			box2.GetComponent<Rigidbody2D> ().gravityScale = gravityIndex;
 			box3.GetComponent<Rigidbody2D> ().gravityScale = gravityIndex;

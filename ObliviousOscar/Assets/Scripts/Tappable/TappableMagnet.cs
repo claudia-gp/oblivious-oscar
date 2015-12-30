@@ -5,7 +5,6 @@ public class TappableMagnet : Tappable
 {
 	public bool tappableTwice;
 	public float initDistance;
-
 	bool isActivated = false;
 	DistanceJoint2D dj;
 

@@ -18,6 +18,7 @@ public class OscarController
 
 	public void Kill ()
 	{
+		HeartsCounter.RemoveALife ();
 		LevelManager.ReloadCurrent ();
 	}
 

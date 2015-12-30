@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Triggerboxesfalling : MonoBehaviour
+public class TriggerFallingBoxes : MonoBehaviour
 {
 
     const float GravityScale = 0.3f;
 
     public GameObject box1, box2, box3;
   
-    public float gravityIndex;
+    public float gravityIndex = 4f;
 
     Rigidbody2D rb1, rb2, rb3;
 
@@ -20,7 +20,7 @@ public class Triggerboxesfalling : MonoBehaviour
     }
 
  
-    IEnumerator revertGravity()
+    IEnumerator RevertGravity()
     {
         yield return new WaitForSeconds(0.5f);
         rb1.gravityScale = rb2.gravityScale = rb3.gravityScale = GravityScale;
@@ -34,7 +34,7 @@ public class Triggerboxesfalling : MonoBehaviour
 
             rb1.gravityScale = rb2.gravityScale = rb3.gravityScale = gravityIndex;
 
-            StartCoroutine(revertGravity());
+            StartCoroutine(RevertGravity());
         }
 
     }

@@ -72,7 +72,7 @@ public class CloudFlow : MonoBehaviour
 		m_CloudList = new Cloud[transform.childCount];
 
 		// Random first direction
-		int RandomDirection = Random.Range(0,2);
+		int RandomDirection = Random.Range(0,1);
 
 		// Survey all chilren and put them to m_CloudList
 		int index = 0;

@@ -13,33 +13,26 @@ public class Oscar : UnitySingleton<Oscar>
 	public bool IsRunning{ get; set; }
 
 	public bool IsAnimationEnabled {
-		get {
-			return animator.enabled;
-		}
-		set {
-			animator.enabled = value;
-		}
+		get { return animator.enabled; }
+		set { animator.enabled = value; }
 	}
 
-	public Sprite Sprite { 
-		get {
-			return spriteRenderer.sprite;
-		}
-		set {
-			spriteRenderer.sprite = value;
-		}
+	public Sprite Sprite {
+		get { return spriteRenderer.sprite; }
+		set { spriteRenderer.sprite = value; }
 	}
+
+	public Vector3 Direction{ get; set; }
 
 	Animator animator;
 	SpriteRenderer spriteRenderer;
-	public Vector3 direction;
 
 	protected new void Awake ()
 	{
 		base.Awake ();
 
 		IsRunning = true;
-		direction = transform.right;
+		Direction = transform.right;
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 
@@ -61,15 +54,10 @@ public class Oscar : UnitySingleton<Oscar>
 		SavePointsManager.LatestPosition = SavePointsManager.InitialPosition;
 	}
 
-	public void InvertDirection ()
-	{
-		direction *= -1;
-	}
-
 	void Update ()
 	{
 		if (IsRunning) {
-			transform.position += direction * Time.deltaTime * Speed;
+			transform.position += Direction * Time.deltaTime * Speed;
 		}
 	}
 

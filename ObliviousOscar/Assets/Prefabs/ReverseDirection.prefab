@@ -1,40 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &161192
+--- !u!1 &140568
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 428444}
-  - 61: {fileID: 6135906}
-  - 114: {fileID: 11461142}
+  - 4: {fileID: 450094}
+  - 61: {fileID: 6178608}
+  - 114: {fileID: 11424108}
   m_Layer: 0
-  m_Name: InvertDirection
+  m_Name: ReverseDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &428444
+--- !u!4 &450094
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161192}
+  m_GameObject: {fileID: 140568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.82, y: 2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6135906
+--- !u!61 &6178608
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161192}
+  m_GameObject: {fileID: 140568}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -43,15 +43,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &11461142
+--- !u!114 &11424108
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161192}
+  m_GameObject: {fileID: 140568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf753831416854086a4e6faec12dac8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a54e1e9ad03b4ebd8915269bf8ae6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000
@@ -63,5 +63,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 161192}
+  m_RootGameObject: {fileID: 140568}
   m_IsPrefabParent: 1

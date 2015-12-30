@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Test scenes/aleScene.unity
+    path: Assets/Scenes/Test scenes/ReverseDirectionTest.unity
   - enabled: 1
     path: Assets/Scenes/Old levels/Tutorial.unity
   - enabled: 1

@@ -1,37 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Triggerboxesfalling : MonoBehaviour {
+public class Triggerboxesfalling : MonoBehaviour
+{
 
-	public GameObject box1;
-	public GameObject box2;
-	public GameObject box3;
-	public float gravityIndex;
+    const float GravityScale = 0.3f;
 
-	void Start () {
-	}
+    public GameObject box1, box2, box3;
+  
+    public float gravityIndex;
 
-	void Update () {
-	}
+    Rigidbody2D rb1, rb2, rb3;
 
-	IEnumerator revertGravity(){
-		yield return new WaitForSeconds (0.5f);
-		box1.GetComponent<Rigidbody2D> ().gravityScale = 0.3f;
-		box2.GetComponent<Rigidbody2D> ().gravityScale = 0.3f;
-		box3.GetComponent<Rigidbody2D> ().gravityScale = 0.3f;
-	}
+    void Start()
+    {
+        rb1 = box1.GetComponent<Rigidbody2D>();
+        rb2 = box2.GetComponent<Rigidbody2D>();
+        rb3 = box3.GetComponent<Rigidbody2D>();
+    }
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.CompareTag(Oscar.Tag)) {
-			box1.GetComponent<Rigidbody2D> ().isKinematic = false;
-			box2.GetComponent<Rigidbody2D> ().isKinematic = false;
-			box3.GetComponent<Rigidbody2D> ().isKinematic = false;
+ 
+    IEnumerator revertGravity()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rb1.gravityScale = rb2.gravityScale = rb3.gravityScale = GravityScale;
+    }
 
-			box1.GetComponent<Rigidbody2D> ().gravityScale = gravityIndex;
-			box2.GetComponent<Rigidbody2D> ().gravityScale = gravityIndex;
-			box3.GetComponent<Rigidbody2D> ().gravityScale = gravityIndex;
-			StartCoroutine (revertGravity ());
-		}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(Oscar.Tag))
+        {
+            rb1.isKinematic = rb2.isKinematic = rb3.isKinematic = false;
 
-	}
+            rb1.gravityScale = rb2.gravityScale = rb3.gravityScale = gravityIndex;
+
+            StartCoroutine(revertGravity());
+        }
+
+    }
 }

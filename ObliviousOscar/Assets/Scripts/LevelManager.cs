@@ -2,20 +2,14 @@
 
 public class LevelManager
 {
-	private LevelManager ()
-	{
-	}
+	private LevelManager (){}
 
 	public static int CurrentIndex {
-		get {
-			return SceneManager.GetActiveScene ().buildIndex;
-		}
+		get { return SceneManager.GetActiveScene ().buildIndex; }
 	}
 
 	public static int LevelCount {
-		get {
-			return SceneManager.sceneCountInBuildSettings;
-		}
+		get { return SceneManager.sceneCountInBuildSettings; }
 	}
 
 	public static void Load (int index)

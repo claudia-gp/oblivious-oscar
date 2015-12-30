@@ -1,20 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public abstract class UnitySingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-	protected UnitySingleton ()
-	{
-	}
+	protected UnitySingleton(){}
 
 	public static T Instance { get; private set; }
 
-	protected void Awake ()
+	protected void Awake()
 	{
 		if (Instance == null) {
-			Instance = GetComponent<T> ();
+			Instance = GetComponent<T>();
 		} else {
-			DestroyImmediate (gameObject);
+			DestroyImmediate(gameObject);
 		}
 	}
 

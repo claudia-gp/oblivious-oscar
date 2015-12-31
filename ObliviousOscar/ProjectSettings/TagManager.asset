@@ -49,11 +49,11 @@ TagManager:
   - name: BackroundElements
     uniqueID: 3270800565
     locked: 0
-  - name: Rope
-    uniqueID: 3452948103
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Rope
+    uniqueID: 3452948103
     locked: 0
   - name: On top
     uniqueID: 1920584841

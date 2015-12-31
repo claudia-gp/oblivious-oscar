@@ -3,7 +3,9 @@ using System.Collections;
 
 public class ShootAPlayerInRange : MonoBehaviour {
 
-	public GameObject projectile;
+	public bool shootLeft = true;
+	public GameObject projectileRight;
+	public GameObject projectileLeft;
 	public float waitBetweeenProjectiles;
 	private float shotCounter;
 	public float projectileSpeed;
@@ -17,12 +19,16 @@ public class ShootAPlayerInRange : MonoBehaviour {
 	void Update () {
 		shotCounter -= Time.deltaTime;
 		if (shotCounter < 0 && isShooting) {
-			GameObject clone = (GameObject)Instantiate (projectile, new Vector3(transform.position.x - 2, transform.position.y+0.5f), Quaternion.identity);
-			clone.GetComponent<Rigidbody2D>().velocity = -transform.right*projectileSpeed;
+			if (shootLeft) {
+				GameObject clone = (GameObject)Instantiate (projectileRight, new Vector3(transform.position.x - 2, transform.position.y+0.5f), Quaternion.identity);
+				clone.GetComponent<Rigidbody2D>().velocity = -transform.right*projectileSpeed;
+				} else {
+				GameObject clone = (GameObject)Instantiate (projectileLeft, new Vector3(transform.position.x + 2, transform.position.y+0.5f), Quaternion.identity);
+				clone.GetComponent<Rigidbody2D>().velocity = transform.right*projectileSpeed;
+			}
+
 			shotCounter = waitBetweeenProjectiles;
 		}
-
 	}
-
 
 }

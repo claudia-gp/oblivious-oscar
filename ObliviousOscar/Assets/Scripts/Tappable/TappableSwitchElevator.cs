@@ -20,7 +20,6 @@ public class TappableSwitchElevator : MonoBehaviour
 	public Sprite switchOnSprite;
 	public direction elevatorDirection = direction.Up;
 
-	bool elevatorMoving = false;
 	bool switchActive = false;
 	Sprite initialSprite;
 	Vector3 initialPosition;
@@ -51,7 +50,6 @@ public class TappableSwitchElevator : MonoBehaviour
 
 	public void OnClick ()
 	{
-		elevatorMoving = true;
 		if (switchActive) {
 			switchActive = false;
 			spriteRenderer.sprite = initialSprite;

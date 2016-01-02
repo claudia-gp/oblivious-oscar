@@ -22,9 +22,21 @@ public class Oscar : UnitySingleton<Oscar>
 		set { spriteRenderer.sprite = value; }
 	}
 
+	public OscarState State {
+		get{ return new OscarState (position: transform.position, direction: Direction, cameraPosition: Camera.main.transform.position); }
+		set {
+			Direction = value.Direction;
+			if (Direction != transform.right) {
+				spriteRenderer.flipX = !spriteRenderer.flipX;
+			}
+			transform.position = value.Position;
+			Camera.main.transform.position = value.CameraPosition;
+		}
+	}
+
 	public Rigidbody2D RigidBody2D{ get; private set; }
 
-	public Vector3 Direction{ get; set; }
+	public Vector3 Direction{ get; private set; }
 
 	Animator animator;
 	SpriteRenderer spriteRenderer;
@@ -34,27 +46,34 @@ public class Oscar : UnitySingleton<Oscar>
 		base.Awake ();
 	
 		IsRunning = true;
-		Direction = transform.right;
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		RigidBody2D = GetComponent<Rigidbody2D> ();
 
-		if (SavePointsManager.HasLatestPosition) {
-			transform.position = SavePointsManager.LatestPosition;
+		if (SavePointsManager.HasLatestState) {
+			State = SavePointsManager.LatestState;
 		} else {
-			SavePointsManager.InitialPosition = transform.position;
-			SavePointsManager.LatestPosition = transform.position;
+			Direction = transform.right;
+
+			SavePointsManager.InitialState = State;
+			SavePointsManager.LatestState = State;
 		}
 	}
 
-	public void UpdateLatestPosition ()
+	public void UpdateLatestState ()
 	{
-		SavePointsManager.LatestPosition = transform.position;
+		SavePointsManager.LatestState = State;
 	}
 
-	public void ResetToInitialPosition ()
+	public void ResetToInitialState ()
 	{
-		SavePointsManager.LatestPosition = SavePointsManager.InitialPosition;
+		SavePointsManager.LatestState = SavePointsManager.InitialState;
+	}
+
+	public void FlipDirection ()
+	{
+		Direction *= -1;
+		spriteRenderer.flipX = !spriteRenderer.flipX;
 	}
 
 	void Update ()

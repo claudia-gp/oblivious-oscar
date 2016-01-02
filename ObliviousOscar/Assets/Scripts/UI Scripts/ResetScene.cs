@@ -5,7 +5,7 @@ public class ResetScene : RetryLevelInteraction
 {
 	public override void Send ()
 	{
-		Oscar.Instance.ResetToInitialPosition ();
+		Oscar.Instance.ResetToInitialState ();
 		base.Send ();
 	}
 }

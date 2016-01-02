@@ -22,6 +22,8 @@ public class Oscar : UnitySingleton<Oscar>
 		set { spriteRenderer.sprite = value; }
 	}
 
+	public Rigidbody2D RigidBody2D{ get; private set; }
+
 	public Vector3 Direction{ get; set; }
 
 	Animator animator;
@@ -30,11 +32,12 @@ public class Oscar : UnitySingleton<Oscar>
 	protected new void Awake ()
 	{
 		base.Awake ();
-
+	
 		IsRunning = true;
 		Direction = transform.right;
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
+		RigidBody2D = GetComponent<Rigidbody2D> ();
 
 		if (SavePointsManager.HasLatestPosition) {
 			transform.position = SavePointsManager.LatestPosition;

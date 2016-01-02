@@ -1,39 +1,50 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TappableSwitchElevator : MonoBehaviour {
+public class TappableSwitchElevator : MonoBehaviour
+{
 
 	public GameObject elevator;
 	public float offsetY;
 	public float offsetX;
 	public float speed;
-	public enum direction{Up, Down, Left, Right};
+
+	public enum direction
+	{
+		Up,
+		Down,
+		Left,
+		Right}
+	;
+
 	public Sprite switchOnSprite;
-	public direction ElevatorDirection = direction.Up;
+	public direction elevatorDirection = direction.Up;
 
 	bool switchActive = false;
 	Sprite initialSprite;
 	Vector3 initialPosition;
-	Vector3 targetPosition; 
+	Vector3 targetPosition;
+	SpriteRenderer spriteRenderer;
 
-	void Start(){
-		
+	void Awake ()
+	{
+		spriteRenderer = GetComponent<SpriteRenderer> ();
 		initialPosition = elevator.transform.position;
-		initialSprite = gameObject.GetComponent<SpriteRenderer> ().sprite;
+		initialSprite = spriteRenderer.sprite;
 
-		switch (ElevatorDirection) {
-		case direction.Up:
-			targetPosition = new Vector3 (initialPosition.x, initialPosition.y + offsetY, initialPosition.z);
-			break;
-		case direction.Down:
-			targetPosition = new Vector3 (initialPosition.x, initialPosition.y - offsetY, initialPosition.z);
-			break;
-		case direction.Right:
-			targetPosition = new Vector3 (initialPosition.x + offsetX, initialPosition.y, initialPosition.z);
-			break;
-		case direction.Left:
-			targetPosition = new Vector3 (initialPosition.x - offsetX, initialPosition.y, initialPosition.z);
-			break;
+		switch (elevatorDirection) {
+			case direction.Up:
+				targetPosition = new Vector3 (initialPosition.x, initialPosition.y + offsetY, initialPosition.z);
+				break;
+			case direction.Down:
+				targetPosition = new Vector3 (initialPosition.x, initialPosition.y - offsetY, initialPosition.z);
+				break;
+			case direction.Right:
+				targetPosition = new Vector3 (initialPosition.x + offsetX, initialPosition.y, initialPosition.z);
+				break;
+			case direction.Left:
+				targetPosition = new Vector3 (initialPosition.x - offsetX, initialPosition.y, initialPosition.z);
+				break;
 		}
 	}
 
@@ -41,11 +52,11 @@ public class TappableSwitchElevator : MonoBehaviour {
 	{
 		if (switchActive) {
 			switchActive = false;
-			GetComponent<SpriteRenderer> ().sprite = initialSprite;
+			spriteRenderer.sprite = initialSprite;
 			StartCoroutine (MoveObject (elevator.transform, targetPosition, initialPosition));
 		} else {
 			switchActive = true;
-			GetComponent<SpriteRenderer> ().sprite = switchOnSprite;
+			spriteRenderer.sprite = switchOnSprite;
 			StartCoroutine (MoveObject (elevator.transform, initialPosition, targetPosition));
 		}
 	}

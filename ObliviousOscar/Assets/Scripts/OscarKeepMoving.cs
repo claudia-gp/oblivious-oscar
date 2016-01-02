@@ -3,13 +3,14 @@ using System.Collections;
 
 public class OscarKeepMoving : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	void OnTriggerEnter2D (Collider2D oscar) {
+		if (oscar.tag.Equals (Oscar.Tag)) {
+			StartCoroutine (keepMoving());
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	IEnumerator keepMoving (){
+		yield return new WaitForSeconds (1);
+		OscarController.Instance.ReverseDirection ();
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TappableSwitch : MonoBehaviour
+public class TappableSwitchDoor : MonoBehaviour
 {
 
 	public GameObject doorToOpen;

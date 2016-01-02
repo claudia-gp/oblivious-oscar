@@ -34,12 +34,13 @@ public class OscarController
 
 	public void ReverseDirection ()
 	{
-		Camera.main.transform.SetParent (null);
-		Oscar.Instance.transform.Rotate (new Vector3 (0f, 180f, 0f));
-		Camera.main.transform.SetParent (Oscar.Instance.transform);
-
+		Camera.main.transform.parent = null;
+		Oscar.Instance.GetComponent<Animator>().transform.Rotate(0,180,0);
 		Oscar.Instance.Direction *= -1;
+		Camera.main.transform.SetParent (Oscar.Instance.transform);	
 
-		Camera.main.transform.DOMoveX (inversionDistance * Oscar.Instance.Direction.x, inversionCameraMovementDuration);
+		Oscar.Instance.IsAnimationEnabled = true;
+		Oscar.Instance.IsRunning = true;
+		Oscar.Instance.Sprite = Oscar.Instance.startSprite;
 	}
 }

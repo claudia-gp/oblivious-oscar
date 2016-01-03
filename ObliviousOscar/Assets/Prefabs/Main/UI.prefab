@@ -112,9 +112,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22408634}
-  - 114: {fileID: 11479296}
   m_Layer: 5
-  m_Name: LivesCounter
+  m_Name: Hearts Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +127,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405182}
+  - 114: {fileID: 11446240}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -520,6 +520,18 @@ MonoBehaviour:
   cancelKey0: 27
   cancelKey1: 331
   m_collisionType: 1
+--- !u!114 &11446240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc4cfd8b4743428fb28d82a793a37a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartsPanel: {fileID: 22408634}
 --- !u!114 &11448358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -688,22 +700,6 @@ MonoBehaviour:
   m_owner: {fileID: 0}
   m_stageToLoadOnClick: 
   m_fadeTime: 1
---- !u!114 &11479296
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf3d3ac3b28ca14faf6b0084bad25f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 142428}
-  Heart2: {fileID: 121464}
-  Heart3: {fileID: 160738}
-  halfHeart: {fileID: 21300000, guid: 836e7e8a07ef71449a1f9aa02b16fc83, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 6c9d2e6691a161049a81ef11ca883ac4, type: 3}
 --- !u!114 &11487224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -921,9 +917,9 @@ RectTransform:
   - {fileID: 22489226}
   m_Father: {fileID: 22476166}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: 53}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 455, y: -247}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22438390

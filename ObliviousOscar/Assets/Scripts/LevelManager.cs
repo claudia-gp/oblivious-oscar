@@ -21,5 +21,12 @@ public class LevelManager
 	{
 		Load (CurrentIndex);
 	}
+
+	public static void ResetLevel ()
+	{
+		Oscar.Instance.ResetToInitialState ();
+		LivesController.Instance.Reset ();
+		UI.Instance.Reset ();
+	}
 		
 }

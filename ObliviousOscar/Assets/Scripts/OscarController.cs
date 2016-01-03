@@ -18,7 +18,7 @@
 
 	public void Kill ()
 	{
-		HeartsCounter.RemoveALife ();
+		LivesController.Instance.RemoveOneLife ();
 		LevelManager.ReloadCurrent ();
 	}
 

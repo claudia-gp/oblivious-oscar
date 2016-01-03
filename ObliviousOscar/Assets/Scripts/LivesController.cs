@@ -3,24 +3,18 @@ using UnityEngine.UI;
 
 public class LivesController : PersistentSingleton<LivesController>
 {
-
 	public Sprite halfHeart;
 	public Sprite emptyHeart;
 
 	int lives;
 	Image[] hearts;
 
-	static bool firstTime = true;
-
 	void Start ()
 	{
-		if (firstTime) {
-			firstTime = false;
+		hearts = UI.Instance.heartsPanel.GetComponentsInChildren<Image> ();
 
-			hearts = UI.Instance.heartsPanel.GetComponentsInChildren<Image> ();
+		lives = hearts.Length * 2;
 
-			lives = hearts.Length * 2;
-		}
 	}
 
 	public void RemoveOneLife ()
@@ -32,11 +26,5 @@ public class LivesController : PersistentSingleton<LivesController>
 			LevelManager.ResetLevel ();
 			LevelManager.ReloadCurrent ();
 		}
-	}
-
-	public override void Reset ()
-	{
-		firstTime = true;
-		base.Reset ();
 	}
 }

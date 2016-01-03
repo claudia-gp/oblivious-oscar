@@ -20,6 +20,8 @@ public class TappableBomb : Tappable {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		StartCoroutine (explosion());
+		if (other.CompareTag (Oscar.Tag)) {
+			StartCoroutine (explosion ());
+		}
 	}
 }

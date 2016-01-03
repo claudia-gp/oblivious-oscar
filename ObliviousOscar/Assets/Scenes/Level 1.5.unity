@@ -14773,21 +14773,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &261032596 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 169302, guid: 3709580aedb1af54ea538ca762df7313, type: 2}
-  m_PrefabInternal: {fileID: 2026872591}
---- !u!114 &261032597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 261032596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c3c9d79c4dc43a4f978b44208a65357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &261946348
 GameObject:
   m_ObjectHideFlags: 0
@@ -34014,6 +33999,22 @@ Prefab:
       propertyPath: m_Name
       value: CameraFollowOscar
       objectReference: {fileID: 0}
+    - target: {fileID: 6110542, guid: 8344972e419d59844b543c05c575d6fb, type: 2}
+      propertyPath: m_Offset.x
+      value: -0.352996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110542, guid: 8344972e419d59844b543c05c575d6fb, type: 2}
+      propertyPath: m_Offset.y
+      value: 0.2974814
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110542, guid: 8344972e419d59844b543c05c575d6fb, type: 2}
+      propertyPath: m_Size.x
+      value: 0.19608286
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110542, guid: 8344972e419d59844b543c05c575d6fb, type: 2}
+      propertyPath: m_Size.y
+      value: 0.5999344
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11419134, guid: 8344972e419d59844b543c05c575d6fb, type: 2}
     - {fileID: 11440054, guid: 8344972e419d59844b543c05c575d6fb, type: 2}
@@ -34049,6 +34050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16da74d0834bb644a5a6f64238401c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 1698842326}
 --- !u!1 &622261173
 GameObject:
   m_ObjectHideFlags: 0
@@ -94093,7 +94095,7 @@ BoxCollider2D:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1698842326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -111022,8 +111024,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11421926, guid: 3709580aedb1af54ea538ca762df7313, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3709580aedb1af54ea538ca762df7313, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2027271404

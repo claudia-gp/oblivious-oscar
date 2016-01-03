@@ -2,7 +2,7 @@
 // Author: Gold Experience Team (http://ge-team.com/pages/unity-3d/)
 // Support: geteamdev@gmail.com
 // Please direct any bugs/comments/suggestions to geteamdev@gmail.com
-
+/*
 #region Namespaces
 
 using UnityEngine;
@@ -270,4 +270,4 @@ public class CloudFlow : MonoBehaviour
 	}
 	
 	#endregion {Functions}
-}
+}*/

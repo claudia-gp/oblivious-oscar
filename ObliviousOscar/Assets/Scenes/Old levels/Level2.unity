@@ -1317,6 +1317,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!4 &238856320 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 410624, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
+  m_PrefabInternal: {fileID: 1423181925}
 --- !u!1 &303937136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,8 +4082,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 211275793}
+  - {fileID: 238856320}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &884587315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7358,15 +7363,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 879110533}
     m_Modifications:
     - target: {fileID: 410624, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.976258
+      value: 14.423742
       objectReference: {fileID: 0}
     - target: {fileID: 410624, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.5434829
+      value: 2.4834828
       objectReference: {fileID: 0}
     - target: {fileID: 410624, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.z

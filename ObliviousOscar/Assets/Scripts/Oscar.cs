@@ -8,8 +8,6 @@ public class Oscar : UnitySingleton<Oscar>
 
 	public Sprite finalSprite;
 
-	public Sprite startSprite;
-
 	public bool IsRunning{ get; set; }
 
 	public bool IsAnimationEnabled {
@@ -34,6 +32,8 @@ public class Oscar : UnitySingleton<Oscar>
 		}
 	}
 
+	public Sprite InitialSprite{ get; private set; }
+
 	public Rigidbody2D RigidBody2D{ get; private set; }
 
 	public Vector3 Direction{ get; private set; }
@@ -49,6 +49,7 @@ public class Oscar : UnitySingleton<Oscar>
 		animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		RigidBody2D = GetComponent<Rigidbody2D> ();
+		InitialSprite = Sprite;
 
 		if (SavePointsManager.HasLatestState) {
 			State = SavePointsManager.LatestState;
@@ -76,6 +77,11 @@ public class Oscar : UnitySingleton<Oscar>
 		spriteRenderer.flipX = !spriteRenderer.flipX;
 	}
 
+	public static bool IsOscar (GameObject go)
+	{
+		return go.CompareTag (Tag);
+	}
+
 	void Update ()
 	{
 		if (IsRunning) {
@@ -96,5 +102,5 @@ public class Oscar : UnitySingleton<Oscar>
 			IsRunning = true;
 		}
 	}
-
+		
 }

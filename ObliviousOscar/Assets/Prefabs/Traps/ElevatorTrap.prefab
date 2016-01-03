@@ -626,21 +626,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &113160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 493374}
-  m_Layer: 0
-  m_Name: IronElevator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &113406
 GameObject:
   m_ObjectHideFlags: 1
@@ -1659,12 +1644,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 444446}
   - 212: {fileID: 21234864}
-  - 50: {fileID: 5091762}
   - 61: {fileID: 6105462}
   - 114: {fileID: 11461330}
   - 114: {fileID: 11492382}
   m_Layer: 0
-  m_Name: switchLeft
+  m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3035,7 +3019,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &169302
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -3047,7 +3031,7 @@ GameObject:
   - 61: {fileID: 6115468}
   - 114: {fileID: 11421926}
   m_Layer: 0
-  m_Name: elevator
+  m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5434,12 +5418,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97, y: -28, z: 0}
+  m_LocalPosition: {x: 48, y: -9, z: 0}
   m_LocalScale: {x: 2.9414203, y: 2.2150257, z: 1}
   m_Children:
   - {fileID: 444446}
-  m_Father: {fileID: 493374}
-  m_RootOrder: 0
+  m_Father: {fileID: 493830}
+  m_RootOrder: 2
 --- !u!4 &423346
 Transform:
   m_ObjectHideFlags: 1
@@ -7706,19 +7690,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 412956}
   m_RootOrder: 192
---- !u!4 &493374
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49, y: 19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 423004}
-  m_Father: {fileID: 493830}
-  m_RootOrder: 2
 --- !u!4 &493546
 Transform:
   m_ObjectHideFlags: 1
@@ -7750,12 +7721,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 31, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412956}
   - {fileID: 452090}
-  - {fileID: 493374}
+  - {fileID: 423004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &494058
@@ -8099,23 +8070,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!50 &5091762
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138664}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &6105462
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -8404,12 +8358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1536e3969931d94f9478cd371822525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elevator: {fileID: 169302}
+  offsetX: 0
   offsetY: 5
-  offsetX: 3
-  speed: 2
+  duration: 1
   switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
-  elevatorDirection: 0
 --- !u!114 &11485284
 MonoBehaviour:
   m_ObjectHideFlags: 1

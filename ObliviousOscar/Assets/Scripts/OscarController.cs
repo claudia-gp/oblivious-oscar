@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using DG.Tweening;
-
-public class OscarController
+﻿public class OscarController
 {
 	const float inversionCameraMovementDuration = 2f;
 	public float inversionDistance = 5f;
@@ -37,6 +34,6 @@ public class OscarController
 		Oscar.Instance.FlipDirection ();
 		Oscar.Instance.IsAnimationEnabled = true;
 		Oscar.Instance.IsRunning = true;
-		Oscar.Instance.Sprite = Oscar.Instance.startSprite;
+		Oscar.Instance.Sprite = Oscar.Instance.InitialSprite;
 	}
 }

@@ -1,74 +1,44 @@
 ﻿using UnityEngine;
-using System.Collections;
+using DG.Tweening;
 
 public class TappableSwitchElevator : MonoBehaviour
 {
-
-	public GameObject elevator;
-	public float offsetY;
-	public float offsetX;
-	public float speed;
-
-	public enum direction
-	{
-		Up,
-		Down,
-		Left,
-		Right}
-	;
-
+	public float offsetX = 0f, offsetY = 0f;
+	public float speed = 1f;
 	public Sprite switchOnSprite;
-	public direction elevatorDirection = direction.Up;
 
-	bool switchActive = false;
-	Sprite initialSprite;
-	Vector3 initialPosition;
-	Vector3 targetPosition;
+	Elevator elevator;
+	GameObject elevatorGO;
+	Vector3 initialPosition, targetPosition;
 	SpriteRenderer spriteRenderer;
+	float duration;
+
+	float additionalVerticalOffset = 0.1f;
+	const float speedFactor = 6f;
 
 	void Awake ()
 	{
-		spriteRenderer = GetComponent<SpriteRenderer> ();
-		initialPosition = elevator.transform.position;
-		initialSprite = spriteRenderer.sprite;
+		elevatorGO = transform.parent.gameObject;
+		elevator = elevatorGO.GetComponent<Elevator> ();
 
-		switch (elevatorDirection) {
-			case direction.Up:
-				targetPosition = new Vector3 (initialPosition.x, initialPosition.y + offsetY, initialPosition.z);
-				break;
-			case direction.Down:
-				targetPosition = new Vector3 (initialPosition.x, initialPosition.y - offsetY, initialPosition.z);
-				break;
-			case direction.Right:
-				targetPosition = new Vector3 (initialPosition.x + offsetX, initialPosition.y, initialPosition.z);
-				break;
-			case direction.Left:
-				targetPosition = new Vector3 (initialPosition.x - offsetX, initialPosition.y, initialPosition.z);
-				break;
-		}
+		spriteRenderer = GetComponent<SpriteRenderer> ();
+
+		initialPosition = elevatorGO.transform.position;
+
+		targetPosition = new Vector3 (initialPosition.x + offsetX, initialPosition.y + offsetY + additionalVerticalOffset, initialPosition.z);
+
+		duration = Vector3.Distance (initialPosition, targetPosition) / (speed * speedFactor);
 	}
 
 	public void OnClick ()
 	{
-		if (switchActive) {
-			switchActive = false;
-			spriteRenderer.sprite = initialSprite;
-			StartCoroutine (MoveObject (elevator.transform, targetPosition, initialPosition));
-		} else {
-			switchActive = true;
-			spriteRenderer.sprite = switchOnSprite;
-			StartCoroutine (MoveObject (elevator.transform, initialPosition, targetPosition));
+		if (elevator.IsOscarIn) {
+			Oscar.Instance.transform.SetParent (elevator.transform);
 		}
-	}
 
-	IEnumerator MoveObject (Transform thisTransform, Vector3 startPos, Vector3 endPos)
-	{
-		var i = 0.0f;
-		while (i < 1.0f) {
-			i += Time.deltaTime * speed;
-			thisTransform.position = Vector3.Lerp (startPos, endPos, i);
-			yield return null; 
-		}
+		spriteRenderer.sprite = switchOnSprite;
+		elevator.transform.DOMove (targetPosition, duration).OnComplete (
+			() => Oscar.Instance.transform.SetParent (null)
+		);
 	}
-	
 }

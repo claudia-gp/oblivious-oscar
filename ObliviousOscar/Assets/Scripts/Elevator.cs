@@ -1,13 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Elevator : MonoBehaviour {
+public class Elevator : MonoBehaviour
+{
+	public bool IsOscarIn{ get; private set; }
 
-	void OnTriggerEnter2D (Collider2D oscar)
+	void OnCollisionEnter2D (Collision2D coll)
 	{
-		if (oscar.tag.Equals (Oscar.Tag)) {
-			Oscar.Instance.GetComponent<Rigidbody2D> ().isKinematic = true;
-
+		if (Oscar.IsOscar (coll.gameObject)) {
+			IsOscarIn = true;
 		}
 	}
+
+	void OnCollisionExit2D (Collision2D coll)
+	{
+		if (Oscar.IsOscar (coll.gameObject)) {
+			IsOscarIn = false;
+		}
+	}
+
 }

@@ -2,9 +2,9 @@
 
 public class StopTheCamera : MonoBehaviour
 {
-	void OnTriggerEnter2D (Collider2D oscar)
+	void OnTriggerEnter2D (Collider2D coll)
 	{
-		if (oscar.tag.Equals (Oscar.Tag)) {
+		if (Oscar.IsOscar (coll.gameObject)) {
 			Camera.main.transform.parent = null;			
 		}
 	}

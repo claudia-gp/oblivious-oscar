@@ -37,6 +37,7 @@ public class Draggable : MonoBehaviour
 	{
 		if (coll.gameObject.CompareTag (Oscar.Tag)) {
 			Oscar.Instance.RigidBody2D.gravityScale = initialGravity;
+			Oscar.Instance.RigidBody2D.velocity = new Vector2 (0f, 0f);
 		}
 	}
 }

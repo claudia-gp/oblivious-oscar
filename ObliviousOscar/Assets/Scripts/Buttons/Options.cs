@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Options : MonoBehaviour {
+public class Options : MonoBehaviour
+{
 
-
-
-	public void LoadStage()  {
-		Application.LoadLevel ("Options Menu");
-	}
+    public void LoadStage()
+    {
+        LevelManager.Load("Options Menu");
+    }
 
 }
 

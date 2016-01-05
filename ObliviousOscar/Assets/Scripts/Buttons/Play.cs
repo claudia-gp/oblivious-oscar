@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Play : MonoBehaviour {
-	
-
-		public void LoadStage()  {
-			Application.LoadLevel ("testPedro");
-		}
-		
+public class Play : MonoBehaviour
+{
+	public void LoadStage ()
+	{
+		LevelManager.Load ("testPedro");
+	}
 
 }

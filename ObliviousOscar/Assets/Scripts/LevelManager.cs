@@ -2,7 +2,7 @@
 
 public class LevelManager
 {
-	private LevelManager (){}
+	LevelManager () {}
 
 	public static int CurrentIndex {
 		get { return SceneManager.GetActiveScene ().buildIndex; }
@@ -15,6 +15,11 @@ public class LevelManager
 	public static void Load (int index)
 	{
 		SceneManager.LoadScene (index);
+	}
+
+	public static void Load (string levelName)
+	{
+		SceneManager.LoadScene (levelName);
 	}
 
 	public static void ReloadCurrent ()

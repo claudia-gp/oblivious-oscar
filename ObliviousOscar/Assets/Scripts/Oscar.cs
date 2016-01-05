@@ -104,20 +104,4 @@ public class Oscar : UnitySingleton<Oscar>
     {
         return go.CompareTag(Tag);
     }
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.GetComponent<StopsOscar>())
-        {
-            IsRunning = false;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D coll)
-    {
-        if (coll.gameObject.GetComponent<StopsOscar>())
-        {
-            IsRunning = true;
-        }
-    }
 }

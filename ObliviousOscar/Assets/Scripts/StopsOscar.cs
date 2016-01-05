@@ -1,20 +1,12 @@
-﻿using UnityEngine;
-
-public class StopsOscar : MonoBehaviour
+﻿public class StopsOscar : OscarEnterExitDetecter
 {
-    void OnCollisionEnter2D(Collision2D coll)
+    protected override void OnOscarEnter()
     {
-        if (Oscar.IsOscar(coll.gameObject))
-        {
-            Oscar.Instance.IsRunning = false;
-        }
+        Oscar.Instance.IsRunning = false;
     }
 
-    void OnCollisionExit2D(Collision2D coll)
+    protected override void OnOscarExit()
     {
-        if (Oscar.IsOscar(coll.gameObject))
-        {
-            Oscar.Instance.IsRunning = true;
-        }
+        Oscar.Instance.IsRunning = true;
     }
 }

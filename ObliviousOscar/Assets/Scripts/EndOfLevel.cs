@@ -1,12 +1,7 @@
-﻿using UnityEngine;
-
-public class EndOfLevel : MonoBehaviour
+﻿public class EndOfLevel : OscarEnterDetecter
 {
-    void OnTriggerEnter2D(Collider2D oscar)
+    protected override void OnOscarEnter()
     {
-        if (oscar.tag.Equals(Oscar.Tag))
-        {
-            OscarController.Instance.StopOscarAndSayHi();
-        }
+        OscarController.Instance.StopOscarAndSayHi();
     }
 }

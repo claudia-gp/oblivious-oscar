@@ -1,21 +1,14 @@
-﻿using UnityEngine;
-
-public class Elevator : MonoBehaviour
+﻿public class Elevator : OscarEnterExitDetecter
 {
-	public bool IsOscarIn{ get; private set; }
+    public bool IsOscarIn{ get; private set; }
 
-	void OnCollisionEnter2D (Collision2D coll)
-	{
-		if (Oscar.IsOscar (coll.gameObject)) {
-			IsOscarIn = true;
-		}
-	}
+    protected override void OnOscarEnter()
+    {
+        IsOscarIn = true;
+    }
 
-	void OnCollisionExit2D (Collision2D coll)
-	{
-		if (Oscar.IsOscar (coll.gameObject)) {
-			IsOscarIn = false;
-		}
-	}
-
+    protected override void OnOscarExit()
+    {
+        IsOscarIn = false;
+    }
 }

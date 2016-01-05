@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 
-public class TriggerFakeMagnetClass : MonoBehaviour
+public class TriggerFakeMagnetClass : OscarEnterDetecter
 {
-	public GameObject magnet;
+    public GameObject magnet;
 
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.CompareTag (Oscar.Tag)) {
-			Destroy (magnet.GetComponent<TappableMagnet> ());
-		}
-	}
+    protected override void OnOscarEnter()
+    {
+        Destroy(magnet.GetComponent<TappableMagnet>());
+    }
 }

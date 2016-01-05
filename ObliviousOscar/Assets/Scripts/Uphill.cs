@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Uphill : MonoBehaviour
+public class Uphill : OscarEnterExitDetecter
 {
     float initialGravity;
     Rigidbody2D rb;
@@ -10,23 +10,16 @@ public class Uphill : MonoBehaviour
         rb = Oscar.Instance.RigidBody2D;
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    protected override void OnOscarEnter()
     {
-        if (Oscar.IsOscar(coll.gameObject))
-        {
-            Oscar.Instance.IsUphill = true;
-            initialGravity = rb.gravityScale;
-            rb.gravityScale = 0f;
-        }
+        Oscar.Instance.IsUphill = true;
+        initialGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
     }
 
-    void OnCollisionExit2D(Collision2D coll)
+    protected override void OnOscarExit()
     {
-        if (Oscar.IsOscar(coll.gameObject))
-        {
-            Oscar.Instance.IsUphill = false;
-            rb.gravityScale = initialGravity;
-        }
+        Oscar.Instance.IsUphill = false;
+        rb.gravityScale = initialGravity;
     }
-
 }

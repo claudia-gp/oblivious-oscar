@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OscarKeepMoving : MonoBehaviour {
+public class OscarKeepMoving : OscarEnterDetecter
+{
+    protected override void OnOscarEnter()
+    {
+        StartCoroutine(KeepMoving());
+    }
 
-	void OnTriggerEnter2D (Collider2D oscar) {
-		if (oscar.tag.Equals (Oscar.Tag)) {
-			StartCoroutine (keepMoving());
-		}
-	}
-
-	IEnumerator keepMoving (){
-		yield return new WaitForSeconds (1);
-		OscarController.Instance.ReverseDirection ();
-	}
+    IEnumerator KeepMoving()
+    {
+        yield return new WaitForSeconds(1);
+        OscarController.Instance.ReverseDirection();
+    }
 }

@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
-public class StopTheCamera : MonoBehaviour
+public class StopTheCamera : OscarEnterDetecter
 {
-	void OnTriggerEnter2D (Collider2D coll)
-	{
-		if (Oscar.IsOscar (coll.gameObject)) {
-			Camera.main.transform.parent = null;			
-		}
-	}
+    protected override void OnOscarEnter()
+    {
+        Camera.main.transform.parent = null;
+    }
 }

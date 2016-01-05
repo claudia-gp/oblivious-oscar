@@ -5,8 +5,6 @@ public class Oscar : UnitySingleton<Oscar>
     const float Speed = 3f;
     const float UphillSpeed = 2f;
 
-    public const string Tag = "Oscar";
-
     public Sprite finalSprite;
 
     public bool IsRunning{ get; set; }
@@ -98,10 +96,5 @@ public class Oscar : UnitySingleton<Oscar>
     {
         Direction *= -1;
         spriteRenderer.flipX = !spriteRenderer.flipX;
-    }
-
-    public static bool IsOscar(GameObject go)
-    {
-        return go.CompareTag(Tag);
     }
 }

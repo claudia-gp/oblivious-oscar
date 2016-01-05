@@ -1,11 +1,7 @@
-﻿using UnityEngine;
-
-public class ReverseDirection : MonoBehaviour
+﻿public class ReverseDirection : OscarEnterDetecter
 {
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.tag.Equals (Oscar.Tag)) {
-			OscarController.Instance.ReverseDirection ();
-		}
-	}
+    protected override void OnOscarEnter()
+    {
+        OscarController.Instance.ReverseDirection();
+    }
 }

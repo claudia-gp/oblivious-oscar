@@ -1,27 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TriggerBombsAppearing : MonoBehaviour {
+public class TriggerBombsAppearing : OscarEnterDetecter
+{
+    public GameObject bomb;
+    SpriteRenderer spriteRenderer;
 
-	public GameObject bomb;
-	SpriteRenderer sR;
+    void Awake()
+    {
+        spriteRenderer = bomb.GetComponent<SpriteRenderer>();
+    }
 
-	void Awake ()
-	{
-		sR = bomb.GetComponent<SpriteRenderer> ();
-	}
+    protected override void OnOscarEnter()
+    {
+        StartCoroutine(BombsAppear());
+    }
 
-	IEnumerator BombsAppear ()
-	{
-		yield return new WaitForSeconds (0.8f);
-		sR.enabled = true;
-	}
-
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.CompareTag (Oscar.Tag)) {
-			StartCoroutine (BombsAppear ());
-		}
-
-	}
+    IEnumerator BombsAppear()
+    {
+        yield return new WaitForSeconds(0.8f);
+        spriteRenderer.enabled = true;
+    }
 }

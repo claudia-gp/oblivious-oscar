@@ -1,11 +1,10 @@
 using UnityEngine;
-using System.Collections;
 
 public class TappableMagnet : Tappable
 {
 	public bool tappableTwice;
 	public float initDistance;
-	bool isActivated = false;
+	bool isActivated;
 	DistanceJoint2D dj;
 
 	void Awake ()
@@ -15,7 +14,7 @@ public class TappableMagnet : Tappable
 
 	public override void OnClick ()
 	{
-		if (isActivated == false) {
+		if (!isActivated) {
 			dj.distance = 0;
 			isActivated = true;
 		} else if (tappableTwice) {

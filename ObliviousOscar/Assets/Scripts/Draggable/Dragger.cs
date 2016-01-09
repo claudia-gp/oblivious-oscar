@@ -8,7 +8,7 @@ public class Dragger : GlobalPressBehaviour
 	public static Dragger Instance {
 		get {
 			if (m_instance == null) {
-				m_instance = GameObject.FindObjectOfType (typeof(Dragger)) as Dragger;
+				m_instance = Object.FindObjectOfType (typeof(Dragger)) as Dragger;
 			}
 			
 			return m_instance;
@@ -40,7 +40,7 @@ public class Dragger : GlobalPressBehaviour
 				newPosition.y = v_worldMousePosition.y + DeltaClick.y;
 			}
 			
-			if (d.limitX != float.PositiveInfinity) {
+			if (!float.IsPositiveInfinity (d.limitX)) {
 				if (newPosition.x > d.initialPosition.x + d.limitX) {
 					newPosition.x = d.initialPosition.x + d.limitX;
 				}
@@ -48,8 +48,8 @@ public class Dragger : GlobalPressBehaviour
 					newPosition.x = d.initialPosition.x - d.limitX;
 				}
 			}
-			
-			if (d.limitY != float.PositiveInfinity) {
+			 
+			if (!float.IsPositiveInfinity (d.limitY)) {
 				if (newPosition.y > d.initialPosition.y + d.limitY) {
 					newPosition.y = d.initialPosition.y + d.limitY;
 				}

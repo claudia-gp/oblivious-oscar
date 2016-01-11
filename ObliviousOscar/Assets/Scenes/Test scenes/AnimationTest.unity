@@ -4579,6 +4579,73 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1832489136
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2139284088}
+    m_Modifications:
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_RootOrder
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176548, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_Name
+      value: Ground (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200886, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 24d4ef13942419946bce5d83779053bb,
+        type: 3}
+    - target: {fileID: 6131764, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1840177984 stripped
 Transform:
   m_PrefabParentObject: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
@@ -4877,6 +4944,25 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1924286087 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 176548, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+  m_PrefabInternal: {fileID: 1832489136}
+--- !u!4 &1924286088 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
+  m_PrefabInternal: {fileID: 1832489136}
+--- !u!114 &1924286089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924286087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3989713b7645d4a5bbe2f7639bf8039e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1931187164 stripped
 Transform:
   m_PrefabParentObject: {fileID: 403186, guid: 05df39534cfb80948a0dca0b46c3a425, type: 2}
@@ -5527,5 +5613,6 @@ Transform:
   - {fileID: 1659104612}
   - {fileID: 1938486795}
   - {fileID: 1830454337}
+  - {fileID: 1924286088}
   m_Father: {fileID: 140051853}
   m_RootOrder: 0

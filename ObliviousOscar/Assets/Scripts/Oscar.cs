@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Oscar : UnitySingleton<Oscar>
 {
@@ -7,9 +8,15 @@ public class Oscar : UnitySingleton<Oscar>
 
     public Sprite finalSprite;
 
-    public bool IsRunning{ get; set; }
+    public void Idle()
+    {
+        IsRunning = false;
+        animator.SetBool("IsRunning", false);
+    }
 
-    public bool IsUphill{ get; set; }
+    public bool IsRunning { get; set; }
+
+    public bool IsUphill { get; set; }
 
     public bool IsAnimationEnabled
     {
@@ -25,7 +32,7 @@ public class Oscar : UnitySingleton<Oscar>
 
     public OscarState State
     {
-        get{ return new OscarState(position: transform.position, direction: Direction, cameraPosition: Camera.main.transform.position); }
+        get { return new OscarState(position: transform.position, direction: Direction, cameraPosition: Camera.main.transform.position); }
         set
         {
             Direction = value.Direction;
@@ -38,11 +45,11 @@ public class Oscar : UnitySingleton<Oscar>
         }
     }
 
-    public Sprite InitialSprite{ get; private set; }
+    public Sprite InitialSprite { get; private set; }
 
-    public Rigidbody2D RigidBody2D{ get; private set; }
+    public Rigidbody2D RigidBody2D { get; private set; }
 
-    public Vector3 Direction{ get; private set; }
+    public Vector3 Direction { get; private set; }
 
     Animator animator;
     SpriteRenderer spriteRenderer;
@@ -50,7 +57,7 @@ public class Oscar : UnitySingleton<Oscar>
     protected new void Awake()
     {
         base.Awake();
-	
+
         IsRunning = true;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();

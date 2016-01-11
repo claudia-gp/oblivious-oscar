@@ -3,7 +3,7 @@
   "$values": [
     "Main Menu",
     "testPedro",
-    "Options Menu",
-    "Tutorial"
+    "Tutorial",
+    "Static Menu"
   ]
 }

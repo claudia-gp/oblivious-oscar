@@ -4,7 +4,7 @@ public class TappableMagnet : Tappable
 {
 	public bool tappableTwice;
 	public float initDistance;
-	bool isActivated;
+	public bool isActivated;
 	DistanceJoint2D dj;
 
 	void Awake ()

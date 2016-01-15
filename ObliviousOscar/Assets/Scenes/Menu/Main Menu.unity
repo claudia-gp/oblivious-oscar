@@ -389,8 +389,8 @@ GameObject:
   m_Component:
   - 224: {fileID: 943827899}
   - 222: {fileID: 943827903}
-  - 114: {fileID: 943827901}
   - 114: {fileID: 943827902}
+  - 114: {fileID: 943827900}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -415,7 +415,7 @@ RectTransform:
   m_AnchoredPosition: {x: 317.88, y: -133}
   m_SizeDelta: {x: 278.76, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &943827901
+--- !u!114 &943827900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -441,14 +441,13 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 367e3cddd930ebb47a4f3c1557b54383,
-      type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 367e3cddd930ebb47a4f3c1557b54383, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: normal
-    m_HighlightedTrigger: activado
-    m_PressedTrigger: pressed
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 943827902}
@@ -724,7 +723,7 @@ GameObject:
   - 224: {fileID: 1849916088}
   - 222: {fileID: 1849916092}
   - 114: {fileID: 1849916091}
-  - 114: {fileID: 1849916090}
+  - 114: {fileID: 1849916089}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -749,7 +748,7 @@ RectTransform:
   m_AnchoredPosition: {x: 317.88, y: -210}
   m_SizeDelta: {x: 278.76, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1849916090
+--- !u!114 &1849916089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -775,14 +774,13 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 602f8c0a898f3eb49b834158eadcfc14,
-      type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 602f8c0a898f3eb49b834158eadcfc14, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: normal
-    m_HighlightedTrigger: activado
-    m_PressedTrigger: pressed
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1849916091}

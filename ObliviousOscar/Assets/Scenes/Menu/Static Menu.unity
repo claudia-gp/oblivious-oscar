@@ -374,7 +374,7 @@ GameObject:
   - 224: {fileID: 1393255271}
   - 222: {fileID: 1393255272}
   m_Layer: 5
-  m_Name: Menu Panel
+  m_Name: Pause Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

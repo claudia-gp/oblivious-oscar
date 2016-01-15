@@ -3,13 +3,20 @@ using System.Collections;
 
 public class Continue : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public GameObject PausePanel;
+	public GameObject Oscar;
+	public GameObject ButtonPanel;
+	public GameObject HeartsPanel;
+	public GameObject BackgroundImage;
+	public GameObject PauseMenuImage;
+
+	public void OnClick () {
+
+		PausePanel.SetActive(false);
+		Oscar.SetActive(true);
+		ButtonPanel.SetActive (true);
+		HeartsPanel.SetActive (true);
+		BackgroundImage.SetActive(true);
+		PauseMenuImage.SetActive(false);
 	}
 }

@@ -3,8 +3,6 @@
 [ExecuteInEditMode]
 public class CameraController : MonoBehaviour
 {
-	public Transform background;
-
 	const float AspectRatioConstant = 9f;
 
 	Camera cam;

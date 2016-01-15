@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Oscar : UnitySingleton<Oscar>
 {
@@ -8,12 +7,7 @@ public class Oscar : UnitySingleton<Oscar>
 
     public Sprite finalSprite;
 
-    public void Idle()
-    {
-        IsRunning = false;
-        animator.SetBool("IsRunning", false);
-    }
-
+    
     public bool IsRunning { get; set; }
 
     public bool IsUphill { get; set; }
@@ -103,5 +97,11 @@ public class Oscar : UnitySingleton<Oscar>
     {
         Direction *= -1;
         spriteRenderer.flipX = !spriteRenderer.flipX;
+    }
+    
+    public void SetIdle(bool isIdle)
+    {
+        IsRunning = !isIdle;
+        animator.SetBool("IsRunning", !isIdle);
     }
 }

@@ -2,7 +2,7 @@
 {
     protected override void OnOscarEnter()
     {
-        Oscar.Instance.Idle();
+        Oscar.Instance.SetIdle(true);
         Destroy(gameObject);
     }
 }

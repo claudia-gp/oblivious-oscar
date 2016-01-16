@@ -4,6 +4,8 @@ public class Oscar : UnitySingleton<Oscar>
 {
 	const float Speed = 3f;
 	const float UphillSpeed = 2f;
+	const string AnimIsRunning = "IsRunning";
+	public const string AnimIsDead = "IsDead";
 
 	public Sprite finalSprite;
 
@@ -12,8 +14,8 @@ public class Oscar : UnitySingleton<Oscar>
 	public bool IsUphill { get; set; }
 
 	public bool IsAnimationEnabled {
-		get { return animator.enabled; }
-		set { animator.enabled = value; }
+		get { return Animator.enabled; }
+		set { Animator.enabled = value; }
 	}
 
 	public Sprite Sprite {
@@ -39,7 +41,8 @@ public class Oscar : UnitySingleton<Oscar>
 
 	public Vector3 Direction { get; private set; }
 
-	Animator animator;
+	public Animator Animator{ get; private set; }
+
 	SpriteRenderer spriteRenderer;
 
 	protected new void Awake ()
@@ -47,7 +50,7 @@ public class Oscar : UnitySingleton<Oscar>
 		base.Awake ();
 
 		IsRunning = true;
-		animator = GetComponent<Animator> ();
+		Animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		RigidBody2D = GetComponent<Rigidbody2D> ();
 		InitialSprite = Sprite;
@@ -91,6 +94,6 @@ public class Oscar : UnitySingleton<Oscar>
 	public void SetIdle (bool isIdle)
 	{
 		IsRunning = !isIdle;
-		animator.SetBool ("IsRunning", !isIdle);
+		Animator.SetBool (AnimIsRunning, !isIdle);
 	}
 }

@@ -14,6 +14,8 @@ public class TappableSwitchElevator : MonoBehaviour
 	SpriteRenderer spriteRenderer;
 	float duration;
 
+	public bool IsClicked{ get; private set; }
+
 	const float additionalVerticalOffset = 0.1f;
 	const float speedFactor = 6f;
 
@@ -33,6 +35,7 @@ public class TappableSwitchElevator : MonoBehaviour
 
 	public void OnClick ()
 	{
+		IsClicked = true;
 		if (dontMoveTheSwitch) {
 			transform.SetParent (elevator.transform.parent);
 		}

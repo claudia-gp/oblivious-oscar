@@ -24,9 +24,7 @@ public class TappableMagnetTimed : Tappable
 			StartCoroutine (WaitAndFall ());
 			animator.SetFloat ("SpeedMultiplier", 1f / delay);
 			animator.enabled = true;
-		
 		} 
-
 	}
 
 	IEnumerator WaitAndFall ()

@@ -20,7 +20,7 @@ public class OscarController
 			if (instance == null) {
 				instance = new OscarController ();
 			}
-			instance.oscar = oscar;
+			instance.oscar = Oscar.Instance;
 			return instance;
 		}
 	}

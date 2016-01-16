@@ -25,6 +25,15 @@ public class ObjectReplacer : MonoBehaviour
 					Probabilities[i] = 1f / NewObjects.Length;
 				}
 			}
+			float accum = 0f;
+			foreach (var p in Probabilities) {
+				accum += p;
+			}
+
+			if (System.Math.Abs (accum - 1f) > 0.01) {
+				Debug.Log ("Wrong probabilities sum");
+				return;
+			}
 
 			GameObject[] objects = FindObjectsOfType<GameObject> ();
 			foreach (var oldGo in objects) {
@@ -52,7 +61,6 @@ public class ObjectReplacer : MonoBehaviour
 		}
 
 		float random = Random.value;
-		Debug.Log ("Random: " + random);
 		for (int i = 0; i < n; i++) {
 			if (probLevel[i] > random) {
 				return NewObjects[i];

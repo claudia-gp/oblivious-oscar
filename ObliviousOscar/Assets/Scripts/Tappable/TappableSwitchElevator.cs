@@ -6,6 +6,7 @@ public class TappableSwitchElevator : MonoBehaviour
 	public float offsetX = 0f, offsetY = 0f;
 	public float speed = 1f;
 	public Sprite switchOnSprite;
+	public bool dontMoveTheSwitch;
 
 	Elevator elevator;
 	GameObject elevatorGO;
@@ -13,7 +14,7 @@ public class TappableSwitchElevator : MonoBehaviour
 	SpriteRenderer spriteRenderer;
 	float duration;
 
-	float additionalVerticalOffset = 0.1f;
+	const float additionalVerticalOffset = 0.1f;
 	const float speedFactor = 6f;
 
 	void Awake ()
@@ -32,6 +33,10 @@ public class TappableSwitchElevator : MonoBehaviour
 
 	public void OnClick ()
 	{
+		if (dontMoveTheSwitch) {
+			transform.SetParent (elevator.transform.parent);
+		}
+
 		if (elevator.IsOscarIn) {
 			Oscar.Instance.transform.SetParent (elevator.transform);
 		}

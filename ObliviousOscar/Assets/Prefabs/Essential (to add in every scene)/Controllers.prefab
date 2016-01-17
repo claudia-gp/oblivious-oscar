@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Switch: {fileID: 8300000, guid: eee551740749e4261bbb7d527b1f4419, type: 3}
+  BombExplosion: {fileID: 0}
+  SavePoint: {fileID: 8300000, guid: b5c1e56a4c6d84718b2f476e9b2eb7c3, type: 3}
 --- !u!114 &11490258
 MonoBehaviour:
   m_ObjectHideFlags: 1

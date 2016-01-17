@@ -9,6 +9,7 @@ TagManager:
   - tack
   - Oscar
   - Ground
+  - Platf
   layers:
   - Default
   - TransparentFX

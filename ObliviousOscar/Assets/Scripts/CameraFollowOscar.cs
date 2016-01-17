@@ -7,7 +7,7 @@ public class CameraFollowOscar : OscarEnterDetecter
     protected override void OnOscarEnter()
     {
         Camera.main.transform.SetParent(Oscar.Instance.transform); 
-        OscarController.Instance.StopOscarAndSayHi();
+		Oscar.Instance.SetIdle (true);
         button.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

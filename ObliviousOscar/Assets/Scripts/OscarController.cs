@@ -51,6 +51,7 @@ public class OscarController
 	{
 		oscar.FlipDirection ();
 		oscar.IsAnimationEnabled = true;
+		oscar.SetIdle (false);
 		oscar.IsRunning = true;
 		oscar.Sprite = oscar.InitialSprite;
 	}

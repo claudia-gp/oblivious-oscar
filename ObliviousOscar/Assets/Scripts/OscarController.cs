@@ -40,19 +40,10 @@ public class OscarController
 		);
 	}
 
-	public void StopOscarAndSayHi ()
-	{
-		oscar.IsAnimationEnabled = false;
-		oscar.Sprite = oscar.finalSprite;
-		oscar.IsRunning = false;
-	}
-
 	public void ReverseDirection ()
 	{
 		oscar.FlipDirection ();
-		oscar.IsAnimationEnabled = true;
 		oscar.SetIdle (false);
-		oscar.IsRunning = true;
 		oscar.Sprite = oscar.InitialSprite;
 	}
 }

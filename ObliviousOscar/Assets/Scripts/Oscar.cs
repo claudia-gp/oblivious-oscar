@@ -7,16 +7,9 @@ public class Oscar : UnitySingleton<Oscar>
 	const string AnimIsRunning = "IsRunning";
 	public const string AnimIsDead = "IsDead";
 
-	public Sprite finalSprite;
-
 	public bool IsRunning { get; set; }
 
 	public bool IsUphill { get; set; }
-
-	public bool IsAnimationEnabled {
-		get { return Animator.enabled; }
-		set { Animator.enabled = value; }
-	}
 
 	public Sprite Sprite {
 		get { return spriteRenderer.sprite; }

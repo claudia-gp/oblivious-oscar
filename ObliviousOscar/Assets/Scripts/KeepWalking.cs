@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class KeepWalking : MonoBehaviour {
-
+public class KeepWalking : MonoBehaviour
+{
 	public Rigidbody2D elevatorRb;
 
 	void OnTriggerEnter2D (Collider2D coll)

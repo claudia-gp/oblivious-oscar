@@ -38,16 +38,18 @@ public class TappableSwitchElevator : MonoBehaviour
 		SoundManager.Instance.Play (SoundManager.Instance.Switch);
 
 		IsClicked = true;
+
 		if (dontMoveTheSwitch) {
 			transform.SetParent (elevator.transform.parent);
 		}
 
 		if (elevator.IsOscarIn) {
+			Oscar.Instance.SetIdle (true);
 			Oscar.Instance.transform.SetParent (elevator.transform);
 		}
 
 		spriteRenderer.sprite = switchOnSprite;
-		elevator.transform.DOMove (targetPosition, duration).OnComplete (
+		elevator.transform.DOMove (targetPosition, duration).SetEase (Ease.Linear).OnComplete (
 			() => Oscar.Instance.transform.SetParent (null)
 		);
 	}

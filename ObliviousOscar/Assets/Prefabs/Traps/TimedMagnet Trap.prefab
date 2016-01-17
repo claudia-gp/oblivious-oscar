@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18, y: -22, z: 0}
+  m_LocalPosition: {x: 45, y: -22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 493974}
@@ -213,8 +213,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 138.02, y: 2.99, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 137.65, y: 2.97, z: 0}
+  m_LocalScale: {x: 1.3973236, y: 1.3973236, z: 1.3973236}
   m_Children: []
   m_Father: {fileID: 400032}
   m_RootOrder: 0
@@ -628,7 +628,7 @@ DistanceJoint2D:
   m_Anchor: {x: 1, y: 0.13287163}
   m_ConnectedAnchor: {x: 0.51779175, y: 1.0172443}
   m_AutoConfigureDistance: 1
-  m_Distance: 4.0884123
+  m_Distance: 4.1211925
   m_MaxDistanceOnly: 0
 --- !u!1001 &100100000
 Prefab:

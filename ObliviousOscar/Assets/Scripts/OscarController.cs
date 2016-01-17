@@ -34,7 +34,7 @@ public class OscarController
 		oscar.transform.DOMove (new Vector3 (oscar.transform.position.x, oscar.transform.position.y + killHeight), killDuration)
 			.OnComplete (
 			() => {
-				LivesController.Instance.RemoveOneLife ();
+				LivesManager.Instance.RemoveOneLife ();
 				LevelManager.ReloadCurrent ();
 			}
 		);

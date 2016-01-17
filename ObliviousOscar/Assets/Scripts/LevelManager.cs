@@ -30,7 +30,7 @@ public class LevelManager
 	public static void ResetLevel ()
 	{
 		Oscar.Instance.ResetToInitialState ();
-		LivesController.Instance.Reset ();
+		LivesManager.Instance.Reset ();
 		UI.Instance.Reset ();
 	}
 		

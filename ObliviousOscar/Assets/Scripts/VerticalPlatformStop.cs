@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class VerticalPlatformStop : MonoBehaviour {
+public class VerticalPlatformStop : MonoBehaviour
+{
+	public Rigidbody2D platformRb;
 
-	public GameObject plat;
-
-	void OnCollisionEnter2D(Collider2D coll)
+	void OnTriggerEnter2D (Collider2D coll)
 	{
-		if (coll.gameObject == plat) {
-			plat.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionY;
+		if (coll.gameObject == platformRb.gameObject) {
+			platformRb.constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 	}
 }

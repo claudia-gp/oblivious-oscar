@@ -22792,7 +22792,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 5.058947
+      value: 5.0574713
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
@@ -23950,9 +23950,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.56211704, y: 0.14675963}
+  m_Offset: {x: 0.56211704, y: 0.11852819}
   serializedVersion: 2
-  m_Size: {x: 1.1239171, y: 0.31364375}
+  m_Size: {x: 1.1239171, y: 0.37010646}
 --- !u!114 &968382855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23964,7 +23964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af3d66485b1077498912a2d059edfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plat: {fileID: 1607522347}
+  platformRb: {fileID: 1607522351}
 --- !u!1 &972420771
 GameObject:
   m_ObjectHideFlags: 0
@@ -37594,13 +37594,14 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &1607522347 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 193070, guid: 9680839ac9a49684490a02e2b5f2976f, type: 2}
-  m_PrefabInternal: {fileID: 1906351618}
 --- !u!4 &1607522348 stripped
 Transform:
   m_PrefabParentObject: {fileID: 414462, guid: 9680839ac9a49684490a02e2b5f2976f, type: 2}
+  m_PrefabInternal: {fileID: 1906351618}
+--- !u!50 &1607522351 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 5050638, guid: 9680839ac9a49684490a02e2b5f2976f,
+    type: 2}
   m_PrefabInternal: {fileID: 1906351618}
 --- !u!1001 &1608195718
 Prefab:

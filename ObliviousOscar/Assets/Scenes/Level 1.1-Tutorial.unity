@@ -23888,7 +23888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1536e3969931d94f9478cd371822525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 16
+  offsetX: 15
   offsetY: 0
   speed: 1
   switchOnSprite: {fileID: 0}

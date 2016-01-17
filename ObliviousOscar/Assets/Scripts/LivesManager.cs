@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class LivesController : PersistentSingleton<LivesController>
+public class LivesManager : PersistentSingleton<LivesManager>
 {
 	public Sprite halfHeart;
 	public Sprite emptyHeart;

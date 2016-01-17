@@ -35,6 +35,8 @@ public class TappableSwitchElevator : MonoBehaviour
 
 	public void OnClick ()
 	{
+		SoundManager.Instance.Play (SoundManager.Instance.Switch);
+
 		IsClicked = true;
 		if (dontMoveTheSwitch) {
 			transform.SetParent (elevator.transform.parent);

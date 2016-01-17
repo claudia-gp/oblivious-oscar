@@ -10,6 +10,7 @@ public class SoundOn : MonoBehaviour {
 	public void OnClick(){
 		
 		//Deactivate sound	
+		AudioListener.pause = true;
 		SoundButtonOff.SetActive (true);
 		SoundButtonOn.SetActive (false);
 	}

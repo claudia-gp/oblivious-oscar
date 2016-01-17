@@ -796,7 +796,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 83, y: -1}
+  m_AnchoredPosition: {x: 89, y: 1}
   m_SizeDelta: {x: -534, y: -0.18048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &542884491
@@ -1999,7 +1999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1182102663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2090,7 +2090,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -161, y: -49}
+  m_AnchoredPosition: {x: -157, y: -8}
   m_SizeDelta: {x: 470, y: 384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1338475556
@@ -2954,7 +2954,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -95, y: 207}
+  m_AnchoredPosition: {x: -60, y: 199}
   m_SizeDelta: {x: 532.32, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742930887
@@ -3143,17 +3143,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6ef6382a078564d9195c324a55e085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPanel: {fileID: 118535509}
+  LevelPanel2: {fileID: 118535509}
   World2Image: {fileID: 1999293696}
   World3Image: {fileID: 1725421004}
   WorldsTitle: {fileID: 130057859}
   World1Image: {fileID: 1399320921}
-  ButtonsPanel: {fileID: 2005116929}
-  speed: 6
+  ButtonsPanel2: {fileID: 2005116929}
+  text2: {fileID: 898355612}
+  Button1: {fileID: 868943697}
+  Button2: {fileID: 418113124}
+  Button3: {fileID: 298190666}
+  Button4: {fileID: 1533291046}
+  Button5: {fileID: 887097579}
+  speed: 8
   NewSizeX: 400
   NewSizeY: 420
   MovX: -4.5
   MovY: 0
+  TextMovX: -4
+  TextMovY: -3.3
 --- !u!114 &1894870980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3251,16 +3259,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6a110ebb0bc1144b251a03c9e4036d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPanel: {fileID: 489852805}
+  LevelPanel1: {fileID: 489852805}
   World2Image: {fileID: 1999293696}
   World3Image: {fileID: 1725421004}
   WorldsTitle: {fileID: 130057859}
   World1Image: {fileID: 1399320921}
+  ButtonsPanel1: {fileID: 1331561252}
+  text1: {fileID: 867504691}
+  Button1: {fileID: 1591652606}
+  Button2: {fileID: 935362699}
+  Button3: {fileID: 1029898846}
+  Button4: {fileID: 437990599}
+  Button5: {fileID: 44777761}
   speed: 2
   NewSizeX: 400
   NewSizeY: 420
   MovX: -4.5
   MovY: 0
+  TextMovX: -4
+  TextMovY: -3
 --- !u!1 &1958621143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,7 +3518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2005116930
 RectTransform:
   m_ObjectHideFlags: 0

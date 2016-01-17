@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class World2Levels : MonoBehaviour {
 
@@ -11,6 +12,11 @@ public class World2Levels : MonoBehaviour {
 	public GameObject World1Image;
 	public GameObject ButtonsPanel2;
 	public GameObject text2;
+	public GameObject Button1;
+	public GameObject Button2;
+	public GameObject Button3;
+	public GameObject Button4;
+	public GameObject Button5;
 	public float speed;
 	public float NewSizeX;
 	public float NewSizeY;
@@ -23,7 +29,7 @@ public class World2Levels : MonoBehaviour {
 
 	public void OnClick(){
 
-		bool resizedDelta = false;
+
 		World1Image.SetActive (false);
 		World3Image.SetActive (false);
 		WorldsTitle.SetActive (false);
@@ -35,6 +41,8 @@ public class World2Levels : MonoBehaviour {
 
 		Vector2 newPosition = new Vector2 (MovX, MovY);
 		Vector2 newSize = new Vector3 (NewSizeX, NewSizeY);
+		Vector2 newSize2 = new Vector2 (200,130);
+		Vector2 newSize3 = new Vector2 (0,0);
 		Vector2 newPosition2 = new Vector2 (3,0);
 
 		float speedFactor = 1f;
@@ -44,6 +52,11 @@ public class World2Levels : MonoBehaviour {
 		World2Image.transform.DOMove (newPosition, duration).OnComplete (() => LevelPanel2.SetActive (true));
 		World2Image.GetComponent<RectTransform> ().DOSizeDelta (newSize, duration, true).OnComplete(()=>ButtonsPanel2.transform.DOMove (newPosition2, duration));
 
+		Button1.GetComponent<Image>().DOFade (0f, 5).From();
+		Button2.GetComponent<Image>().DOFade (0f, 5).From();
+		Button3.GetComponent<Image>().DOFade (0f, 5).From();
+		Button4.GetComponent<Image>().DOFade (0f, 5).From();
+		Button5.GetComponent<Image>().DOFade (0f, 5).From();
 	}
 
 

@@ -36,12 +36,10 @@ public class World2Levels : MonoBehaviour {
 		BackButton2.SetActive (true);
 
 		Vector2 InitialPosition = World2Image.transform.position;
-		Vector2 InitialSize = World2Image.GetComponent<RectTransform> ().sizeDelta;
+
 
 		Vector2 newPosition = new Vector2 (MovX, MovY);
 		Vector2 newSize = new Vector3 (NewSizeX, NewSizeY);
-		Vector2 newSize2 = new Vector2 (200,130);
-		Vector2 newSize3 = new Vector2 (0,0);
 		Vector2 newPosition2 = new Vector2 (3,0);
 
 		float speedFactor = 1f;

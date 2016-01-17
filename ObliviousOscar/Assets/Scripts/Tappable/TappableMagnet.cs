@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class TappableMagnet : Tappable
 {
-	public bool tappableTwice;
 	public float initDistance;
 	public bool isActivated;
 	DistanceJoint2D dj;
@@ -17,7 +16,7 @@ public class TappableMagnet : Tappable
 		if (!isActivated) {
 			dj.distance = 0;
 			isActivated = true;
-		} else if (tappableTwice) {
+		} else {
 			dj.distance = initDistance;
 			isActivated = false;
 		}

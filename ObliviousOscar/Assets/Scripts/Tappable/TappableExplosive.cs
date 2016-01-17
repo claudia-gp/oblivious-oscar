@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TappableBomb : Tappable
+public class TappableExplosive : Tappable
 {
 	KillingObject kobj;
+	Animator animator;
 
 	void Start ()
 	{
 		kobj = GetComponent<KillingObject> ();
+		animator = GetComponent<Animator> ();
 	}
 
 	public override void OnTap ()
@@ -27,7 +29,7 @@ public class TappableBomb : Tappable
 		Destroy (kobj);
 		Destroy (collider);
 		SoundManager.Instance.Play (SoundManager.Instance.Explosion);
-		gameObject.GetComponent<Animator> ().enabled = true;
+		animator.enabled = true;
 		yield return new WaitForSeconds (0.700f);
 		Destroy (gameObject);
 	}

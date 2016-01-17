@@ -12,7 +12,8 @@ GameObject:
   - 114: {fileID: 11418250}
   - 50: {fileID: 5034814}
   - 61: {fileID: 6156454}
-  - 114: {fileID: 11443800}
+  - 95: {fileID: 9576352}
+  - 114: {fileID: 11424150}
   m_Layer: 0
   m_Name: ProjectileRight
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.405277, y: 0.4169489, z: 0}
+  m_LocalPosition: {x: 65.761215, y: -4.2988153, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,6 +64,23 @@ BoxCollider2D:
   m_Offset: {x: 0.6143112, y: 0.22550464}
   serializedVersion: 2
   m_Size: {x: 1.3322778, y: 0.917473}
+--- !u!95 &9576352
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139418}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: faf2726e0968f4615840fabd0f5fa876, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11418250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1515ebe3ab64b46828f3ae6f9f3371e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11443800
+--- !u!114 &11424150
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,7 +100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 139418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bbb76d25abc9164897e0f73457b4482, type: 3}
+  m_Script: {fileID: 11500000, guid: 36450dc0e6cf95a44890c81d81aef220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21263174

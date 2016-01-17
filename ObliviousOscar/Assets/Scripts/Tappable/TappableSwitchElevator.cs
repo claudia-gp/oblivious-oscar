@@ -7,6 +7,7 @@ public class TappableSwitchElevator : MonoBehaviour
 	public float speed = 1f;
 	public Sprite switchOnSprite;
 	public bool dontMoveTheSwitch;
+	public bool stopOscarOnThePlatform;
 
 	Elevator elevator;
 	GameObject elevatorGO;
@@ -45,6 +46,9 @@ public class TappableSwitchElevator : MonoBehaviour
 
 		if (elevator.IsOscarIn) {
 			Oscar.Instance.transform.SetParent (elevator.transform);
+			if (stopOscarOnThePlatform) {
+				Oscar.Instance.SetIdle (true);
+			}
 		}
 
 		spriteRenderer.sprite = switchOnSprite;

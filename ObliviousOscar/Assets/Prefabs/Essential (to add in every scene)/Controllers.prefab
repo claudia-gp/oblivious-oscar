@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.654703, y: 9.213341, z: 0.0000076293945}
+  m_LocalPosition: {x: -50, y: -299.99988, z: 0.0000076293945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 499476}
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Switch: {fileID: 8300000, guid: eee551740749e4261bbb7d527b1f4419, type: 3}
-  BombExplosion: {fileID: 0}
+  Explosion: {fileID: 8300000, guid: e1a32bc6866ec4e0e9cef5b48bb53f77, type: 3}
   SavePoint: {fileID: 8300000, guid: b5c1e56a4c6d84718b2f476e9b2eb7c3, type: 3}
 --- !u!114 &11490258
 MonoBehaviour:

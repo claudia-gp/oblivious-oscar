@@ -5,7 +5,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
 	AudioSource audioSource;
 
 	public AudioClip Switch;
-	public AudioClip BombExplosion;
+	public AudioClip Explosion;
 	public AudioClip SavePoint;
 
 	void Start ()

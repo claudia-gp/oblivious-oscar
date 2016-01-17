@@ -39899,7 +39899,6 @@ Transform:
   - {fileID: 1564977089}
   - {fileID: 539064792}
   - {fileID: 1425169555}
-  - {fileID: 2000754746}
   - {fileID: 1726806892}
   - {fileID: 1393934787}
   - {fileID: 2023854292}
@@ -39910,8 +39909,9 @@ Transform:
   - {fileID: 1494420821}
   - {fileID: 1528956151}
   - {fileID: 2090983270}
-  - {fileID: 1039386205}
   - {fileID: 1108119285}
+  - {fileID: 1039386205}
+  - {fileID: 2000754746}
   - {fileID: 706618827}
   - {fileID: 434620536}
   - {fileID: 469454107}
@@ -46220,7 +46220,6 @@ Transform:
   - {fileID: 1583105763}
   - {fileID: 362983922}
   - {fileID: 1731180279}
-  - {fileID: 1579000462}
   - {fileID: 1911940545}
   - {fileID: 2021025912}
   - {fileID: 135844445}
@@ -46229,9 +46228,10 @@ Transform:
   - {fileID: 1476147630}
   - {fileID: 1399538921}
   - {fileID: 1615960998}
+  - {fileID: 1579000462}
   - {fileID: 1736159257}
-  - {fileID: 741676253}
   - {fileID: 2113886793}
+  - {fileID: 741676253}
   m_Father: {fileID: 1079037100}
   m_RootOrder: 0
 --- !u!1001 &1911413010
@@ -52298,7 +52298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}

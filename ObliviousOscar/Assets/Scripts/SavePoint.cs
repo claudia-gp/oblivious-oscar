@@ -1,8 +1,13 @@
 ﻿public class SavePoint : OscarEnterDetecter
 {
+	bool wasActivated;
+
 	protected override void OnOscarEnter ()
 	{
-		SoundManager.Instance.Play (SoundManager.Instance.SavePoint);
+		if (!wasActivated) {
+			wasActivated = true;
+			SoundManager.Instance.Play (SoundManager.Instance.SavePoint);
+		}
 
 		Oscar.Instance.UpdateLatestState ();
 	}

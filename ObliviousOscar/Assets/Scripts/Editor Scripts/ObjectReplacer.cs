@@ -6,6 +6,7 @@ public class ObjectReplacer : MonoBehaviour
 {
 	public bool ReplaceObject;
 	public string OldObjectName = "grassCenter ";
+	public string SpriteName = "";
 
 	public GameObject[] NewObjects;
 	public float[] Probabilities;
@@ -35,15 +36,25 @@ public class ObjectReplacer : MonoBehaviour
 				return;
 			}
 
-			GameObject[] objects = FindObjectsOfType<GameObject> ();
-			foreach (var oldGo in objects) {
-				if (oldGo.name.StartsWith (OldObjectName)) {
-					GameObject prefab = choosePrefab ();
-					GameObject newGo = PrefabUtility.InstantiatePrefab (prefab) as GameObject;
-					newGo.transform.position = oldGo.transform.position;
-					newGo.transform.parent = oldGo.transform.parent;
-					DestroyImmediate (oldGo);
+			SpriteRenderer[] spriteRenderers = FindObjectsOfType<SpriteRenderer> ();
+
+			foreach (var sr in spriteRenderers) {
+				GameObject oldGo = sr.gameObject;
+				try {
+					if (sr != null &&
+					    oldGo != null &&
+					    (string.IsNullOrEmpty (OldObjectName) || oldGo.name.StartsWith (OldObjectName)) &&
+					    (string.IsNullOrEmpty (SpriteName) || oldGo.GetComponent<SpriteRenderer> ().sprite.name.StartsWith (SpriteName))) {
+						GameObject prefab = choosePrefab ();
+						GameObject newGo = PrefabUtility.InstantiatePrefab (prefab) as GameObject;
+						newGo.transform.position = oldGo.transform.position;
+						newGo.transform.parent = oldGo.transform.parent;
+						DestroyImmediate (oldGo);
+					}
+				} catch (System.Exception ex) {
+					Debug.Log("Problem with object: " + oldGo + "\n" + ex);
 				}
+				
 			}
 		}
 	}

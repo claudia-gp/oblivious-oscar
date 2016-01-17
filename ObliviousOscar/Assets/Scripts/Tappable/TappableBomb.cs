@@ -25,6 +25,7 @@ public class TappableBomb : Tappable
 	IEnumerator Explosion ()
 	{
 		Destroy (kobj);
+		Destroy (collider);
 		SoundManager.Instance.Play (SoundManager.Instance.Explosion);
 		gameObject.GetComponent<Animator> ().enabled = true;
 		yield return new WaitForSeconds (0.700f);

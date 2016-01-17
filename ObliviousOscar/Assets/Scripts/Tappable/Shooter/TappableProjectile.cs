@@ -1,13 +1,13 @@
 
 public class TappableProjectile : Tappable
 {
-    public override void OnClick()
+    public override void OnTap()
     {
         Destroy(gameObject);
     }
 
     public void OnDrag()
     {
-        OnClick();
+        OnTap();
     }
 }

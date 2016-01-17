@@ -3,7 +3,7 @@
 public class StopOscarOnTutorial : Tappable
 {
 
-	public override void OnClick ()
+	public override void OnTap ()
 	{
 		Oscar oscar = Oscar.Instance;
 		Oscar.Instance.SetIdle (false);
@@ -13,7 +13,7 @@ public class StopOscarOnTutorial : Tappable
 
 	public void OnDrag ()
 	{
-		OnClick ();
+		OnTap ();
 	}
 
 	void OnTriggerEnter2D (Collider2D other)

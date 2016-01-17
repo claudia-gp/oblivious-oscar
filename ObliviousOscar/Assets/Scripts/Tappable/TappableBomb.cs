@@ -3,15 +3,16 @@ using System.Collections;
 
 public class TappableBomb : Tappable
 {
+	KillingObject kobj;
 
-	public override void OnClick ()
+	void Start ()
 	{
-		StartCoroutine (Explosion ());
+		kobj = GetComponent<KillingObject> ();
 	}
 
-	public void OnDrag ()
+	public override void OnTap ()
 	{
-		OnClick ();
+		StartCoroutine (Explosion ());
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
@@ -23,9 +24,10 @@ public class TappableBomb : Tappable
 
 	IEnumerator Explosion ()
 	{
+		Destroy (kobj);
 		SoundManager.Instance.Play (SoundManager.Instance.Explosion);
 		gameObject.GetComponent<Animator> ().enabled = true;
 		yield return new WaitForSeconds (0.700f);
-		Destroy (this.gameObject);
+		Destroy (gameObject);
 	}
 }

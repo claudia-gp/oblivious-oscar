@@ -10,14 +10,16 @@ public class TappableMagnetTimed : Tappable
 	DistanceJoint2D dj;
 	Animator animator;
 
-	void Awake ()
+	void Start ()
 	{
 		dj = GetComponent<DistanceJoint2D> ();
 		animator = GetComponent<Animator> ();
 	}
 
-	public override void OnClick ()
+	public override void OnTap ()
 	{
+		SoundManager.Instance.Play (SoundManager.Instance.MagnetActive);
+
 		if (isActivated == false) {
 			dj.distance = 0;
 			isActivated = true;

@@ -7,6 +7,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
 	public AudioClip Switch;
 	public AudioClip Explosion;
 	public AudioClip SavePoint;
+	public AudioClip MagnetActive;
 
 	void Start ()
 	{

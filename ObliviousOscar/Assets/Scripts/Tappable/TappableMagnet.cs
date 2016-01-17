@@ -7,12 +7,12 @@ public class TappableMagnet : Tappable
 	public bool isActivated;
 	DistanceJoint2D dj;
 
-	void Awake ()
+	void Start ()
 	{
 		dj = GetComponent<DistanceJoint2D> ();
 	}
 
-	public override void OnClick ()
+	public override void OnTap ()
 	{
 		if (!isActivated) {
 			dj.distance = 0;

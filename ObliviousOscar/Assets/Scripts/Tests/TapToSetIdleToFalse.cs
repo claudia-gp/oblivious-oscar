@@ -1,6 +1,6 @@
 ﻿public class TapToSetIdleToFalse : Tappable
 {
-    public override void OnClick()
+    public override void OnTap()
     {
         Oscar.Instance.SetIdle(false);
     }

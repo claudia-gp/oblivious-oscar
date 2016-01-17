@@ -405,7 +405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Switch: {fileID: 8300000, guid: eee551740749e4261bbb7d527b1f4419, type: 3}
   Explosion: {fileID: 8300000, guid: e1a32bc6866ec4e0e9cef5b48bb53f77, type: 3}
-  SavePoint: {fileID: 8300000, guid: b5c1e56a4c6d84718b2f476e9b2eb7c3, type: 3}
+  SavePoint: {fileID: 8300000, guid: 6090d105a29024e45b121dda418e0231, type: 3}
+  MagnetActive: {fileID: 8300000, guid: cd11c2e004da743648e8bb620a2f5d01, type: 3}
 --- !u!114 &11490258
 MonoBehaviour:
   m_ObjectHideFlags: 1

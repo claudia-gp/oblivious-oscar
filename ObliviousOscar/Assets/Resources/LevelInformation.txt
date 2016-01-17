@@ -4,6 +4,7 @@
     "Main Menu",
     "testPedro",
     "Tutorial",
-    "Static Menu"
+    "Static Menu",
+    "Choose World Scene"
   ]
 }

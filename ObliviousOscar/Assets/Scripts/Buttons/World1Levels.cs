@@ -12,11 +12,11 @@ public class World1Levels : MonoBehaviour {
 	public GameObject World1Image;
 	public GameObject ButtonsPanel1;
 	public GameObject text1;
-	public GameObject Button1;
-	public GameObject Button2;
-	public GameObject Button3;
-	public GameObject Button4;
-	public GameObject Button5;
+	public GameObject Button1,Button2,Button3,Button4,Button5;
+	public GameObject BackButton1;
+	public GameObject BackButton2;
+
+
 	public float speed;
 	public float NewSizeX;
 	public float NewSizeY;
@@ -32,7 +32,8 @@ public class World1Levels : MonoBehaviour {
 		World2Image.SetActive (false);
 		World3Image.SetActive (false);
 		WorldsTitle.SetActive (false);
-
+		BackButton1.SetActive (false);
+		BackButton2.SetActive (true);
 
 		Vector2 InitialPosition = World1Image.transform.position;
 		Vector2 InitialSize = World1Image.GetComponent<RectTransform> ().sizeDelta;
@@ -52,11 +53,11 @@ public class World1Levels : MonoBehaviour {
 
 
 
-		Button1.GetComponent<Image>().DOFade (0f, 5).From();
-		Button2.GetComponent<Image>().DOFade (0f, 5).From();
-		Button3.GetComponent<Image>().DOFade (0f, 5).From();
-		Button4.GetComponent<Image>().DOFade (0f, 5).From();
-		Button5.GetComponent<Image>().DOFade (0f, 5).From();
+		Button1.GetComponent<Image>().DOFade (0f, 2).From();
+		Button2.GetComponent<Image>().DOFade (0f, 2).From();
+		Button3.GetComponent<Image>().DOFade (0f, 2).From();
+		Button4.GetComponent<Image>().DOFade (0f, 2).From();
+		Button5.GetComponent<Image>().DOFade (0f, 2).From();
 
 		
 	}

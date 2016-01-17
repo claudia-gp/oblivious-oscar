@@ -2,8 +2,10 @@
 
 public class Back : MonoBehaviour
 {
-	public void LoadStage ()
+	public  void LoadStage ()
 	{
+
 		LevelManager.Load ("Main Menu");
+
 	}
 }

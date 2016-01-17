@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 
-public class Play : MonoBehaviour
+public class Back2 : MonoBehaviour
 {
-	public void LoadStage ()
+	public  void LoadStage ()
 	{
-		LevelManager.Load ("Choose World Scene");
-	}
 
+		LevelManager.Load ("Choose World Scene");
+
+	}
 }

@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Old levels/Tutorial.unity
   - enabled: 1
     path: Assets/Scenes/Menu/Static Menu.unity
+  - enabled: 1
+    path: Assets/Scenes/Menu/Choose World Scene.unity

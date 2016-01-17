@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TriggerFallingBoxes : OscarEnterDetecter
 {
-    const float GravityScale = 0.3f;
+    const float GravityScale = 0.2f;
     public GameObject box;
     public float gravityIndex = 4f;
     Rigidbody2D rb;

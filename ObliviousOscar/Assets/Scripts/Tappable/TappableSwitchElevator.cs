@@ -44,7 +44,6 @@ public class TappableSwitchElevator : MonoBehaviour
 		}
 
 		if (elevator.IsOscarIn) {
-			Oscar.Instance.SetIdle (true);
 			Oscar.Instance.transform.SetParent (elevator.transform);
 		}
 

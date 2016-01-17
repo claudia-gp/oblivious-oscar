@@ -33407,6 +33407,7 @@ GameObject:
   - 61: {fileID: 1220607793}
   - 114: {fileID: 1220607792}
   - 114: {fileID: 1220607791}
+  - 114: {fileID: 1220607794}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -33470,6 +33471,22 @@ BoxCollider2D:
   m_Offset: {x: 0.5, y: 0.5}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &1220607794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220607789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfb3e60a505b3b41b1f05676d9eb78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetX: 16.2
+  offsetY: 0
+  speed: 0.5
+  switchOnSprite: {fileID: 0}
+  dontMoveTheSwitch: 0
 --- !u!212 &1220607795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48014,7 +48031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 5.0625
+      value: 5.058947
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_RootOrder

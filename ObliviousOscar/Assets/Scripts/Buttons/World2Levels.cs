@@ -6,29 +6,21 @@ using UnityEngine.UI;
 public class World2Levels : MonoBehaviour {
 
 	public GameObject LevelPanel2;
-	public GameObject World2Image;
-	public GameObject World3Image;
+	public GameObject World2Image,World3Image,World1Image;
 	public GameObject WorldsTitle;
-	public GameObject World1Image;
 	public GameObject ButtonsPanel2;
 	public GameObject text2;
 	public GameObject Button1,Button2,Button3,Button4,Button5;
-	public GameObject BackButton1;
-	public GameObject BackButton2;
-
+	public GameObject BackButton1,BackButton2;
 	public float speed;
-	public float NewSizeX;
-	public float NewSizeY;
-	public float MovX;
-	public float MovY;
-	public float TextMovX;
-	public float TextMovY;
+	public float WorldNewSizeX,WorldNewSizeY;
+	public float MoveWorldImageX,MoveWorldImageY;
 
 
 
 	public void OnClick(){
 
-
+		text2.SetActive (false);
 		World1Image.SetActive (false);
 		World3Image.SetActive (false);
 		WorldsTitle.SetActive (false);
@@ -36,24 +28,21 @@ public class World2Levels : MonoBehaviour {
 		BackButton2.SetActive (true);
 
 		Vector2 InitialPosition = World2Image.transform.position;
-
-
-		Vector2 newPosition = new Vector2 (MovX, MovY);
-		Vector2 newSize = new Vector3 (NewSizeX, NewSizeY);
-		Vector2 newPosition2 = new Vector2 (3,0);
+		Vector2 newPosition = new Vector2 (MoveWorldImageX,MoveWorldImageY);
+		Vector2 newSize = new Vector3 (WorldNewSizeX, WorldNewSizeY);
 
 		float speedFactor = 1f;
 		float duration = Vector3.Distance (InitialPosition, newPosition) / (speed * speedFactor);
 
-		text2.transform.DOMove (new Vector2(TextMovX,TextMovY),duration);
-		World2Image.transform.DOMove (newPosition, duration).OnComplete (() => LevelPanel2.SetActive (true));
-		World2Image.GetComponent<RectTransform> ().DOSizeDelta (newSize, duration, true).OnComplete(()=>ButtonsPanel2.transform.DOMove (newPosition2, duration));
 
-		Button1.GetComponent<Image>().DOFade (0f, 2).From();
-		Button2.GetComponent<Image>().DOFade (0f, 2).From();
-		Button3.GetComponent<Image>().DOFade (0f, 2).From();
-		Button4.GetComponent<Image>().DOFade (0f, 2).From();
-		Button5.GetComponent<Image>().DOFade (0f, 2).From();
+		World2Image.transform.DOMove (newPosition, duration).OnComplete (() => LevelPanel2.SetActive (true));
+		World2Image.GetComponent<RectTransform> ().DOSizeDelta (newSize, duration, true);
+
+		Button1.GetComponent<Image>().DOFade (0f, 3).From();
+		Button2.GetComponent<Image>().DOFade (0f, 3).From();
+		Button3.GetComponent<Image>().DOFade (0f, 3).From();
+		Button4.GetComponent<Image>().DOFade (0f, 3).From();
+		Button5.GetComponent<Image>().DOFade (0f, 3).From();
 	}
 
 

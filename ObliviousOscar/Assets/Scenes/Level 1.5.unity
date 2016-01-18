@@ -10118,6 +10118,7 @@ MonoBehaviour:
   switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
   dontMoveTheSwitch: 0
   stopOscarOnThePlatform: 0
+  linearMovement: 0
 --- !u!61 &188089694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17831,7 +17832,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 337996699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdfb3e60a505b3b41b1f05676d9eb78a, type: 3}
+  m_Script: {fileID: 11500000, guid: e1536e3969931d94f9478cd371822525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offsetX: 0
@@ -17839,6 +17840,8 @@ MonoBehaviour:
   speed: 1
   switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
   dontMoveTheSwitch: 0
+  stopOscarOnThePlatform: 0
+  linearMovement: 0
 --- !u!61 &337996703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34378,7 +34381,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 644260381}
   - 212: {fileID: 644260384}
-  - 61: {fileID: 644260383}
   - 114: {fileID: 644260382}
   m_Layer: 0
   m_Name: Ground (17)
@@ -34410,21 +34412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0dfbc552a01430e991da46eed5035e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &644260383
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6172694, guid: 474b14d6527c14a4a9f67adee1258401,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 644260380}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.5, y: 0.5}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!212 &644260384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34450,7 +34437,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1793077951
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 336d3479483664cc1b5431969bb5579f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -55077,7 +55064,7 @@ Animator:
   m_GameObject: {fileID: 1053856623}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7693a0d4481bed346b27c814a7470c57, type: 2}
+  m_Controller: {fileID: 9100000, guid: a27e0254aa32a4df6b10d2f5ce734ba7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -57002,7 +56989,7 @@ GameObject:
   - 212: {fileID: 1088057118}
   - 61: {fileID: 1088057117}
   - 114: {fileID: 1088057116}
-  - 114: {fileID: 1088057119}
+  - 114: {fileID: 1088057115}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -57017,11 +57004,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1088057113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1558967, y: 15.450918, z: 0}
+  m_LocalPosition: {x: -6.36, y: 14.6, z: 0}
   m_LocalScale: {x: 7.631331, y: 7.7254586, z: 1.9027544}
   m_Children: []
   m_Father: {fileID: 1234470545}
   m_RootOrder: 0
+--- !u!114 &1088057115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1088057113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1536e3969931d94f9478cd371822525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetX: 15
+  offsetY: 0
+  speed: 0.6
+  switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
+  dontMoveTheSwitch: 1
+  stopOscarOnThePlatform: 1
+  linearMovement: 1
 --- !u!114 &1088057116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57080,22 +57085,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1088057119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1088057113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdfb3e60a505b3b41b1f05676d9eb78a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetX: 16.2
-  offsetY: 0
-  speed: 0.5
-  switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
-  dontMoveTheSwitch: 1
 --- !u!1001 &1090940494
 Prefab:
   m_ObjectHideFlags: 0
@@ -64435,7 +64424,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 496864032ba627d40bd5e79263ec92ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -66525,7 +66514,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1793077951
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f97fbfe7f6532491bb9892478c91d3c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -73615,13 +73604,13 @@ Transform:
   - {fileID: 926474333}
   - {fileID: 139976077}
   - {fileID: 909772245}
+  - {fileID: 1667581738}
   - {fileID: 1457263917}
   - {fileID: 1379728156}
-  - {fileID: 509139026}
-  - {fileID: 239391863}
-  - {fileID: 1667581738}
   - {fileID: 760871733}
   - {fileID: 1367599176}
+  - {fileID: 509139026}
+  - {fileID: 239391863}
   - {fileID: 794838482}
   - {fileID: 124330878}
   m_Father: {fileID: 2026872592}
@@ -82225,7 +82214,7 @@ Animator:
   m_GameObject: {fileID: 1560038052}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7693a0d4481bed346b27c814a7470c57, type: 2}
+  m_Controller: {fileID: 9100000, guid: a27e0254aa32a4df6b10d2f5ce734ba7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105661,11 +105650,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 49.2
+      value: 103.96
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.8
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.z

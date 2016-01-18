@@ -8,6 +8,7 @@ public class TappableSwitchElevator : MonoBehaviour
 	public Sprite switchOnSprite;
 	public bool dontMoveTheSwitch;
 	public bool stopOscarOnThePlatform;
+	public bool linearMovement = true;
 
 	Elevator elevator;
 	GameObject elevatorGO;
@@ -52,8 +53,9 @@ public class TappableSwitchElevator : MonoBehaviour
 		}
 
 		spriteRenderer.sprite = switchOnSprite;
-		elevator.transform.DOMove (targetPosition, duration).SetEase (Ease.Linear).OnComplete (
-			() => Oscar.Instance.transform.SetParent (null)
-		);
+
+		elevator.transform.DOMove (targetPosition, duration).
+		SetEase (linearMovement ? Ease.Linear : Ease.OutQuad).
+		OnComplete (() => Oscar.Instance.transform.SetParent (null));
 	}
 }

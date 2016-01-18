@@ -23909,6 +23909,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6149934, guid: f9c91893f025a434184305aad7f31ecf, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9c91893f025a434184305aad7f31ecf, type: 2}
   m_IsPrefabParent: 0
@@ -27499,6 +27503,7 @@ MonoBehaviour:
   switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
   dontMoveTheSwitch: 0
   stopOscarOnThePlatform: 0
+  linearMovement: 1
 --- !u!61 &989406192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33353,12 +33358,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1536e3969931d94f9478cd371822525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 16.2
+  offsetX: 15
   offsetY: 0
   speed: 0.5
   switchOnSprite: {fileID: 21300000, guid: 90b6c221f884d44fcb14d749e6fea639, type: 3}
   dontMoveTheSwitch: 1
-  stopOscarOnThePlatform: 0
+  stopOscarOnThePlatform: 1
+  linearMovement: 1
 --- !u!114 &1220607792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47751,11 +47757,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -16.33
+      value: -21.4
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 205.83
+      value: 142.1
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size

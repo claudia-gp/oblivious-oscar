@@ -2,8 +2,6 @@
   "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
   "$values": [
     "Main Menu",
-    "testPedro",
-    "Tutorial",
     "Static Menu",
     "Choose World Scene"
   ]

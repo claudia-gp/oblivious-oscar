@@ -7798,6 +7798,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 11458778, guid: a9171eac023a304449a1c1ccaf9f8fdb, type: 2}
+      propertyPath: winningAnim
+      value: 
+      objectReference: {fileID: 1745090241}
+    - target: {fileID: 11458778, guid: a9171eac023a304449a1c1ccaf9f8fdb, type: 2}
+      propertyPath: goOnButton
+      value: 
+      objectReference: {fileID: 561031651}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9171eac023a304449a1c1ccaf9f8fdb, type: 2}
   m_IsPrefabParent: 0
@@ -16013,6 +16021,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 410208, guid: 7e3a322b9e7f4450bbe4e170b9f478ac, type: 2}
   m_PrefabInternal: {fileID: 559589465}
+--- !u!114 &561031651 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11496712, guid: 68a2ffeb0f39c44e588b54ccab766fc6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1130292146}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &561627263
 Prefab:
   m_ObjectHideFlags: 0
@@ -27409,19 +27423,19 @@ Transform:
   - {fileID: 1827770291}
   - {fileID: 1579465961}
   - {fileID: 113988494}
+  - {fileID: 975979379}
   - {fileID: 173221644}
   - {fileID: 1994068864}
+  - {fileID: 1857203472}
   - {fileID: 15749146}
+  - {fileID: 1975902627}
   - {fileID: 1226806293}
   - {fileID: 806125303}
-  - {fileID: 975979379}
-  - {fileID: 1657001714}
-  - {fileID: 805187210}
-  - {fileID: 1857203472}
-  - {fileID: 1975902627}
   - {fileID: 814103331}
   - {fileID: 2089220041}
+  - {fileID: 1657001714}
   - {fileID: 1423566508}
+  - {fileID: 805187210}
   m_Father: {fileID: 197475678}
   m_RootOrder: 0
 --- !u!1 &989406188
@@ -33308,7 +33322,6 @@ GameObject:
   - 61: {fileID: 1220607793}
   - 114: {fileID: 1220607792}
   - 114: {fileID: 1220607791}
-  - 114: {fileID: 1220607794}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -33373,22 +33386,6 @@ BoxCollider2D:
   m_Offset: {x: 0.5, y: 0.5}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &1220607794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1220607789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdfb3e60a505b3b41b1f05676d9eb78a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetX: 16.2
-  offsetY: 0
-  speed: 0.5
-  switchOnSprite: {fileID: 0}
-  dontMoveTheSwitch: 0
 --- !u!212 &1220607795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46244,6 +46241,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 410208, guid: 7e3a322b9e7f4450bbe4e170b9f478ac, type: 2}
   m_PrefabInternal: {fileID: 1744331833}
+--- !u!1 &1745090241 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 145142, guid: 68a2ffeb0f39c44e588b54ccab766fc6, type: 2}
+  m_PrefabInternal: {fileID: 1130292146}
 --- !u!1001 &1745176683
 Prefab:
   m_ObjectHideFlags: 0
@@ -47750,11 +47751,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -21.5
+      value: -16.33
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 140
+      value: 205.83
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size

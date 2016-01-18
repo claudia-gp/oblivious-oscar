@@ -9,6 +9,7 @@ public class TappableMagnetTimed : Tappable
 	bool isActivated = false;
 	DistanceJoint2D dj;
 	Animator animator;
+	bool soundPlayed;
 
 	void Start ()
 	{
@@ -18,9 +19,12 @@ public class TappableMagnetTimed : Tappable
 
 	public override void OnTap ()
 	{
-		SoundManager.Instance.Play (SoundManager.Instance.MagnetActive);
+		if (!soundPlayed) {
+			SoundManager.Instance.Play (SoundManager.Instance.MagnetActive);
+			soundPlayed = true;
+		}
 
-		if (isActivated == false) {
+		if (!isActivated) {
 			dj.distance = 0;
 			isActivated = true;
 			StartCoroutine (WaitAndFall ());

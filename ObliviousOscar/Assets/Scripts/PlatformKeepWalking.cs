@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class KeepWalking : MonoBehaviour
+public class PlatformKeepWalking : MonoBehaviour
 {
 	public Rigidbody2D elevatorRb;
 

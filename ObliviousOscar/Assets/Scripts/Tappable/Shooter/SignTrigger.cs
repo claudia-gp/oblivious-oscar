@@ -1,22 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class SignTrigger : MonoBehaviour {
+public class SignTrigger : OscarEnterDetecter
+{
 
 	public GameObject shooter;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
-	void OnTriggerEnter2D(Collider2D oscar){
+	protected override void OnOscarEnter ()
+	{
 		shooter.SetActive (true);
 	}
-
-
 }

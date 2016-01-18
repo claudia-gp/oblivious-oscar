@@ -29,6 +29,7 @@ public class OscarController
 	{
 		oscar.IsRunning = false;
 		oscar.Animator.SetBool (Oscar.AnimIsDead, true);
+		Object.Destroy (oscar.GetComponent<Collider2D> ());
 		Camera.main.transform.SetParent (null);
 		oscar.GetComponent<SpriteRenderer> ().material.DOFade (0f, killDuration);
 		oscar.transform.DOMove (new Vector3 (oscar.transform.position.x, oscar.transform.position.y + killHeight), killDuration)

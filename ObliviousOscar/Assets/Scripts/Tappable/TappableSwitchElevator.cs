@@ -15,8 +15,7 @@ public class TappableSwitchElevator : MonoBehaviour
 	Vector3 initialPosition, targetPosition;
 	SpriteRenderer spriteRenderer;
 	float duration;
-
-	public bool IsClicked{ get; private set; }
+	bool wasClicked;
 
 	const float additionalVerticalOffset = 0.1f;
 	const float speedFactor = 6f;
@@ -37,9 +36,10 @@ public class TappableSwitchElevator : MonoBehaviour
 
 	public void OnClick ()
 	{
-		SoundManager.Instance.Play (SoundManager.Instance.Switch);
-
-		IsClicked = true;
+		if (!wasClicked) {
+			wasClicked = true;
+			SoundManager.Instance.Play (SoundManager.Instance.Switch);
+		}
 
 		if (dontMoveTheSwitch) {
 			transform.SetParent (elevator.transform.parent);

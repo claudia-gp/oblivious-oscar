@@ -40,7 +40,7 @@ public class World1Levels : MonoBehaviour {
 
 		Vector2 newPosition = new Vector2 (MovX, MovY);
 		Vector2 newSize = new Vector3 (NewSizeX, NewSizeY);
-		Vector2 newPosition2 = new Vector2 (3,0);
+		Vector2 newPosition2 = new Vector2 (4,-1);
 
 		float speedFactor = 1f;
 		float duration = Vector3.Distance (InitialPosition, newPosition) / (speed * speedFactor);

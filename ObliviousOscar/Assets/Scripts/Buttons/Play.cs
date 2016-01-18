@@ -4,7 +4,7 @@ public class Play : MonoBehaviour
 {
 	public void LoadStage ()
 	{
-		LevelManager.Load ("Choose World Scene");
+		LevelManager.Load ("Level 1.1-Tutorial");
 	}
 
 }

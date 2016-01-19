@@ -650,6 +650,7 @@ GameObject:
   - 114: {fileID: 1264260475}
   - 114: {fileID: 1264260476}
   - 114: {fileID: 1264260477}
+  - 114: {fileID: 1264260478}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -825,6 +826,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundButtonOff: {fileID: 416847598}
   SoundButtonOn: {fileID: 756838757}
+--- !u!114 &1264260478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264260466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebbaecfa4dff234ab14a7e4431bfaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762097162
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +971,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1849916091}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1264260478}
+        m_MethodName: LoadStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1849916091
@@ -1018,7 +1041,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2090126812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -5, z: -5399.9995}
+  m_LocalPosition: {x: 0, y: 1, z: -5399.9995}
   m_LocalScale: {x: 55.49303, y: 55.68739, z: 60}
   m_Children: []
   m_Father: {fileID: 1264260470}

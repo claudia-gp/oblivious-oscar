@@ -50,6 +50,9 @@ TagManager:
   - name: BackroundElements
     uniqueID: 3270800565
     locked: 0
+  - name: trees
+    uniqueID: 4139681583
+    locked: 0
   - name: Rope
     uniqueID: 3452948103
     locked: 0

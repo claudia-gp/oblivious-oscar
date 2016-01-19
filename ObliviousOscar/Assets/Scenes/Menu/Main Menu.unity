@@ -195,7 +195,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416847598}
-  m_LocalRotation: {x: 0, y: 0, z: 0.25881907, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -225,7 +225,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 32001824736f5374d98dbc687c1a3432, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0b5af256f571234fa34b6ff33ad46a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -454,8 +454,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 486148f6d950485488f05de3615e860b, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 32001824736f5374d98dbc687c1a3432, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -498,7 +498,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 486148f6d950485488f05de3615e860b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7753613b7a31424d88f190a758ba2ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -512,6 +512,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756838757}
+--- !u!1001 &881622739
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -299.99988
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451112, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 22ba97133b5d04041a72a54f586c2593, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &943827898
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +616,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 367e3cddd930ebb47a4f3c1557b54383, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: bf8ff58cfea16244eb95dde8a01edabc, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -618,7 +660,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 28ecda3d370b4e047ae4d5f1d0909c29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73e7c8a531b9f0c4089faef4b298a17b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -645,7 +687,6 @@ GameObject:
   - 114: {fileID: 1264260467}
   - 114: {fileID: 1264260471}
   - 114: {fileID: 1264260472}
-  - 114: {fileID: 1264260474}
   - 114: {fileID: 1264260473}
   - 114: {fileID: 1264260475}
   - 114: {fileID: 1264260476}
@@ -772,17 +813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27013084f794fff4cb5bf5f3564e0ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1264260474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1264260466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d27b76ec92de4f4b934af547c9bf1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1264260475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,6 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebbaecfa4dff234ab14a7e4431bfaeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnIpad: 0
 --- !u!1 &1762097162
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +941,7 @@ GameObject:
   - 114: {fileID: 1849916091}
   - 114: {fileID: 1849916089}
   m_Layer: 5
-  m_Name: ContinueButton
+  m_Name: LevelsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -960,7 +991,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 602f8c0a898f3eb49b834158eadcfc14, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: fd215bd1b3c4d4b4fb9a89be8ab86c9d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1004,7 +1035,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dbc95ac9b75b10f438883f306f0ef287, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5163f94b2e726564390d21ab4de01d96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

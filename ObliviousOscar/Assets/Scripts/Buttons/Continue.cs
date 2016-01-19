@@ -9,6 +9,7 @@ public class Continue : MonoBehaviour {
 	public GameObject HeartsPanel;
 	public GameObject BackgroundImage;
 	public GameObject PauseMenuImage;
+	public GameObject LevelContainer;
 
 	public void OnClick () {
 
@@ -18,5 +19,6 @@ public class Continue : MonoBehaviour {
 		HeartsPanel.SetActive (true);
 		BackgroundImage.SetActive(true);
 		PauseMenuImage.SetActive(false);
+		LevelContainer.SetActive (true);
 	}
 }

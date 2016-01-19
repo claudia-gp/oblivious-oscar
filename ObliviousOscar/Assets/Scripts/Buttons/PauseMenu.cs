@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 	public GameObject HeartsPanel;
 	public GameObject PauseMenuImage;
 	public GameObject BackgroundImage;
+	public GameObject LevelContainer;
 
     public void OnClick()
     {
@@ -17,6 +18,7 @@ public class PauseMenu : MonoBehaviour
 		HeartsPanel.SetActive(false);
 		PauseMenuImage.SetActive(true);
 		BackgroundImage.SetActive(false);
+		LevelContainer.SetActive(false);
     }
 
 }

@@ -108,15 +108,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 24133850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -460.41}
+  m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_Children:
   - {fileID: 1079107291}
   m_Father: {fileID: 1894870984}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 95, y: -28}
+  m_AnchoredPosition: {x: 52, y: -13}
   m_SizeDelta: {x: -532, y: -1.1804199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &24133852
@@ -589,15 +589,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489852805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -460.41}
+  m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_Children:
   - {fileID: 1331561253}
   m_Father: {fileID: 1894870984}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 95, y: -30}
+  m_AnchoredPosition: {x: 52, y: -15}
   m_SizeDelta: {x: -458, y: -0.18048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &571364706
@@ -957,8 +957,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672194589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -460.41}
+  m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_Children:
   - {fileID: 1218313868}
   - {fileID: 130057860}
@@ -971,7 +971,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2, y: 0.057403922}
   m_SizeDelta: {x: 0.00012207, y: 0.000061035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &672194591
@@ -2175,8 +2175,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218313866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.023861, y: 6.2852073, z: -5400.0005}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalPosition: {x: -4.0239, y: 6.2852073, z: -5400}
+  m_LocalScale: {x: 69, y: 69.00001, z: 69.00001}
   m_Children: []
   m_Father: {fileID: 672194590}
   m_RootOrder: 0
@@ -2614,7 +2614,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429, y: 190}
+  m_AnchoredPosition: {x: -413, y: 190}
   m_SizeDelta: {x: 110.12, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1477069958
@@ -3495,7 +3495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ea4f730f98ef143b2f7928777de642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnIpad: 0
+  OnIpad: 1
 --- !u!114 &1894870979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3522,9 +3522,9 @@ MonoBehaviour:
   BackButton1: {fileID: 1477069956}
   BackButton2: {fileID: 2041387642}
   speed: 8
-  WorldNewSizeX: 375
-  WorldNewSizeY: 400
-  MoveWorldImageX: -5
+  WorldNewSizeX: 300
+  WorldNewSizeY: 320
+  MoveWorldImageX: -4
   MoveWorldImageY: -0.5
 --- !u!114 &1894870980
 MonoBehaviour:
@@ -3638,9 +3638,9 @@ MonoBehaviour:
   BackButton1: {fileID: 1477069956}
   BackButton2: {fileID: 2041387642}
   speed: 2
-  WorldNewSizeX: 375
-  WorldNewSizeY: 400
-  MoveWorldImageX: -5
+  WorldNewSizeX: 300
+  WorldNewSizeY: 320
+  MoveWorldImageX: -4
   MoveWorldImageY: -0.5
 --- !u!114 &1894870986
 MonoBehaviour:
@@ -3653,7 +3653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27b76ec92de4f4b934af547c9bf1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnIpad: 0
+  OnIpad: 1
 --- !u!1 &1958621143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,7 +4147,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303.56, y: 205}
+  m_AnchoredPosition: {x: -303.56, y: 189.99997}
   m_SizeDelta: {x: 110.12, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2122310813

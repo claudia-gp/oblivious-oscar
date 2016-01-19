@@ -2,10 +2,14 @@
 
 public class Back : MonoBehaviour
 {
+	public bool OnIpad = false;
+
 	public  void LoadStage ()
 	{
-
-		LevelManager.Load ("Main Menu");
-
+		if (OnIpad) {
+			LevelManager.Load ("Main Menu 1");
+		} else {
+			LevelManager.Load ("Main Menu");
+		}
 	}
 }

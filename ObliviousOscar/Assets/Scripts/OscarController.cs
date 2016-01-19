@@ -45,6 +45,5 @@ public class OscarController
 	{
 		oscar.FlipDirection ();
 		oscar.SetIdle (false);
-		oscar.Sprite = oscar.InitialSprite;
 	}
 }

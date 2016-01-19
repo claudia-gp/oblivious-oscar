@@ -28,8 +28,6 @@ public class Oscar : UnitySingleton<Oscar>
 		}
 	}
 
-	public Sprite InitialSprite { get; private set; }
-
 	public Rigidbody2D RigidBody2D { get; private set; }
 
 	public Vector3 Direction { get; private set; }
@@ -46,7 +44,6 @@ public class Oscar : UnitySingleton<Oscar>
 		Animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		RigidBody2D = GetComponent<Rigidbody2D> ();
-		InitialSprite = Sprite;
 
 		if (SavePointsManager.HasLatestState) {
 			State = SavePointsManager.LatestState;

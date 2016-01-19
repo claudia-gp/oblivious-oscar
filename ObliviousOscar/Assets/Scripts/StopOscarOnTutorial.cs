@@ -6,8 +6,7 @@ public class StopOscarOnTutorial : Tappable
 	public override void OnTap ()
 	{
 		Oscar oscar = Oscar.Instance;
-		Oscar.Instance.SetIdle (false);
-		oscar.Sprite = oscar.InitialSprite;
+		oscar.SetIdle (false);
 		Camera.main.transform.parent = oscar.transform;
 	}
 

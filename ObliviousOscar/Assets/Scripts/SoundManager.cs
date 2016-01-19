@@ -19,4 +19,13 @@ public class SoundManager : PersistentSingleton<SoundManager>
 	{
 		audioSource.PlayOneShot (clip);
 	}
+
+	public void SetMusic (bool musicOn)
+	{
+		if (musicOn) {
+			audioSource.Play ();
+		} else {
+			audioSource.Stop ();
+		}
+	}
 }

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+
+using UnityEngine;
 
 [ExecuteInEditMode]
 public class SpriteReplacer : MonoBehaviour
@@ -34,3 +36,9 @@ public class SpriteReplacer : MonoBehaviour
 		}
 	}
 }
+
+#else
+public class SpriteReplacer : UnityEngine.MonoBehaviour
+{
+}
+#endif

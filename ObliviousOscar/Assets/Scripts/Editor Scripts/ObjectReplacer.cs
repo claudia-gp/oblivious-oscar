@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+
+using UnityEngine;
 using UnityEditor;
 
 [ExecuteInEditMode]
@@ -52,7 +54,7 @@ public class ObjectReplacer : MonoBehaviour
 						DestroyImmediate (oldGo);
 					}
 				} catch (System.Exception ex) {
-					Debug.Log("Problem with object: " + oldGo + "\n" + ex);
+					Debug.Log ("Problem with object: " + oldGo + "\n" + ex);
 				}
 				
 			}
@@ -82,3 +84,9 @@ public class ObjectReplacer : MonoBehaviour
 		return null;
 	}
 }
+
+#else
+public class ObjectReplacer : UnityEngine.MonoBehaviour
+{
+}
+#endif

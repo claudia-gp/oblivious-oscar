@@ -1,21 +1,36 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class Back : MonoBehaviour
-{
-	public bool OnIpad = false;
+public class Back : MonoBehaviour {
+
+
 	public GameObject PausePanel;
 	public GameObject PauseButton;
 	public GameObject oscar;
-	public  void LoadStage ()
-	{
+
+
+	public void Back2MainMenu () {
+	
+		LevelManager.Load ("Main Menu");
+
+	}
+	
+
+	public void Back2WorldScene () {
+	
+		LevelManager.Load ("Choose World Scene");
+
+	}
+
+
+	public void Exit(){
+
 		PauseButton.SetActive (true);
 		PausePanel.SetActive (false);
 		oscar.SetActive(true);
-		if (OnIpad) {
-			LevelManager.Load ("Main Menu 1");
-		} else {
-			LevelManager.Load ("Main Menu");
-		
-		}
+
+		LevelManager.Load ("Main Menu");
+
+
 	}
 }

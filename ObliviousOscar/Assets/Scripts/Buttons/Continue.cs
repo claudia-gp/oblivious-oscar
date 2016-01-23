@@ -8,7 +8,7 @@ public class Continue : MonoBehaviour {
 	public GameObject ButtonPanel;
 	public GameObject HeartsPanel;
 	public GameObject BackgroundImage;
-	public GameObject PauseMenuImage;
+	public GameObject PauseMenuImage1,PauseMenuImage2;
 	public GameObject LevelContainer;
 
 	public void OnClick () {
@@ -18,7 +18,8 @@ public class Continue : MonoBehaviour {
 		ButtonPanel.SetActive (true);
 		HeartsPanel.SetActive (true);
 		BackgroundImage.SetActive(true);
-		PauseMenuImage.SetActive(false);
+		PauseMenuImage1.SetActive(false);
+		PauseMenuImage2.SetActive(false);
 		LevelContainer.SetActive (true);
 	}
 }

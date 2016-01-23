@@ -2683,8 +2683,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1894870986}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870978}
+        m_MethodName: Back2MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3486,7 +3486,6 @@ GameObject:
   - 114: {fileID: 1894870976}
   - 114: {fileID: 1894870985}
   - 114: {fileID: 1894870979}
-  - 114: {fileID: 1894870986}
   - 114: {fileID: 1894870978}
   m_Layer: 5
   m_Name: Canvas
@@ -3512,6 +3511,7 @@ MonoBehaviour:
   HeartsPanel: {fileID: 0}
   PauseMenuImage: {fileID: 0}
   BackgroundImage: {fileID: 0}
+  LevelContainer: {fileID: 0}
 --- !u!114 &1894870977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3531,10 +3531,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894870975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ea4f730f98ef143b2f7928777de642, type: 3}
+  m_Script: {fileID: 11500000, guid: 7809a7cf7d6a7be419ea7e190a6d5cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnIpad: 0
+  PausePanel: {fileID: 0}
+  PauseButton: {fileID: 0}
+  oscar: {fileID: 0}
 --- !u!114 &1894870979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,19 +3684,6 @@ MonoBehaviour:
   WorldNewSizeY: 400
   MoveWorldImageX: -5
   MoveWorldImageY: -0.5
---- !u!114 &1894870986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1894870975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d27b76ec92de4f4b934af547c9bf1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnIpad: 0
-  PausePanel: {fileID: 1677755116}
 --- !u!1 &1958621143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4155,8 +4144,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1894870978}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870975}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

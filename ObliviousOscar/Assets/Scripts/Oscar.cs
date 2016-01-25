@@ -2,7 +2,7 @@
 
 public class Oscar : UnitySingleton<Oscar>
 {
-	const float Speed = 3f;
+	public float Speed = 3f;
 	const float UphillSpeed = 2f;
 	const string AnimIsRunning = "IsRunning";
 	public const string AnimIsDead = "IsDead";

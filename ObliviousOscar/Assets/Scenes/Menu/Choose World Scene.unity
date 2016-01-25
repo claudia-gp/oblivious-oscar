@@ -301,8 +301,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331561254}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level1_5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pressRadius: 0.06
-  m_clickEffect: {fileID: 100000, guid: afc23073c8de8e94c80fa03da55e13e3, type: 2}
-  m_trailEffect: {fileID: 100000, guid: 405278a418609cc4ca90eb5e90e217d3, type: 2}
-  m_clickEffectCameraLayerName: TransparentFX
+  m_clickEffect: {fileID: 0}
+  m_trailEffect: {fileID: 0}
+  m_clickEffectCameraLayerName: ClickEffectLayer
   m_showDebug: 0
 --- !u!1 &437990599
 GameObject:
@@ -541,8 +541,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331561255}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level1_4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -769,8 +769,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079107292}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level2_3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1241,8 +1241,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079107294}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level2_1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1667,8 +1667,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331561257}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level1_2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1788,8 +1788,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331561256}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level1_3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1925,9 +1925,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1079107291}
-  - 114: {fileID: 1079107294}
-  - 114: {fileID: 1079107292}
-  - 114: {fileID: 1079107293}
   m_Layer: 5
   m_Name: ButtonPanel2
   m_TagString: Untagged
@@ -1958,39 +1955,6 @@ RectTransform:
   m_AnchoredPosition: {x: 135, y: -13}
   m_SizeDelta: {x: 470, y: 384}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1079107292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079107290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2932a493d412f946adc1c82fce27557, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1079107293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079107290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c8672f627ed4e49b8c67b506e76514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1079107294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079107290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f30132bae66c44e867f638993d6356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1180332002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,11 +2283,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1331561253}
-  - 114: {fileID: 1331561258}
-  - 114: {fileID: 1331561257}
-  - 114: {fileID: 1331561256}
-  - 114: {fileID: 1331561255}
-  - 114: {fileID: 1331561254}
   m_Layer: 5
   m_Name: ButtonPanel1
   m_TagString: Untagged
@@ -2354,61 +2313,6 @@ RectTransform:
   m_AnchoredPosition: {x: 135, y: -13}
   m_SizeDelta: {x: 470, y: 384}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1331561254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331561252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36eee8152a0727d4290a922544615a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1331561255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331561252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1444a5cdd32234dae1239b5de27aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1331561256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331561252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee110e8bafb75a540a21ddf85fb7b3e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1331561257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331561252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4869cf74d7a7cf4d9454860c61a4b14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1331561258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1331561252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20b69988e8e45648afd4fda9f80d5cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1399320921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,8 +2418,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1894870985}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1894870977}
+        m_MethodName: GoIntoWorld1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2863,8 +2767,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079107293}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Level2_2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3003,8 +2907,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331561258}
-        m_MethodName: LoadStage
+      - m_Target: {fileID: 1894870979}
+        m_MethodName: Tutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3062,7 +2966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425372836cb5f4127b53768b99945e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_triggerButton: 0
+  m_triggerButton: 1
 --- !u!1 &1638944778
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,11 +3386,10 @@ GameObject:
   - 114: {fileID: 1894870982}
   - 114: {fileID: 1894870981}
   - 114: {fileID: 1894870980}
-  - 114: {fileID: 1894870977}
   - 114: {fileID: 1894870976}
-  - 114: {fileID: 1894870985}
-  - 114: {fileID: 1894870979}
   - 114: {fileID: 1894870978}
+  - 114: {fileID: 1894870979}
+  - 114: {fileID: 1894870977}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3520,9 +3423,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894870975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27013084f794fff4cb5bf5f3564e0ee8, type: 3}
+  m_Script: {fileID: 11500000, guid: 635f1f20768c8f54e97666eb0ce80de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelPanel1: {fileID: 489852805}
+  LevelPanel2: {fileID: 24133850}
+  World2Image: {fileID: 1999293696}
+  World3Image: {fileID: 1725421004}
+  World1Image: {fileID: 1399320921}
+  WorldsTitle: {fileID: 130057859}
+  ButtonsPanel1: {fileID: 1331561252}
+  ButtonsPanel2: {fileID: 1079107290}
+  text1: {fileID: 1638944778}
+  text2: {fileID: 836182987}
+  Buttons1array:
+  - {fileID: 1591652606}
+  - {fileID: 935362699}
+  - {fileID: 1029898846}
+  - {fileID: 437990599}
+  - {fileID: 44777761}
+  Buttons2array:
+  - {fileID: 800899796}
+  - {fileID: 1507001964}
+  - {fileID: 649535526}
+  - {fileID: 1066941832}
+  - {fileID: 1869467714}
+  BackButton1: {fileID: 1477069956}
+  BackButton2: {fileID: 2041387642}
+  speed1: 2
+  speed2: 8
+  WorldNewSizeX: 375
+  WorldNewSizeY: 400
+  MoveWorldImageX: -5
+  MoveWorldImageY: -0.5
 --- !u!114 &1894870978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3545,28 +3478,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894870975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6ef6382a078564d9195c324a55e085, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e35f641336117d4896071dcbd4915d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPanel2: {fileID: 24133850}
-  World2Image: {fileID: 1999293696}
-  World3Image: {fileID: 1725421004}
-  World1Image: {fileID: 1399320921}
-  WorldsTitle: {fileID: 130057859}
-  ButtonsPanel2: {fileID: 1079107290}
-  text2: {fileID: 836182987}
-  Button1: {fileID: 800899796}
-  Button2: {fileID: 1507001964}
-  Button3: {fileID: 649535526}
-  Button4: {fileID: 1066941832}
-  Button5: {fileID: 1869467714}
-  BackButton1: {fileID: 1477069956}
-  BackButton2: {fileID: 2041387642}
-  speed: 8
-  WorldNewSizeX: 375
-  WorldNewSizeY: 400
-  MoveWorldImageX: -5
-  MoveWorldImageY: -0.5
 --- !u!114 &1894870980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3654,36 +3568,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1894870985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1894870975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6a110ebb0bc1144b251a03c9e4036d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelPanel1: {fileID: 489852805}
-  World2Image: {fileID: 1999293696}
-  World3Image: {fileID: 1725421004}
-  World1Image: {fileID: 1399320921}
-  WorldsTitle: {fileID: 130057859}
-  ButtonsPanel1: {fileID: 1331561252}
-  text1: {fileID: 1638944778}
-  Button1: {fileID: 1591652606}
-  Button2: {fileID: 935362699}
-  Button3: {fileID: 1029898846}
-  Button4: {fileID: 437990599}
-  Button5: {fileID: 44777761}
-  BackButton1: {fileID: 1477069956}
-  BackButton2: {fileID: 2041387642}
-  speed: 2
-  WorldNewSizeX: 375
-  WorldNewSizeY: 400
-  MoveWorldImageX: -5
-  MoveWorldImageY: -0.5
 --- !u!1 &1958621143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3937,8 +3821,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1894870979}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1894870977}
+        m_MethodName: GoIntoWorld2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4144,8 +4028,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1894870975}
-        m_MethodName: 
+      - m_Target: {fileID: 1894870978}
+        m_MethodName: Back2WorldScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

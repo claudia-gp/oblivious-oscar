@@ -34,6 +34,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &123934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 439786}
+  - 114: {fileID: 11462520}
+  m_Layer: 0
+  m_Name: OscarSpeed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &148968
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +178,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 451112}
   m_RootOrder: 2
+--- !u!4 &439786
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 451112}
+  m_RootOrder: 6
 --- !u!4 &449370
 Transform:
   m_ObjectHideFlags: 1
@@ -190,6 +218,7 @@ Transform:
   - {fileID: 415148}
   - {fileID: 426032}
   - {fileID: 426892}
+  - {fileID: 439786}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &499476
@@ -408,6 +437,17 @@ MonoBehaviour:
   SavePoint: {fileID: 8300000, guid: 6090d105a29024e45b121dda418e0231, type: 3}
   MagnetActive: {fileID: 8300000, guid: cd11c2e004da743648e8bb620a2f5d01, type: 3}
   Winning: {fileID: 8300000, guid: a648fe3b7ed674f4abbfa91126712381, type: 3}
+--- !u!114 &11462520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb666a65b2c6b4ccd8ea7f1e425b6ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490258
 MonoBehaviour:
   m_ObjectHideFlags: 1

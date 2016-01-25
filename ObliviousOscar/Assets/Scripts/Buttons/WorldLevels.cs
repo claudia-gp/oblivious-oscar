@@ -3,21 +3,23 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine.UI;
 
-public class WorldLevels : MonoBehaviour {
+public class WorldLevels : MonoBehaviour
+{
 
-	public GameObject LevelPanel1,LevelPanel2;
-	public GameObject World2Image,World3Image,World1Image;
+	public GameObject LevelPanel1, LevelPanel2;
+	public GameObject World2Image, World3Image, World1Image;
 	public GameObject WorldsTitle;
-	public GameObject ButtonsPanel1,ButtonsPanel2;
-	public GameObject text1,text2;
-	public GameObject[] Buttons1array,Buttons2array;
-	public GameObject BackButton1,BackButton2;
-	public float speed1,speed2;
-	public float WorldNewSizeX,WorldNewSizeY;
-	public float MoveWorldImageX,MoveWorldImageY;
+	public GameObject ButtonsPanel1, ButtonsPanel2;
+	public GameObject text1, text2;
+	public GameObject[] Buttons1array, Buttons2array;
+	public GameObject BackButton1, BackButton2;
+	public float speed1, speed2;
+	public float WorldNewSizeX, WorldNewSizeY;
+	public float MoveWorldImageX, MoveWorldImageY;
 
 
-	public void GoIntoWorld1(){
+	public void GoIntoWorld1 ()
+	{
 
 		CommonChanges ();
 		ButtonsAppearance (Buttons1array);
@@ -26,7 +28,7 @@ public class WorldLevels : MonoBehaviour {
 		World2Image.SetActive (false);
 
 		Vector2 InitialPosition = World1Image.transform.position;
-		Vector2 newPosition = new Vector2 (MoveWorldImageX,MoveWorldImageY);
+		Vector2 newPosition = new Vector2 (MoveWorldImageX, MoveWorldImageY);
 		Vector2 newSize = new Vector3 (WorldNewSizeX, WorldNewSizeY);
 		float speedFactor = 1f;
 		float duration = Vector3.Distance (InitialPosition, newPosition) / (speed1 * speedFactor);
@@ -38,7 +40,8 @@ public class WorldLevels : MonoBehaviour {
 
 
 
-	public void GoIntoWorld2(){
+	public void GoIntoWorld2 ()
+	{
 
 		CommonChanges ();
 		ButtonsAppearance (Buttons2array);
@@ -47,7 +50,7 @@ public class WorldLevels : MonoBehaviour {
 		World1Image.SetActive (false);
 
 		Vector2 InitialPosition = World2Image.transform.position;
-		Vector2 newPosition = new Vector2 (MoveWorldImageX,MoveWorldImageY);
+		Vector2 newPosition = new Vector2 (MoveWorldImageX, MoveWorldImageY);
 		Vector2 newSize = new Vector3 (WorldNewSizeX, WorldNewSizeY);
 		float speedFactor = 1f;
 		float duration = Vector3.Distance (InitialPosition, newPosition) / (speed2 * speedFactor);
@@ -59,20 +62,18 @@ public class WorldLevels : MonoBehaviour {
 
 
 	public void CommonChanges ()
-		{
+	{
 		BackButton1.SetActive (false);
 		BackButton2.SetActive (true);
 		World3Image.SetActive (false);
 		WorldsTitle.SetActive (false);
-		Vector2 newPosition = new Vector2 (MoveWorldImageX,MoveWorldImageY);
-		Vector2 newSize = new Vector3 (WorldNewSizeX, WorldNewSizeY);
-		}
+	}
 
-	public void ButtonsAppearance(GameObject[]buttons){
+	public void ButtonsAppearance (GameObject[]buttons)
+	{
 		
-		foreach (var i in buttons)
-		{
-			i.GetComponent<Image>().DOFade (0f, 3).From();
-	    }
-}
+		foreach (var i in buttons) {
+			i.GetComponent<Image> ().DOFade (0f, 3).From ();
+		}
+	}
 }

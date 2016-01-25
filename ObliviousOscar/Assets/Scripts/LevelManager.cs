@@ -4,6 +4,7 @@ public class LevelManager
 {
 	public const string MainMenu = "Main Menu";
 	public const string ChooseWorld = "Choose World Scene";
+	public const string FirstLevel = "Level 1.1-Tutorial";
 
 	LevelManager () {}
 

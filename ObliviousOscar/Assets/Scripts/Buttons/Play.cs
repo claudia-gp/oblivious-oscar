@@ -8,7 +8,7 @@ public class Play : MonoBehaviour
 
 	public void LoadStage ()
 	{
-		SceneManager.LoadSceneAsync ("Level 1.1-Tutorial").allowSceneActivation = true;
+		SceneManager.LoadSceneAsync (LevelManager.FirstLevel).allowSceneActivation = true;
 
 		var loadingScreen = MainMenuCanvas.Instance.LoadingScreen;
 		loadingScreen.SetActive (true);

@@ -1,25 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ChangeDifficulty : MonoBehaviour
 {
-	const float speedSlow = 2f;
-	const float speedMedium = 3f;
-	const float speedFast = 4f;
-
-	public void slowSpeed ()
+	public void SlowSpeed ()
 	{
-		Oscar.Instance.Speed = speedSlow;
+		OscarSpeed.Instance.Speed = OscarSpeed.Slow;
 	}
 
-	public void mediumSpeed ()
+	public void MediumSpeed ()
 	{
-		Oscar.Instance.Speed = speedMedium;
+		OscarSpeed.Instance.Speed = OscarSpeed.Medium;
 	}
 
-	public void fastSpeed ()
+	public void FastSpeed ()
 	{
-		Oscar.Instance.Speed = speedFast;
+		OscarSpeed.Instance.Speed = OscarSpeed.Fast;
 	}
-
 }

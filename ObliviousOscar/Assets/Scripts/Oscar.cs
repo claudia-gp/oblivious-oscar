@@ -2,7 +2,7 @@
 
 public class Oscar : UnitySingleton<Oscar>
 {
-	public float Speed = 3f;
+	float speed;
 	const float UphillSpeed = 2f;
 	const string AnimIsRunning = "IsRunning";
 	public const string AnimIsDead = "IsDead";
@@ -49,16 +49,20 @@ public class Oscar : UnitySingleton<Oscar>
 			State = SavePointsManager.LatestState;
 		} else {
 			Direction = transform.right;
-
 			SavePointsManager.InitialState = State;
 			SavePointsManager.LatestState = State;
 		}
 	}
 
+	void Start ()
+	{
+		speed = OscarSpeed.Instance.Speed;
+	}
+
 	void Update ()
 	{
 		if (IsRunning) {
-			transform.position += Direction * Time.deltaTime * Speed;
+			transform.position += Direction * Time.deltaTime * speed;
 			if (IsUphill) {
 				transform.position += transform.up * Time.deltaTime * UphillSpeed;
 			}

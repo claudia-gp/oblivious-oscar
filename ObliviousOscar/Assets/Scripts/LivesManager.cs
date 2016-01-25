@@ -14,7 +14,6 @@ public class LivesManager : PersistentSingleton<LivesManager>
 		hearts = UI.Instance.heartsPanel.GetComponentsInChildren<Image> ();
 
 		lives = hearts.Length * 2;
-
 	}
 
 	public void RemoveOneLife ()

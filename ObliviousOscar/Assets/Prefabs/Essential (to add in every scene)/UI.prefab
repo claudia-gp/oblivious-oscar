@@ -204,10 +204,6 @@ GameObject:
   - 114: {fileID: 11461248}
   - 114: {fileID: 11456750}
   - 114: {fileID: 11428924}
-  - 114: {fileID: 11419548}
-  - 114: {fileID: 11439758}
-  - 114: {fileID: 11426254}
-  - 114: {fileID: 11480712}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -231,6 +227,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &135676
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22452534}
+  - 222: {fileID: 22281056}
+  - 114: {fileID: 11424580}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &141966
 GameObject:
   m_ObjectHideFlags: 1
@@ -242,6 +255,23 @@ GameObject:
   - 222: {fileID: 22212512}
   m_Layer: 5
   m_Name: PauseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &144482
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22465832}
+  - 222: {fileID: 22245308}
+  - 114: {fileID: 11441372}
+  m_Layer: 5
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +650,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11439758}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -633,19 +663,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11419548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734101621e9a97245a563afd168502df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SoundButtonOff: {fileID: 119270}
-  SoundButtonOn: {fileID: 119356}
 --- !u!114 &11421158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -711,24 +728,33 @@ MonoBehaviour:
   m_owner: {fileID: 0}
   m_stageToLoadOnClick: 
   m_fadeTime: 1
---- !u!114 &11426254
+--- !u!114 &11424580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131722}
+  m_GameObject: {fileID: 135676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a758d5ff3b8b8a4e8be56b2d6c1dd62, type: 3}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PausePanel: {fileID: 117518}
-  Oscar: {fileID: 0}
-  ButtonPanel: {fileID: 141966}
-  HeartsPanel: {fileID: 186430}
-  BackgroundImage: {fileID: 0}
-  PauseMenuImage: {fileID: 0}
-  LevelContainer: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11428924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -741,12 +767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 117518}
-  Oscar: {fileID: 0}
   ButtonPanel: {fileID: 141966}
   HeartsPanel: {fileID: 186430}
-  PauseMenuImage: {fileID: 0}
-  BackgroundImage: {fileID: 0}
-  LevelContainer: {fileID: 0}
+  PauseButton: {fileID: 141966}
 --- !u!114 &11429552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -839,19 +862,33 @@ MonoBehaviour:
   m_owner: {fileID: 0}
   m_stageToLoadOnClick: 
   m_fadeTime: 1
---- !u!114 &11439758
+--- !u!114 &11441372
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131722}
+  m_GameObject: {fileID: 144482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b4e4e884686c1439ad78f510dbee61, type: 3}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundButtonOn: {fileID: 119356}
-  SoundButtonOff: {fileID: 119270}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: e110dd9043d4d614b91288cd470b17f1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11444800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -918,7 +955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11419548}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1095,7 +1132,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11428924}
-        m_MethodName: OnClick
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1217,21 +1254,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11480712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d27b76ec92de4f4b934af547c9bf1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnIpad: 0
-  PausePanel: {fileID: 117518}
-  PauseButton: {fileID: 141966}
-  oscar: {fileID: 0}
 --- !u!114 &11483178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1384,7 +1406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11426254}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1550,6 +1572,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160522}
+--- !u!222 &22245308
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144482}
 --- !u!222 &22252612
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1574,6 +1602,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108696}
+--- !u!222 &22281056
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135676}
 --- !u!222 &22281974
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1622,7 +1656,7 @@ RectTransform:
   m_Children:
   - {fileID: 22468160}
   m_Father: {fileID: 22459606}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2999907.8, y: -52.5}
@@ -1640,7 +1674,7 @@ RectTransform:
   m_Children:
   - {fileID: 22425530}
   m_Father: {fileID: 22459606}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2999867.2, y: -58}
@@ -1692,7 +1726,7 @@ RectTransform:
   m_Children:
   - {fileID: 22474708}
   m_Father: {fileID: 22459606}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2999877.8, y: -22.399994}
@@ -1753,6 +1787,23 @@ RectTransform:
   m_AnchoredPosition: {x: -407.99997, y: 225}
   m_SizeDelta: {x: 63, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &22452534
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22459606}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 2999871.8, y: -50.250008}
+  m_SizeDelta: {x: -866.8, y: -486.8}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22458014
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1797,6 +1848,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
+  - {fileID: 22452534}
+  - {fileID: 22465832}
   - {fileID: 22406060}
   - {fileID: 22428330}
   - {fileID: 22470086}
@@ -1821,11 +1874,28 @@ RectTransform:
   m_Children:
   - {fileID: 22459020}
   m_Father: {fileID: 22459606}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2999870.2, y: -86.70001}
   m_SizeDelta: {x: 133.70001, y: 113.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &22465832
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22459606}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2999870, y: -52.5}
+  m_SizeDelta: {x: 206.8, y: 206.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22468160
 RectTransform:
@@ -1856,7 +1926,7 @@ RectTransform:
   m_Children:
   - {fileID: 22429874}
   m_Father: {fileID: 22459606}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2999872.8, y: -14.399994}

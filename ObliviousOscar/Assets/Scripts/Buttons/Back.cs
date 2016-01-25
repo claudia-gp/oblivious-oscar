@@ -1,36 +1,27 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Back : MonoBehaviour {
-
-
+public class Back : MonoBehaviour
+{
 	public GameObject PausePanel;
 	public GameObject PauseButton;
-	public GameObject oscar;
 
-
-	public void Back2MainMenu () {
-	
-		LevelManager.Load ("Main Menu");
-
-	}
-	
-
-	public void Back2WorldScene () {
-	
-		LevelManager.Load ("Choose World Scene");
-
+	public void Back2MainMenu ()
+	{
+		LevelManager.Load (LevelManager.MainMenu);
 	}
 
 
-	public void Exit(){
+	public void Back2WorldScene ()
+	{	
+		LevelManager.Load (LevelManager.ChooseWorld);
+	}
+
+	public void Exit ()
+	{
 
 		PauseButton.SetActive (true);
 		PausePanel.SetActive (false);
-		oscar.SetActive(true);
 
-		LevelManager.Load ("Main Menu");
-
-
+		LevelManager.Load (LevelManager.MainMenu);
 	}
 }

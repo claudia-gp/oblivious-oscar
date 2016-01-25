@@ -2,6 +2,9 @@
 
 public class LevelManager
 {
+	public const string MainMenu = "Main Menu";
+	public const string ChooseWorld = "Choose World Scene";
+
 	LevelManager () {}
 
 	public static int CurrentIndex {

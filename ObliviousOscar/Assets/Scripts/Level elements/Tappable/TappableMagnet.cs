@@ -21,7 +21,6 @@ public class TappableMagnet : Tappable
 
 		if (!isActivated) {
 			dj.distance = 0;
-			isActivated = true;
 		} else {
 			dj.distance = initDistance;
 			isActivated = false;

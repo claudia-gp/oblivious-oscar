@@ -6,6 +6,6 @@ public class TriggerFakeMagnetClass : OscarEnterDetecter
 
     protected override void OnOscarEnter()
     {
-        Destroy(magnet.GetComponent<TappableMagnet>());
+		magnet.GetComponent<BoxCollider2D> ().enabled = false;
     }
 }

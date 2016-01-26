@@ -14,7 +14,6 @@ public class OptionsMenu : MonoBehaviour
 	{
 		OptionsPanel.SetActive (true);
 		OptionsButton.SetActive (false);
-		BackButton.SetActive (true);
 		PlayButton.GetComponent<Button> ().enabled = false;
 		LevelsButton.GetComponent<Button> ().enabled = false;
 	}

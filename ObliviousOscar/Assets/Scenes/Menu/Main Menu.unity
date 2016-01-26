@@ -806,7 +806,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1264260474}
         m_MethodName: Back2MainMenu
         m_Mode: 1
         m_Arguments:
@@ -1524,6 +1524,7 @@ GameObject:
   - 114: {fileID: 1264260472}
   - 114: {fileID: 1264260473}
   - 114: {fileID: 1264260475}
+  - 114: {fileID: 1264260474}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1646,6 +1647,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f180253fbac924896cc918060fdf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1264260474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264260466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7809a7cf7d6a7be419ea7e190a6d5cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PausePanel: {fileID: 0}
+  PauseButton: {fileID: 0}
 --- !u!114 &1264260475
 MonoBehaviour:
   m_ObjectHideFlags: 0

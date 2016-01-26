@@ -19,15 +19,13 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 0f;
 
 		PausePanel.SetActive (true);
-		ButtonPanel.SetActive (false);
-		HeartsPanel.SetActive (false);
+
 
 	}
 
 	public  void Exit ()
 	{
-		HeartsPanel.SetActive (true);
-		PauseButton.SetActive (true);
+		Time.timeScale = initialTimeScale;
 		PausePanel.SetActive (false);
 		LevelManager.Load (LevelManager.MainMenu);
 	}
@@ -37,8 +35,8 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = initialTimeScale;
 
 		PausePanel.SetActive (false);
-		ButtonPanel.SetActive (true);
-		HeartsPanel.SetActive (true);
+
+
 	}
 
 }

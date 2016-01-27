@@ -43697,6 +43697,49 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 410208, guid: 7e3a322b9e7f4450bbe4e170b9f478ac, type: 2}
   m_PrefabInternal: {fileID: 837948789}
+--- !u!1 &840496574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 174048, guid: 0b71278b44c894d09912f4f48d9bb741, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 840496576}
+  - 114: {fileID: 840496575}
+  m_Layer: 0
+  m_Name: Level Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &840496575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11473534, guid: 0b71278b44c894d09912f4f48d9bb741,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840496574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baeb84e7b7fd6403cb2b5652f0a6f802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  World: 1
+  Level: 1
+  Name: Tutorial
+--- !u!4 &840496576
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412614, guid: 0b71278b44c894d09912f4f48d9bb741, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840496574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 167.95795, y: 1.7542, z: 90.171875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1001 &842630407
 Prefab:
   m_ObjectHideFlags: 0
@@ -109986,7 +110029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 5.0615115
+      value: 6.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}

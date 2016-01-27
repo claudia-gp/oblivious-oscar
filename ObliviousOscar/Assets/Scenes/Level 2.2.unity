@@ -4797,19 +4797,19 @@ Transform:
   - {fileID: 333320311}
   - {fileID: 164209524}
   - {fileID: 1115135728}
-  - {fileID: 1173475475}
   - {fileID: 1967261016}
-  - {fileID: 926267156}
-  - {fileID: 1115598728}
-  - {fileID: 1415447120}
   - {fileID: 688140005}
+  - {fileID: 926267156}
+  - {fileID: 1173475475}
+  - {fileID: 1415447120}
+  - {fileID: 1115598728}
   - {fileID: 654088484}
   - {fileID: 1118902649}
-  - {fileID: 154257206}
   - {fileID: 1947415686}
   - {fileID: 1620293270}
-  - {fileID: 2097364160}
+  - {fileID: 154257206}
   - {fileID: 1385638204}
+  - {fileID: 2097364160}
   - {fileID: 1169061705}
   m_Father: {fileID: 998379697}
   m_RootOrder: 15
@@ -61266,7 +61266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 5.630435
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_RootOrder
@@ -63303,6 +63303,49 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 410208, guid: 7e3a322b9e7f4450bbe4e170b9f478ac, type: 2}
   m_PrefabInternal: {fileID: 1870883365}
+--- !u!1 &1872124857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 174048, guid: 0b71278b44c894d09912f4f48d9bb741, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1872124859}
+  - 114: {fileID: 1872124858}
+  m_Layer: 0
+  m_Name: Level Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1872124858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11473534, guid: 0b71278b44c894d09912f4f48d9bb741,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872124857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baeb84e7b7fd6403cb2b5652f0a6f802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  World: 2
+  Level: 2
+  Name: Mixtape
+--- !u!4 &1872124859
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412614, guid: 0b71278b44c894d09912f4f48d9bb741, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872124857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 167.95795, y: 1.7542, z: 90.171875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1001 &1873990098
 Prefab:
   m_ObjectHideFlags: 0

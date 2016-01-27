@@ -168,44 +168,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 462762, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11428924, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: Oscar
-      value: 
-      objectReference: {fileID: 334823673}
-    - target: {fileID: 11428924, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: BackgroundImage
-      value: 
-      objectReference: {fileID: 720374332}
-    - target: {fileID: 11428924, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: PauseMenuImage
-      value: 
-      objectReference: {fileID: 1666712855}
-    - target: {fileID: 11428924, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: LevelContainer
-      value: 
-      objectReference: {fileID: 1144338581}
-    - target: {fileID: 11426254, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: Oscar
-      value: 
-      objectReference: {fileID: 334823673}
-    - target: {fileID: 11426254, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: BackgroundImage
-      value: 
-      objectReference: {fileID: 720374332}
-    - target: {fileID: 11426254, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: PauseMenuImage
-      value: 
-      objectReference: {fileID: 1666712855}
-    - target: {fileID: 11426254, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: LevelContainer
-      value: 
-      objectReference: {fileID: 1144338581}
-    - target: {fileID: 11480712, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
-      propertyPath: oscar
-      value: 
-      objectReference: {fileID: 334823673}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9e85ca5655ee064396483a69c6f1060, type: 2}
   m_IsPrefabParent: 0
@@ -4846,7 +4810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 5.057692
+      value: 5.0673914
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
@@ -8353,10 +8317,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 401658, guid: 52fcfa9d2ee1d4a879e0a8045695f8c4, type: 2}
   m_PrefabInternal: {fileID: 330739355}
---- !u!1 &334823673 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 166018, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
-  m_PrefabInternal: {fileID: 176106672}
 --- !u!1001 &335194570
 Prefab:
   m_ObjectHideFlags: 0
@@ -18581,10 +18541,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 491296, guid: a5c846cca79df470cbcaf9c4c9b4e28f, type: 2}
   m_PrefabInternal: {fileID: 709159775}
---- !u!1 &720374332 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 160214, guid: 24a7fe9686982fa4f8d0be2288ef4fe4, type: 2}
-  m_PrefabInternal: {fileID: 1614019466}
 --- !u!1001 &722554018
 Prefab:
   m_ObjectHideFlags: 0
@@ -42290,10 +42246,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 401658, guid: 52fcfa9d2ee1d4a879e0a8045695f8c4, type: 2}
   m_PrefabInternal: {fileID: 1665008954}
---- !u!1 &1666712855 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 104772, guid: 24a7fe9686982fa4f8d0be2288ef4fe4, type: 2}
-  m_PrefabInternal: {fileID: 1614019466}
 --- !u!1001 &1666768036
 Prefab:
   m_ObjectHideFlags: 0

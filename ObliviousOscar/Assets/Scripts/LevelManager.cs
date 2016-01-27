@@ -3,8 +3,9 @@
 public class LevelManager
 {
 	public const string MainMenu = "Main Menu";
-	public const string ChooseWorld = "Choose World Scene";
+	public const string ChooseWorld = "Choose World";
 	public const string FirstLevel = "Level 1.1-Tutorial";
+	public const string Loading = "Loading";
 
 	LevelManager () {}
 
@@ -24,6 +25,12 @@ public class LevelManager
 	public static void Load (string levelName)
 	{
 		SceneManager.LoadScene (levelName);
+	}
+
+	public static void LoadAfterLoadingScreen (string levelName)
+	{
+		SceneManager.LoadSceneAsync (Loading).allowSceneActivation = true;
+		SceneManager.LoadSceneAsync (levelName).allowSceneActivation = true;
 	}
 
 	public static void ReloadCurrent ()

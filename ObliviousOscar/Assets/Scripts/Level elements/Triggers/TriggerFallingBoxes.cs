@@ -21,6 +21,7 @@ public class TriggerFallingBoxes : OscarEnterDetecter
 
     protected override void OnOscarEnter()
     {
+		box.SetActive (true);
         rb.isKinematic = false;
         rb.gravityScale = gravityIndex;
         StartCoroutine(RevertGravity());

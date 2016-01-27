@@ -4267,6 +4267,22 @@ Prefab:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 21242140, guid: bba68d6515bde68418883774eae77dc2, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103530, guid: bba68d6515bde68418883774eae77dc2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 144262, guid: bba68d6515bde68418883774eae77dc2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185540, guid: bba68d6515bde68418883774eae77dc2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bba68d6515bde68418883774eae77dc2, type: 2}
   m_IsPrefabParent: 0
@@ -15942,6 +15958,7 @@ Transform:
   - {fileID: 784107356}
   - {fileID: 1135820389}
   - {fileID: 366399692}
+  - {fileID: 704804410}
   m_Father: {fileID: 263920524}
   m_RootOrder: 1
 --- !u!114 &461930301
@@ -23890,6 +23907,56 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 410208, guid: 7e3a322b9e7f4450bbe4e170b9f478ac, type: 2}
   m_PrefabInternal: {fileID: 700800828}
+--- !u!1001 &704804409
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 461930300}
+    m_Modifications:
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 107016, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+      propertyPath: m_Name
+      value: Magnet+KillBox Trap (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &704804410 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 457446, guid: 5404e92ddf1d66c40b777dbc8d0bee67, type: 2}
+  m_PrefabInternal: {fileID: 704804409}
 --- !u!1001 &706082710
 Prefab:
   m_ObjectHideFlags: 0
@@ -51462,7 +51529,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -37.6
+      value: -37.5
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -51490,7 +51557,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 5.0673914
+      value: 5.630435
       objectReference: {fileID: 0}
     - target: {fileID: 11443736, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_Enabled

@@ -27,6 +27,7 @@ public class PauseMenu : MonoBehaviour
 	{
 		Time.timeScale = initialTimeScale;
 		PausePanel.SetActive (false);
+		LevelManager.ResetLevel ();
 		LevelManager.Load (LevelManager.MainMenu);
 	}
 

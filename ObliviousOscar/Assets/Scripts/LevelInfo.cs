@@ -12,6 +12,9 @@ public class LevelInfo : UnitySingleton<LevelInfo>
 	Text line1, line2;
 	Image infoPanel;
 
+	const float infoShowDuration = 2f;
+	const float fadeDuration = 1f;
+
 	void Start ()
 	{
 		infoPanel = UI.Instance.LevelInfo;
@@ -25,13 +28,17 @@ public class LevelInfo : UnitySingleton<LevelInfo>
 
 	IEnumerator ShowText ()
 	{
-		const float fadeDuration = 2f;
-		
-		yield return new WaitForSeconds (2f);
-		Oscar.Instance.IsRunning = true;
+		yield return new WaitForSeconds (infoShowDuration);
 			
-		line1.DOFade (0f, fadeDuration);
-		line2.DOFade (0f, fadeDuration);
-		infoPanel.DOFade (0f, fadeDuration);
+		fade (line1, line2, infoPanel);
+	}
+
+	void fade (params Graphic[] toFade)
+	{
+		Tweener lastTweener = null;
+		foreach (var g in toFade) {
+			lastTweener = g.DOFade (0f, fadeDuration).SetEase (Ease.Linear);
+		}
+		lastTweener.OnComplete (() => Oscar.Instance.SetIdle (false));
 	}
 }

@@ -32,13 +32,9 @@ public class OscarController
 		Object.Destroy (oscar.GetComponent<Collider2D> ());
 		Camera.main.transform.SetParent (null);
 		oscar.GetComponent<SpriteRenderer> ().material.DOFade (0f, killDuration);
+		LivesManager.Instance.RemoveOneLife ();
 		oscar.transform.DOMove (new Vector3 (oscar.transform.position.x, oscar.transform.position.y + killHeight), killDuration)
-			.OnComplete (
-			() => {
-				LivesManager.Instance.RemoveOneLife ();
-				LevelManager.ReloadCurrent ();
-			}
-		);
+			.OnComplete (LevelManager.ReloadCurrent);
 	}
 
 	public void ReverseDirection ()

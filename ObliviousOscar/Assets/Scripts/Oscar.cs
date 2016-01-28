@@ -40,7 +40,7 @@ public class Oscar : UnitySingleton<Oscar>
 	{
 		base.Awake ();
 
-		IsRunning = false;
+		IsRunning = true;
 		Animator = GetComponent<Animator> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		RigidBody2D = GetComponent<Rigidbody2D> ();

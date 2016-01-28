@@ -1553,7 +1553,7 @@ MonoBehaviour:
   PlayButton: {fileID: 943827898}
   LevelsButton: {fileID: 1849916087}
   OptionsButton: {fileID: 1332334554}
-  BackButton: {fileID: 0}
+  BackButton: {fileID: 433030105}
 --- !u!114 &1264260473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,6 +1565,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f180253fbac924896cc918060fdf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlowArrowGrey: {fileID: 21300000, guid: 147c9326e6335d24e8aa28af1674b6d5, type: 3}
+  SlowArrowActive: {fileID: 21300000, guid: e39b429905384934f9c17598748f2688, type: 3}
+  MediumArrowGrey: {fileID: 21300000, guid: d9695f9b30c755240b9fe0f9b08bf806, type: 3}
+  MediumArrowActive: {fileID: 21300000, guid: 256e158d8e06f304fbdf4777c62cff8d, type: 3}
+  FastArrowGrey: {fileID: 21300000, guid: c7f0f9bbec4516740b20b34773cb507b, type: 3}
+  FastArrowActive: {fileID: 21300000, guid: 1916f54e512ec6748a92bdb496815d20, type: 3}
+  SlowButton: {fileID: 416183377}
+  MediumButton: {fileID: 1412025229}
+  FastButton: {fileID: 1313152944}
 --- !u!114 &1264260474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,7 +2087,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

@@ -20,8 +20,8 @@ public class LevelInfo : UnitySingleton<LevelInfo>
 		infoPanel = UI.Instance.LevelInfo;
 		line1 = UI.Instance.InfoLine1;
 		line2 = UI.Instance.InfoLine2;
-		line1.text = "World " + World;
-		line2.text = "Level " + Level + ": " + Name;
+		line1.text = "Level " + World + "." + Level;
+		line2.text = Name;
 
 		StartCoroutine (ShowText ());
 	}

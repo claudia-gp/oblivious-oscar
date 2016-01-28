@@ -13,6 +13,7 @@ public class Sound : MonoBehaviour {
 
 		//Deactivate sound	
 		SoundManager.Instance.SetMusic(false);
+		SoundManager.Instance.SetSound (false);
 		changeAspectOn ();
 	}
 	
@@ -20,6 +21,7 @@ public class Sound : MonoBehaviour {
 
 		//Activate Sound
 		SoundManager.Instance.SetMusic(true);
+		SoundManager.Instance.SetSound (true);
 		changeAspectOff();
 
 
@@ -28,14 +30,14 @@ public class Sound : MonoBehaviour {
 	public void OptionsSoundOn(){
 
 		//Deactivate sound	
-		SoundManager.Instance.SetMusic(false);
+		SoundManager.Instance.SetSound(false);
 		changeAspectOn ();
 	}
 
 	public void OptionsSoundOff(){
 
 		//Activate Sound
-		SoundManager.Instance.SetMusic(true);
+		SoundManager.Instance.SetSound(true);
 		changeAspectOff ();
 
 

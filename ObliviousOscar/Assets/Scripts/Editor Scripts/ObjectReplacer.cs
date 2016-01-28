@@ -7,10 +7,9 @@ using UnityEditor;
 public class ObjectReplacer : MonoBehaviour
 {
 	public bool ReplaceObject;
-	public string OldObjectName = "grassCenter ";
 	public string SpriteName = "";
 
-	public GameObject[] NewObjects;
+	public Sprite[] NewSprites;
 	public float[] Probabilities;
 
 	void Update ()
@@ -18,14 +17,14 @@ public class ObjectReplacer : MonoBehaviour
 		if (ReplaceObject) {
 			ReplaceObject = false;
 
-			if (Probabilities.Length != NewObjects.Length) {
+			if (Probabilities.Length != NewSprites.Length) {
 				if (Probabilities.Length != 0) {
 					Debug.Log ("Wrong probabilities length");
 					return;
 				}
-				Probabilities = new float[NewObjects.Length];
-				for (int i = 0; i < NewObjects.Length; i++) {
-					Probabilities[i] = 1f / NewObjects.Length;
+				Probabilities = new float[NewSprites.Length];
+				for (int i = 0; i < NewSprites.Length; i++) {
+					Probabilities[i] = 1f / NewSprites.Length;
 				}
 			}
 			float accum = 0f;
@@ -45,13 +44,9 @@ public class ObjectReplacer : MonoBehaviour
 				try {
 					if (sr != null &&
 					    oldGo != null &&
-					    (string.IsNullOrEmpty (OldObjectName) || oldGo.name.StartsWith (OldObjectName)) &&
 					    (string.IsNullOrEmpty (SpriteName) || oldGo.GetComponent<SpriteRenderer> ().sprite.name.StartsWith (SpriteName))) {
-						GameObject prefab = choosePrefab ();
-						GameObject newGo = PrefabUtility.InstantiatePrefab (prefab) as GameObject;
-						newGo.transform.position = oldGo.transform.position;
-						newGo.transform.parent = oldGo.transform.parent;
-						DestroyImmediate (oldGo);
+						Sprite newSprite = chooseSprite ();
+						sr.sprite = newSprite;
 					}
 				} catch (System.Exception ex) {
 					Debug.Log ("Problem with object: " + oldGo + "\n" + ex);
@@ -61,10 +56,10 @@ public class ObjectReplacer : MonoBehaviour
 		}
 	}
 
-	GameObject choosePrefab ()
+	Sprite chooseSprite ()
 	{
-		Debug.Assert (NewObjects.Length == Probabilities.Length);
-		int n = NewObjects.Length;
+		Debug.Assert (NewSprites.Length == Probabilities.Length);
+		int n = NewSprites.Length;
 
 		float[] probLevel = new float[n];
 		float accum = 0f;
@@ -76,7 +71,7 @@ public class ObjectReplacer : MonoBehaviour
 		float random = Random.value;
 		for (int i = 0; i < n; i++) {
 			if (probLevel[i] > random) {
-				return NewObjects[i];
+				return NewSprites[i];
 			}
 		}
 

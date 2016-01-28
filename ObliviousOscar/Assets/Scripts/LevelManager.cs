@@ -43,6 +43,7 @@ public class LevelManager
 		Oscar.Instance.ResetToInitialState ();
 		LivesManager.Instance.Reset ();
 		UI.Instance.Reset ();
+		SavePoint.ResetSavePoints ();
 	}
 		
 }

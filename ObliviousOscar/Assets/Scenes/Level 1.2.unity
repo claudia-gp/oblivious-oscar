@@ -3676,15 +3676,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430476, guid: 430459e78dd6a4b25be0357ac9036809, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.5564305
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 430476, guid: 430459e78dd6a4b25be0357ac9036809, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.6319084
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 430476, guid: 430459e78dd6a4b25be0357ac9036809, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.5694679
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430459e78dd6a4b25be0357ac9036809, type: 2}
@@ -5156,9 +5156,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -5.79666, y: 0.4999994}
+  m_Offset: {x: -7.5159388, y: 0.4999994}
   serializedVersion: 2
-  m_Size: {x: 0.53857934, y: 1}
+  m_Size: {x: 0.71956474, y: 1}
 --- !u!212 &133123449
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30185,11 +30185,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 16.6
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 461606, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -30217,7 +30217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042574, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
       propertyPath: orthographic size
-      value: 6.740741
+      value: 5.058947
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b255f19f45c25694aaa8f6f9f1f7ef0b, type: 2}
@@ -41190,7 +41190,7 @@ Transform:
   - {fileID: 140051853}
   - {fileID: 1111277843}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!1001 &1249557924
 Prefab:
   m_ObjectHideFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21255086}
   - 114: {fileID: 11403788}
   - 50: {fileID: 5010704}
-  - 61: {fileID: 6142858}
   - 95: {fileID: 9550898}
   - 114: {fileID: 11483860}
+  - 61: {fileID: 6141736}
   m_Layer: 0
   m_Name: ProjectileLeft
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.88152, y: -2.3359466, z: 0}
+  m_LocalPosition: {x: 91.18544, y: -0.94011354, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,7 +50,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!61 &6142858
+--- !u!61 &6141736
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -61,9 +61,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.62495935, y: 0.24320984}
+  m_Offset: {x: -0.49512738, y: 0.5}
   serializedVersion: 2
-  m_Size: {x: 1.2614726, y: 0.9528817}
+  m_Size: {x: 0.964251, y: 1}
 --- !u!95 &9550898
 Animator:
   serializedVersion: 3
@@ -127,9 +127,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1920584841
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 24d4ef13942419946bce5d83779053bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba38c09df7caaf24db54ed4d7b436464, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -139,7 +139,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: 1920584841
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101660}

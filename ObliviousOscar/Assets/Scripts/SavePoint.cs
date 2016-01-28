@@ -10,7 +10,7 @@ public class SavePoint : OscarEnterDetecter
 	{
 		Oscar.Instance.UpdateLatestState ();
 		SoundManager.Instance.Play (SoundManager.Instance.SavePoint);
-		transform.DOScale (scale, duration).SetEase (Ease.Linear);
+		//transform.DOScale (scale, duration).SetEase (Ease.Linear);
 		GetComponent<SpriteRenderer> ().DOColor (Color.white, duration);
 	}
 }

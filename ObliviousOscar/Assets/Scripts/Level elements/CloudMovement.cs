@@ -2,10 +2,12 @@
 
 public class CloudMovement : MonoBehaviour
 {
-	public float ReduceSpeed;
+	const float speedConstant = 1000f;
+
+	public float Speed = 10f;
 
 	void Update ()
 	{
-		transform.Translate (Vector3.left / ReduceSpeed);
+		transform.Translate (Speed / speedConstant * Vector3.left);
 	}
 }

@@ -47,8 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 3790166227
     locked: 0
-  - name: BackroundElements
+  - name: Sun
+    uniqueID: 2022316753
+    locked: 0
+  - name: Clouds
     uniqueID: 3270800565
+    locked: 0
+  - name: Elements in sky
+    uniqueID: 3078853435
     locked: 0
   - name: trees
     uniqueID: 4139681583

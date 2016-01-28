@@ -4,6 +4,7 @@ public class Oscar : UnitySingleton<Oscar>
 {
 	float speed;
 	const float UphillSpeed = 2f;
+	readonly Vector3 shiftToAvoidSavePointCollision = new Vector3 (1.5f, 0f);
 	const string AnimIsRunning = "IsRunning";
 	public const string AnimIsDead = "IsDead";
 
@@ -17,7 +18,7 @@ public class Oscar : UnitySingleton<Oscar>
 	}
 
 	public OscarState State {
-		get { return new OscarState (position: transform.position, direction: Direction, cameraPosition: Camera.main.transform.position); }
+		get { return new OscarState (position: transform.position + shiftToAvoidSavePointCollision, direction: Direction, cameraPosition: Camera.main.transform.position); }
 		set {
 			Direction = value.Direction;
 			if (Direction != transform.right) {

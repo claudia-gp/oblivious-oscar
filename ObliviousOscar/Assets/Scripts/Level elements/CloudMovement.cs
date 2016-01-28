@@ -1,17 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class CloudMovement : MonoBehaviour {
-
+public class CloudMovement : MonoBehaviour
+{
 	public float ReduceSpeed;
 
-
-	void Start () {
-	
-	}
-	
-
-	void Update () {
-		transform.Translate(Vector3.left/ReduceSpeed);
+	void Update ()
+	{
+		transform.Translate (Vector3.left / ReduceSpeed);
 	}
 }

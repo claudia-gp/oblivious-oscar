@@ -8,11 +8,21 @@ public class Sound : MonoBehaviour
 	public GameObject MusicButtonOn;
 	public GameObject MusicButtonOff;
 
-	/*void start(){
+	void Start(){
 
-		if(Oscar.speed=)
+		if (SoundManager.Instance.SoundOn == false) {
+			changeAspectOn ();
 
-	}*/
+		}
+
+
+
+		if (SoundManager.Instance.MusicOn == false) {
+			MusicButtonOff.SetActive (true);
+			MusicButtonOn.SetActive (false);
+		}
+
+	}
 
 
 

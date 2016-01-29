@@ -9,7 +9,9 @@ public class ChangeDifficulty : MonoBehaviour
 
 	public GameObject SlowButton,MediumButton,FastButton;
 
-	/*void Start(){
+	Image SlowArrow, MediumArrow, FastArrow;
+
+	void OnEnable(){
 
 		if (OscarSpeed.Instance.Speed == OscarSpeed.Slow) {
 			slowChanges ();
@@ -21,7 +23,13 @@ public class ChangeDifficulty : MonoBehaviour
 			fastChanges ();
 		}  
 
-	}*/
+		SlowArrow = SlowButton.GetComponent<Image> ();
+		MediumArrow = MediumButton.GetComponent<Image> ();
+		FastArrow = MediumButton.GetComponent<Image> ();
+
+
+
+	}
 
 	public void SlowSpeed ()
 	{
@@ -45,20 +53,20 @@ public class ChangeDifficulty : MonoBehaviour
 	}
 
 	void slowChanges(){
-		SlowButton.GetComponent<Image> ().overrideSprite = SlowArrowActive;
-		MediumButton.GetComponent<Image> ().overrideSprite = MediumArrowGrey;
-		FastButton.GetComponent<Image> ().overrideSprite = FastArrowGrey; 
+		SlowArrow.overrideSprite = SlowArrowActive;
+		MediumArrow.overrideSprite = MediumArrowGrey;
+		FastArrow.overrideSprite = FastArrowGrey; 
 	}
 
 	void mediumChanges(){
-		SlowButton.GetComponent<Image> ().overrideSprite = SlowArrowGrey;
-		MediumButton.GetComponent<Image> ().overrideSprite = MediumArrowActive;
-		FastButton.GetComponent<Image> ().overrideSprite = FastArrowGrey;
+		SlowArrow.overrideSprite = SlowArrowGrey;
+		MediumArrow.overrideSprite = MediumArrowActive;
+		FastArrow.overrideSprite = FastArrowGrey;
 	}
 
 	void fastChanges(){
-		SlowButton.GetComponent<Image> ().overrideSprite = SlowArrowGrey;
-		MediumButton.GetComponent<Image> ().overrideSprite = MediumArrowGrey;
-		FastButton.GetComponent<Image> ().overrideSprite = FastArrowActive; 
+		SlowArrow.overrideSprite = SlowArrowGrey;
+		MediumArrow.overrideSprite = MediumArrowGrey;
+		FastArrow.overrideSprite = FastArrowActive; 
 	}
 }

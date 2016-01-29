@@ -6,6 +6,8 @@ public class LevelManager
 	public const string ChooseWorld = "Choose World";
 	public const string FirstLevel = "Level 1.1-Tutorial";
 	public const string Loading = "Loading";
+	public const string Story = "FirstStory";
+
 
 	LevelManager () {}
 

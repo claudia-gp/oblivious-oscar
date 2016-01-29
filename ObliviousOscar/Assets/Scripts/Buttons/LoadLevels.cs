@@ -5,7 +5,7 @@ public class LoadLevels : MonoBehaviour
 
 	public void Tutorial ()
 	{
-		LevelManager.LoadAfterLoadingScreen ("Level 1.1-Tutorial");
+		LevelManager.Load (LevelManager.Story);
 	}
 
 	public void Level1_2 ()

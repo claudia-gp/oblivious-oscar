@@ -23,10 +23,8 @@ public class SoundManager : PersistentSingleton<SoundManager>
 		}
 	}
 
-	protected new void Awake ()
+	void Start ()
 	{
-		base.Awake ();
-
 		audioSource = GetComponent<AudioSource> ();
 		SoundOn = true;
 	}

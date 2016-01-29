@@ -110,14 +110,14 @@ RectTransform:
   m_GameObject: {fileID: 15280207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0999963, y: 1, z: 1}
+  m_LocalScale: {x: 1.1697812, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 588278890}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43, y: -100}
-  m_SizeDelta: {x: 206.5, y: 128.5}
+  m_AnchoredPosition: {x: 44, y: -133}
+  m_SizeDelta: {x: 300, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15280209
 MonoBehaviour:
@@ -140,18 +140,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 16
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 225
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "  Good job, everyone!\n We saved many lives \ntoday. Only one failed..."
+    m_LineSpacing: 1.1
+  m_Text: "  Good job everyone! \n You saved many lives. \n    Only one failed..."
 --- !u!222 &15280210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -183,14 +183,14 @@ RectTransform:
   m_GameObject: {fileID: 216475546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0874968, y: 1, z: 1}
+  m_LocalScale: {x: 1.1282779, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 588278890}
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35, y: 25}
-  m_SizeDelta: {x: 206.5, y: 128.5}
+  m_AnchoredPosition: {x: 24, y: 86}
+  m_SizeDelta: {x: 280, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216475548
 MonoBehaviour:
@@ -213,7 +213,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 16
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -223,7 +223,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.1
   m_Text: '  This is oscar, our
 
     most difficult human.
@@ -273,7 +273,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 20
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -307,7 +307,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 61.75, y: 30}
+  m_AnchoredPosition: {x: 181, y: 39}
   m_SizeDelta: {x: 206.5, y: 128.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &588278889
@@ -639,7 +639,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -692,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &782016748
 RectTransform:
   m_ObjectHideFlags: 0
@@ -701,14 +701,14 @@ RectTransform:
   m_GameObject: {fileID: 782016747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0124997, y: 1, z: 1}
   m_Children:
   - {fileID: 220941066}
   m_Father: {fileID: 588278890}
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61, y: -63}
+  m_AnchoredPosition: {x: -102, y: -65}
   m_SizeDelta: {x: 206.5, y: 128.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782016749
@@ -732,7 +732,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 25
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -806,14 +806,14 @@ RectTransform:
   m_GameObject: {fileID: 1023376576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1375, y: 1, z: 1}
+  m_LocalScale: {x: 1.0521876, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 588278890}
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -106}
-  m_SizeDelta: {x: 206.5, y: 128.5}
+  m_AnchoredPosition: {x: -111, y: -141}
+  m_SizeDelta: {x: 266, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023376578
 MonoBehaviour:
@@ -836,7 +836,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 17
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -846,8 +846,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.9
-  m_Text: " i'll be waiting for\nyou. Take good care\n       of oscar!"
+    m_LineSpacing: 1.1
+  m_Text: " i'll be waiting for\nyou. Take good care\n        of oscar!"
 --- !u!222 &1023376579
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -870,7 +870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1194804502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -886,8 +886,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 128, y: -161}
-  m_SizeDelta: {x: 238, y: 270}
+  m_AnchoredPosition: {x: 166, y: -187}
+  m_SizeDelta: {x: 288, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194804503
 MonoBehaviour:
@@ -910,7 +910,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 17
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -920,8 +920,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "    You have let me down \n   again... this is the last \n      chance
+    m_LineSpacing: 1.1
+  m_Text: "     You have let me down \n   again... this is the last \n      chance
     i give you.\n"
 --- !u!222 &1194804504
 CanvasRenderer:
@@ -1035,8 +1035,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0}
-  m_SizeDelta: {x: 475, y: 267}
+  m_AnchoredPosition: {x: 0, y: -3.474977}
+  m_SizeDelta: {x: 800, y: 456.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392933387
 MonoBehaviour:
@@ -1133,7 +1133,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 405941d1a5def914ca9770db62575aae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80733110628886e42a599c52e851d1e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1249,14 +1249,14 @@ RectTransform:
   m_GameObject: {fileID: 1525622453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1375049, y: 1, z: 1}
+  m_LocalScale: {x: 1.1943803, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 588278890}
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116, y: -89}
-  m_SizeDelta: {x: 206.5, y: 128.5}
+  m_AnchoredPosition: {x: 148, y: -116}
+  m_SizeDelta: {x: 244.79, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525622455
 MonoBehaviour:
@@ -1279,7 +1279,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 18
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1289,8 +1289,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: " you must protect him,\nand don't let him fall \n  into any trap!"
+    m_LineSpacing: 1.1
+  m_Text: " you must protect him,\nand don't let him fall \n    into any trap!"
 --- !u!222 &1525622456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1421,7 +1421,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2441101, y: 131}
+  m_AnchoredPosition: {x: -25, y: 225}
   m_SizeDelta: {x: 238, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943587797
@@ -1445,7 +1445,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e53bb680b9bfd4bd6968c07d1ce73818, type: 3}
-    m_FontSize: 17
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1455,7 +1455,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.1
   m_Text: "i'm very \nsorry, sir."
 --- !u!222 &1943587798
 CanvasRenderer:

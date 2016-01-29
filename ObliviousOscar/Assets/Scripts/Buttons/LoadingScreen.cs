@@ -6,7 +6,7 @@ public class LoadingScreen : MonoBehaviour
 {
 	Text loadingText;
 	const string baseText = "Loading";
-	const int maxDots = 3;
+	const int maxDots = 4;
 
 	void Awake ()
 	{

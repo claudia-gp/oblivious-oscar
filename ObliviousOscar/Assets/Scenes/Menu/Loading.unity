@@ -96,10 +96,6 @@ GameObject:
   - 223: {fileID: 130159176}
   - 114: {fileID: 130159175}
   - 114: {fileID: 130159174}
-  - 114: {fileID: 130159173}
-  - 114: {fileID: 130159172}
-  - 114: {fileID: 130159171}
-  - 114: {fileID: 130159169}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -107,57 +103,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &130159169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 130159168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7809a7cf7d6a7be419ea7e190a6d5cb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausePanel: {fileID: 0}
-  PauseButton: {fileID: 0}
---- !u!114 &130159171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 130159168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f180253fbac924896cc918060fdf8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &130159172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 130159168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f908aa51e62e9bf4fb2bcba1e690fc77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OptionsPanel: {fileID: 0}
-  PlayButton: {fileID: 0}
-  LevelsButton: {fileID: 0}
-  OptionsButton: {fileID: 0}
-  BackButton: {fileID: 0}
---- !u!114 &130159173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 130159168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7481e0c5f437f2c48b359de3755e5277, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &130159174
 MonoBehaviour:
   m_ObjectHideFlags: 0

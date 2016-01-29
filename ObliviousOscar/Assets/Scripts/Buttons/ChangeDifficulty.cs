@@ -3,37 +3,31 @@ using UnityEngine.UI;
 
 public class ChangeDifficulty : MonoBehaviour
 {
-	public Sprite SlowArrowGrey,SlowArrowActive;
-	public Sprite MediumArrowGrey,MediumArrowActive;
-	public Sprite FastArrowGrey,FastArrowActive;
+	public Sprite SlowArrowGrey, SlowArrowActive;
+	public Sprite MediumArrowGrey, MediumArrowActive;
+	public Sprite FastArrowGrey, FastArrowActive;
 
-	public GameObject SlowButton,MediumButton,FastButton;
+	public GameObject SlowButton, MediumButton, FastButton;
 
 	Image SlowArrow, MediumArrow, FastArrow;
 
-	void OnEnable(){
+	void Start ()
+	{
+		SlowArrow = SlowButton.GetComponent<Image> ();
+		MediumArrow = MediumButton.GetComponent<Image> ();
+		FastArrow = FastButton.GetComponent<Image> ();
 
 		if (OscarSpeed.Instance.Speed == OscarSpeed.Slow) {
 			slowChanges ();
-		}
-		if (OscarSpeed.Instance.Speed == OscarSpeed.Medium) {
+		} else if (OscarSpeed.Instance.Speed == OscarSpeed.Medium) {
 			mediumChanges ();
-		}
-		if (OscarSpeed.Instance.Speed == OscarSpeed.Fast) {
+		} else if (OscarSpeed.Instance.Speed == OscarSpeed.Fast) {
 			fastChanges ();
 		}  
-
-		SlowArrow = SlowButton.GetComponent<Image> ();
-		MediumArrow = MediumButton.GetComponent<Image> ();
-		FastArrow = MediumButton.GetComponent<Image> ();
-
-
-
 	}
 
 	public void SlowSpeed ()
 	{
-		
 		OscarSpeed.Instance.Speed = OscarSpeed.Slow;
 		slowChanges ();
 	}
@@ -52,19 +46,22 @@ public class ChangeDifficulty : MonoBehaviour
 		fastChanges ();
 	}
 
-	void slowChanges(){
+	void slowChanges ()
+	{
 		SlowArrow.overrideSprite = SlowArrowActive;
 		MediumArrow.overrideSprite = MediumArrowGrey;
 		FastArrow.overrideSprite = FastArrowGrey; 
 	}
 
-	void mediumChanges(){
+	void mediumChanges ()
+	{
 		SlowArrow.overrideSprite = SlowArrowGrey;
 		MediumArrow.overrideSprite = MediumArrowActive;
 		FastArrow.overrideSprite = FastArrowGrey;
 	}
 
-	void fastChanges(){
+	void fastChanges ()
+	{
 		SlowArrow.overrideSprite = SlowArrowGrey;
 		MediumArrow.overrideSprite = MediumArrowGrey;
 		FastArrow.overrideSprite = FastArrowActive; 

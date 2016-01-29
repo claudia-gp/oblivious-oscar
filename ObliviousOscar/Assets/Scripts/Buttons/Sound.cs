@@ -8,23 +8,21 @@ public class Sound : MonoBehaviour
 	public GameObject MusicButtonOn;
 	public GameObject MusicButtonOff;
 
-	void Start(){
-
-		if (SoundManager.Instance.SoundOn == false) {
+	void Start ()
+	{
+		if (!SoundManager.Instance.SoundOn) {
 			changeAspectOn ();
-
 		}
-
-
-
-		if (SoundManager.Instance.MusicOn == false) {
-			MusicButtonOff.SetActive (true);
-			MusicButtonOn.SetActive (false);
+			
+		if (!SoundManager.Instance.MusicOn) {
+			if (MusicButtonOff) {
+				MusicButtonOff.SetActive (true);
+			}
+			if (MusicButtonOn) {
+				MusicButtonOn.SetActive (false);
+			}
 		}
-
 	}
-
-
 
 	public void SoundOn ()
 	{

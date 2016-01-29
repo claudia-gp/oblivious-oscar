@@ -4,7 +4,12 @@
 	public const float Medium = 3f;
 	public const float Fast = 4f;
 
-	public float Speed{ get; set; }
+	float _speed = Medium;
+
+	public float Speed {
+		get{ return _speed; }
+		set{ _speed = value; }
+	}
 
 	protected new void Awake ()
 	{

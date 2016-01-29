@@ -5,6 +5,7 @@
     "Choose World",
     "Loading",
     "FirstStory",
+    "Options",
     "Level 1.1-Tutorial",
     "Level 1.2",
     "Level 1.3",

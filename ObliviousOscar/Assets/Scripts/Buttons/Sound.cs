@@ -1,78 +1,70 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Sound : MonoBehaviour {
+public class Sound : MonoBehaviour
+{
 
-	public GameObject SoundButtonOn; 
+	public GameObject SoundButtonOn;
 	public GameObject SoundButtonOff;
 	public GameObject MusicButtonOn;
 	public GameObject MusicButtonOff;
 
 
-	public void SoundOn(){
-
+	public void SoundOn ()
+	{
 		//Deactivate sound	
-		SoundManager.Instance.SetMusic(false);
-		SoundManager.Instance.SetSound (false);
-		changeAspectOn ();
-	}
-	
-	public void SoundOff(){
-
-		//Activate Sound
-		SoundManager.Instance.SetMusic(true);
-		SoundManager.Instance.SetSound (true);
-		changeAspectOff();
-
-
-	}
-
-	public void OptionsSoundOn(){
-
-		//Deactivate sound	
-		SoundManager.Instance.SetSound(false);
+		SoundManager.Instance.MusicOn = false;
+		SoundManager.Instance.SoundOn = false;
 		changeAspectOn ();
 	}
 
-	public void OptionsSoundOff(){
-
+	public void SoundOff ()
+	{
 		//Activate Sound
-		SoundManager.Instance.SetSound(true);
+		SoundManager.Instance.MusicOn = true;
+		SoundManager.Instance.SoundOn = true;
 		changeAspectOff ();
-
-
 	}
 
-	public void OptionsMusicOn(){
-
+	public void OptionsSoundOn ()
+	{
 		//Deactivate sound	
-		SoundManager.Instance.SetMusic(false);
+		SoundManager.Instance.SoundOn = false;
+		changeAspectOn ();
+	}
+
+	public void OptionsSoundOff ()
+	{
+		//Activate Sound
+		SoundManager.Instance.SoundOn = true;
+		changeAspectOff ();
+	}
+
+	public void OptionsMusicOn ()
+	{
+		//Deactivate sound	
+		SoundManager.Instance.MusicOn = false;
 		MusicButtonOff.SetActive (true);
 		MusicButtonOn.SetActive (false);
 	}
 
-	public void OptionsMusicOff(){
-
+	public void OptionsMusicOff ()
+	{
 		//Activate Sound
-		SoundManager.Instance.SetMusic(true);
-		MusicButtonOn.SetActive(true);
-		MusicButtonOff.SetActive(false);
-
-
+		SoundManager.Instance.MusicOn = true;
+		MusicButtonOn.SetActive (true);
+		MusicButtonOff.SetActive (false);
 	}
 
-	void changeAspectOn(){
-
+	void changeAspectOn ()
+	{
 		SoundButtonOff.SetActive (true);
-		SoundButtonOn.SetActive (false);
-		
+		SoundButtonOn.SetActive (false);	
 	}
 
-	void changeAspectOff(){
-
-		SoundButtonOn.SetActive(true);
-		SoundButtonOff.SetActive(false);
-		
+	void changeAspectOff ()
+	{
+		SoundButtonOn.SetActive (true);
+		SoundButtonOff.SetActive (false);
 	}
 
 }

@@ -10,31 +10,31 @@ public class SoundManager : PersistentSingleton<SoundManager>
 	public AudioClip MagnetActive;
 	public AudioClip Winning;
 
-	bool soundOn = true;
+	public bool SoundOn{ get; set; }
 
-	void Start ()
+	public bool MusicOn {
+		get { return audioSource.isPlaying; } 
+		set {
+			if (value) {
+				audioSource.Play ();
+			} else {
+				audioSource.Stop ();
+			}
+		}
+	}
+
+	protected new void Awake ()
 	{
+		base.Awake ();
+
 		audioSource = GetComponent<AudioSource> ();
+		SoundOn = true;
 	}
 
 	public void Play (AudioClip clip)
 	{
-		if (soundOn) {
+		if (SoundOn) {
 			audioSource.PlayOneShot (clip);
 		}
-	}
-
-	public void SetMusic (bool musicOn)
-	{
-		if (musicOn) {
-			audioSource.Play ();
-		} else {
-			audioSource.Stop ();
-		}
-	}
-
-	public void SetSound (bool soundOn)
-	{
-		this.soundOn = soundOn;
 	}
 }

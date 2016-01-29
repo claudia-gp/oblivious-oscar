@@ -6,10 +6,8 @@ public class StoryAnimation : MonoBehaviour
 {
 
 	public Sprite[] introSequence;
-	public Text[] texts;
-	public Text initialText;
-	public Text initialText2;
-
+	public GameObject[] texts;
+	public GameObject initialText;
 	int current = 0;
 	Image image;
 
@@ -24,13 +22,12 @@ public class StoryAnimation : MonoBehaviour
 			GoToLevel ();
 		} else { 
 			if (current == 0) {
-				initialText.enabled = false;
-				initialText2.enabled = false;
+				initialText.SetActive (false);
 			} else {
-				texts [current - 1].enabled = false;
+				texts [current - 1].SetActive(false);
 			}
 
-			texts [current].enabled = true;
+			texts [current].SetActive(true);
 			image.overrideSprite = introSequence [current];
 
 			current++;

@@ -50,6 +50,9 @@ TagManager:
   - name: Sun
     uniqueID: 2022316753
     locked: 0
+  - name: Plane
+    uniqueID: 709150289
+    locked: 0
   - name: Clouds
     uniqueID: 3270800565
     locked: 0

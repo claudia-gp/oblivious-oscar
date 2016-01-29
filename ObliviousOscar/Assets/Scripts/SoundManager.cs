@@ -12,9 +12,12 @@ public class SoundManager : PersistentSingleton<SoundManager>
 
 	public bool SoundOn{ get; set; }
 
+	bool _musicOn = true;
+
 	public bool MusicOn {
-		get { return audioSource.isPlaying; } 
+		get { return _musicOn; } 
 		set {
+			_musicOn = value;
 			if (value) {
 				audioSource.Play ();
 			} else {
@@ -26,7 +29,6 @@ public class SoundManager : PersistentSingleton<SoundManager>
 	void Start ()
 	{
 		audioSource = GetComponent<AudioSource> ();
-		SoundOn = true;
 	}
 
 	public void Play (AudioClip clip)

@@ -8,6 +8,13 @@ public class Sound : MonoBehaviour
 	public GameObject MusicButtonOn;
 	public GameObject MusicButtonOff;
 
+	/*void start(){
+
+		if(Oscar.speed=)
+
+	}*/
+
+
 
 	public void SoundOn ()
 	{

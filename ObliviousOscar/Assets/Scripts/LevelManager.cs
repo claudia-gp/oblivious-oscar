@@ -8,6 +8,7 @@ public class LevelManager
 	public const string Loading = "Loading";
 	public const string Story = "FirstStory";
 	public const string Options = "Options";
+	public const string Credits = "Credits";
 
 
 	LevelManager () {}

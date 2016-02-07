@@ -3,6 +3,7 @@
   "$values": [
     "SplashScreen",
     "Main Menu",
+    "Credits",
     "Choose World",
     "Loading",
     "FirstStory",
